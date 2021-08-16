@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:title="@string/settings_font_title"
+        app:icon="@drawable/ic_font_size_24dp"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.FontPreferenceFragment" />
+
+    <Preference
+        app:key="immersive_interface_entry"
+        app:title="@string/settings_immersive_interface_title"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.ImmersiveInterfacePreferenceFragment"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        app:title="@string/settings_navigation_drawer_title"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.NavigationDrawerPreferenceFragment" />
+
+    <Preference
+        app:title="@string/settings_customize_tabs_in_main_page_title"
+        app:summary="@string/only_for_logged_in_user"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.CustomizeMainPageTabsFragment" />
+
+    <Preference
+        app:title="@string/settings_customize_bottom_app_bar_title"
+        app:summary="@string/only_for_logged_in_user"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.CustomizeBottomAppBarFragment" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="bottom_app_bar"
+        app:title="@string/settings_enable_bottom_app_bar_title"
+        app:summary="@string/settings_enable_bottom_app_bar_summary" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="hide_subreddit_description"
+        app:title="@string/settings_hide_subreddit_description_title" />
+
+    <ListPreference
+        app:defaultValue="0"
+        app:entries="@array/settings_default_search_result_tab"
+        app:entryValues="@array/settings_default_search_result_tab_values"
+        app:key="default_search_result_tab"
+        app:title="@string/settings_default_search_result_tab"
+        app:useSimpleSummaryProvider="true" />
+
+    <Preference
+        app:title="@string/settings_time_format_title"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.TimeFormatPreferenceFragment" />
+
+    <Preference
+        app:title="@string/settings_category_post_title"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.PostPreferenceFragment" />
+
+    <Preference
+        app:title="@string/settings_category_comment_title"
+        app:fragment="ml.docilealligator.infinityforreddit.settings.CommentPreferenceFragment" />
+
+    <PreferenceCategory
+        app:title="@string/settings_category_post_and_comment_title" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="vote_buttons_on_the_right"
+        app:title="@string/settings_vote_buttons_on_the_right_title" />
+
+    <SwitchPreference
+        app:defaultValue="true"
+        app:key="show_absolute_number_of_votes"
+        app:title="@string/settings_show_absolute_number_of_votes_title" />
+
+</PreferenceScreen>

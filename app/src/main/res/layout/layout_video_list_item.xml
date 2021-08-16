@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/media_container_video_player_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivThumbVideoItem"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorBlack"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splashscreen" />
+
+        <ImageView
+            android:id="@+id/ivVolumeVideoItem"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="0"
+            android:animateLayoutChanges="true"
+            android:contentDescription="@string/volume_on_off_layout_video"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_volume_up_grey_24dp" />
+
+        <ProgressBar
+            android:id="@+id/pbVideoItem"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:background="@color/colorBlack"
+            android:padding="2dp"
+            android:text="10:20"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgChannelPic"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/splashscreen" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="36dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitleVideoItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/this_is_the_title_layout_video"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_more_vert" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

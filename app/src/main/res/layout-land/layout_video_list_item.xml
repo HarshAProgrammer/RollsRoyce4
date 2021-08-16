@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-9dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#000"
+        android:scaleType="center"
+        android:id="@+id/media_container_video_player_item">
+
+        <ImageView
+            android:id="@+id/ivThumbVideoItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_background"
+            android:scaleType="fitXY"
+            android:src="@drawable/splashscreen"
+            android:contentDescription="@string/thumbnail_layout_video" />
+
+        <ImageView
+            android:id="@+id/ivVolumeVideoItem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_volume_up_grey_24dp"
+            android:layout_gravity="end|bottom"
+            android:alpha="0"
+            android:animateLayoutChanges="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="@string/volume_on_off_layout_video" />
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:background="@color/colorBlack"
+            android:padding="2dp"
+            android:text="10:20"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/pbVideoItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvTitleVideoItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:text="@string/this_is_the_title_layout_video"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

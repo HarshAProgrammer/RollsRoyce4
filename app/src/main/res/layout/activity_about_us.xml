@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activities.AboutUsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAboutUsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:titleTextColor="@color/colorBlack">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/ivAboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/rolex_inc"
+        android:src="@drawable/splashscreen"
+        app:layout_constraintBottom_toTopOf="@id/tvVersionAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ablAboutUs" />
+
+    <TextView
+        android:id="@+id/tvVersionAbout"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/version_about_us"
+        app:layout_constraintBottom_toTopOf="@id/cvRateAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAboutUs" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRateAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@id/cvPrivacyAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVersionAbout">
+
+        <ImageView
+            android:id="@+id/ivRateAbout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/image_rate_about_us"
+            android:src="@drawable/ic_star_24dp" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="50dp"
+            android:text="@string/rate_app_about_us" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/arrow_right_about_us"
+            android:src="@drawable/ic_arrow_right_24dp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPrivacyAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@id/cvTermsAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvRateAbout">
+
+        <ImageView
+            android:id="@+id/ivPrivacyAbout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/image_privacy_about_us"
+            android:src="@drawable/ic_privacy" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="50dp"
+            android:text="@string/privacy_policy_about_us" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/arrow_right_about_us"
+            android:src="@drawable/ic_arrow_right_24dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTermsAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@id/cvFeedbackAbout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPrivacyAbout">
+
+        <ImageView
+            android:id="@+id/ivTermsAbout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/image_terms_about_us"
+            android:src="@drawable/ic_terms" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="50dp"
+            android:text="@string/terms_and_conditions_about_us" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/arrow_right_about_us"
+            android:src="@drawable/ic_arrow_right_24dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFeedbackAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvTermsAbout">
+
+        <ImageView
+            android:id="@+id/ivFeedbackAbout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/image_feedback_about_us"
+            android:src="@drawable/ic_feedback_24dp" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="50dp"
+            android:text="@string/feedback_about_us" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/arrow_right_about_us"
+            android:src="@drawable/ic_arrow_right_24dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/motionLayExpensiveDetail"
+    android:scrollbars="vertical"
+    tools:context=".activities.ExpensiveDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablExpensiveDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarExpensiveDetailActivity"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:titleTextColor="@color/colorBlack">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/ivExpensiveDetailImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/rolex_categories_detail_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splashscreen"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewExpensiveDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ablExpensiveDetail" />
+    <ImageView
+        android:id="@+id/ivExpensiveDetailGreyHeart"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/rolex_categories_detail_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avd_grey_heart"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewExpensiveDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ablExpensiveDetail" />
+
+    <ImageView
+        android:id="@+id/ivExpensiveDetailLiker"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/rolex_categories_detail_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_heart_white"
+        app:layout_constraintBottom_toTopOf="@+id/linLayExpensiveDetail1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/colorRed" />
+
+    <LinearLayout
+        android:id="@+id/linLayExpensiveDetail1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/description_title_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivExpensiveDetailImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:text="@string/rolex_watch_name_categories_detail"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollViewExpensiveDetail"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:padding="16sp"
+        android:scrollbarSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvExpensiveDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:text="@string/rolex_detail_categories_description"
+                android:textColor="@color/colorDetailDescription"
+                android:textSize="12sp">
+
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

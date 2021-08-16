@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlBlogPost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCategoriesRecyclerRowItemCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:id="@+id/tvCreatorImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_toStartOf="@id/ivImageImages"
+                            android:maxLines="2"
+                            android:orientation="vertical"
+                            android:text="@string/creator_image"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/ivImageImages"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/rolex_main_image_expensive"
+                            android:src="@drawable/splashscreen"
+                            app:civ_border_color="@color/colorPrimary"
+                            app:civ_border_width="4dp"
+                            app:civ_shadow="true"
+                            app:civ_shadow_color="@color/colorPrimaryDark"
+                            app:civ_shadow_radius="5dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/tvViewsImages"
+                style="italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="0dp"
+                android:gravity="start"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="italic"
+
+                app:drawableStartCompat="@drawable/ic_view_images" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

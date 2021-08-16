@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.UpdateProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablUpdateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarProfileUpdateActivity"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:titleTextColor="@color/colorBlack">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/imgUpdateProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@id/update_profile_username_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ablUpdateProfile"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="275dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/circle_border">
+
+    <ImageView
+        android:contentDescription="@string/new_profile_pic_update_profile"
+        android:id="@+id/ivProfileUpdate"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="9dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/circle"
+        android:padding="3dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_profile_pic" />
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/update_profile_username_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="15"
+        app:errorEnabled="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgUpdateProfile"
+        app:layout_constraintBottom_toTopOf="@id/update_profile_email_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNameUpdateProfile"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/open_sans_condensed_light"
+            app:drawableStartCompat="@drawable/ic_person"
+            style="@style/EditTextStyle"
+            android:hint="@string/username"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/update_profile_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/update_profile_username_layout"
+        app:layout_constraintBottom_toTopOf="@id/update_profile_phone_no_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailUpdateProfile"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/open_sans_condensed_light"
+            app:drawableStartCompat="@drawable/ic_email"
+            style="@style/EditTextStyle"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/update_profile_phone_no_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/update_profile_email_layout"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhoneNoUpdateProfile"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/open_sans_condensed_light"
+            app:drawableStartCompat="@drawable/ic_phone_no_update_profile"
+            style="@style/EditTextStyle"
+            android:hint="@string/phone_no_update_profile"
+            android:inputType="phone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/btnUpdateProfile"
+        style="@style/StrokeButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/save_update_profile"
+        app:layout_constraintTop_toBottomOf="@+id/update_profile_phone_no_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

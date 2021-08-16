@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/expensiveNavigation"
+            android:icon="@drawable/ic_expensive_main"
+            android:title="@string/most_expensive_nav_home" />
+        <item
+            android:id="@+id/imagesNavigation"
+            android:icon="@drawable/ic_images_main"
+            android:title="@string/images_nav_home" />
+        <item
+            android:id="@+id/videoNavigation"
+            android:icon="@drawable/ic_video_library_main"
+            android:title="@string/videos_nav_home" />
+        <item
+            android:id="@+id/blogNavigation"
+            android:icon="@drawable/ic_blog_main"
+            android:title="@string/blog_nav_home" />
+        <item
+            android:id="@+id/redditNavigation"
+            android:icon="@drawable/ic_reddit_main"
+            android:title="@string/reddit_nav_home" />
+        <item
+            android:id="@+id/profileNavigation"
+            android:icon="@drawable/ic_person"
+            android:title="@string/profile_nav_home" />
+        <item
+            android:id="@+id/billingNavigation"
+            android:icon="@drawable/ic_buy_main"
+            android:title="@string/buy_us_a_watch_nav_home" />
+        <item
+            android:id="@+id/factsNavigation"
+            android:icon="@drawable/ic_facts_main"
+            android:title="@string/facts_about_us_nav_home" />
+
+
+        <item
+            android:id="@+id/signOutNavigation"
+            android:icon="@drawable/ic_sign_out_main"
+            android:title="@string/sign_out_nav_home" />
+
+        <item android:title=""
+            >
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/shareNavigation"
+                        android:icon="@drawable/ic_general_share_main"
+                        android:title="@string/share" />
+                    <item
+                        android:id="@+id/facebookLikeNavigation"
+                        android:icon="@drawable/ic_facebook_like_main"
+                        android:title="@string/like_us_on_facebook_nav_home" />
+                    <item
+                        android:id="@+id/facebookShareNavigation"
+                        android:icon="@drawable/ic_facebook_share_main"
+                        android:title="@string/share_on_facebook_nav_home" />
+                    <item
+                        android:id="@+id/twitterShareNavigation"
+                        android:icon="@drawable/ic_twitter_share_main"
+                        android:title="@string/share_on_twitter_nav_home" />
+                    <item
+                        android:id="@+id/companyNavigation"
+                        android:icon="@drawable/ic_company_main"
+                        android:title="@string/company_nav_home" />
+                    <item
+                        android:id="@+id/aboutUsNavigation"
+                        android:icon="@drawable/ic_about_us_main"
+                        android:title="@string/about_us_nav_home" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

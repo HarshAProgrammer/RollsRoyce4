@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activities.CompanyInfo">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarCompanyInfoActivity"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:titleTextColor="@color/colorBlack">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCompanyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@id/svCompanyInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ablCompany">
+
+        <com.smarteist.autoimageslider.SliderLayout
+            android:id="@+id/imageSliderCompanyInfo"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_alignParentTop="true" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:id="@+id/svCompanyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16sp"
+        android:scrollbarSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvCompanyInfo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorCompany"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/raleway_medium"
+                        android:padding="20dp"
+                        android:text="@string/tvCompanyDescription1"
+                        android:textColor="@color/colorCompany"
+                        android:textSize="12sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading1"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorCompany"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading2"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/raleway_medium"
+                        android:padding="20dp"
+                        android:text="@string/tvCompanyDescription2"
+                        android:textColor="@color/colorCompany"
+                        android:textSize="12sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading2"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorCompany"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading3"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/raleway_medium"
+                        android:padding="20dp"
+                        android:text="@string/tvCompanyDescription3"
+                        android:textColor="@color/colorCompany"
+                        android:textSize="12sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading3"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorCompany"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading4"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/raleway_medium"
+                        android:padding="20dp"
+                        android:text="@string/tvCompanyDescription4"
+                        android:textColor="@color/colorCompany"
+                        android:textSize="12sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading4"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorCompany"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading5"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/raleway_medium"
+                        android:padding="20dp"
+                        android:text="@string/tvCompanyDescription5"
+                        android:textColor="@color/colorCompany"
+                        android:textSize="12sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading5"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorCompany"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading6"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:fontFamily="@font/raleway_medium"
+                        android:padding="20dp"
+                        android:text="@string/tvCompanyDescription6"
+                        android:textColor="@color/colorCompany"
+                        android:textSize="12sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_condensed_bold"
+                        android:padding="32dp"
+                        android:text="@string/tvCompanyHeading6"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:text="@string/tvCompanySpacing"
+                android:textColor="@color/colorDetailDescription"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

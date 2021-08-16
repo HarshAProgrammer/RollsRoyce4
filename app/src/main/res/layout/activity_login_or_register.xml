@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    tools:context=".activities.LoginOrRegisterActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:text="@string/loginOrRegister_welcome_txt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_loginOrRegister_login"
+                style="@style/StrokeButtonStyle"
+                android:minWidth="@dimen/splash_btn_width"
+                android:onClick="login"
+                android:text="@string/login"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_loginOrRegister_get_started"
+                style="@style/StrokeButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:minWidth="@dimen/splash_btn_width"
+                android:onClick="getStarted"
+                android:text="@string/get_started_loginOrRegister_btn_label"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</layout>

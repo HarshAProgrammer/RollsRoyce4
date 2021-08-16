@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/sort">
+        <menu>
+            <item
+                android:id="@+id/sort_images_views"
+                android:title="@string/sort_by_views_images">
+            </item>
+
+            <item
+                android:id="@+id/sort_images_likes"
+                android:title="@string/sort_by_likes_images">
+            </item>
+            <item
+                android:id="@+id/sort_images_comments"
+                android:title="@string/sort_by_comments_images">
+            </item>
+            <item
+                android:id="@+id/sort_images_downloads"
+                android:title="@string/sort_by_downloads_images">
+            </item>
+        </menu>
+    </item>
+
+
+</menu>

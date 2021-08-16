@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hauler_view_view_image_or_gif_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:application="com.rackluxury.rolex.reddit.activities.ViewImageActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_view_image_or_gif_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.github.piasy.biv.view.BigImageView
+        android:id="@+id/image_view_view_image_or_gif_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:optimizeDisplay="true"
+        app:tapToRetry="false" />
+
+    <LinearLayout
+        android:id="@+id/load_image_error_linear_layout_view_image_or_gif_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_error_outline_white_24dp"
+            android:fontFamily="?attr/font_family"
+            android:gravity="center"
+            android:text="@string/error_loading_image_tap_to_retry"
+            android:textColor="@android:color/white"
+            android:textSize="?attr/font_default" />
+
+    </LinearLayout>
+
+</RelativeLayout>

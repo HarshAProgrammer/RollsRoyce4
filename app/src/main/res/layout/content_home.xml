@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategoriesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabVideosCategories"
+            app:pressedTranslationZ="12dp"
+            android:elevation="6dp"
+            app:fabSize="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+
+            android:backgroundTint="@color/colorYellow"
+            android:clickable="true"
+
+            android:focusable="true"
+            android:tint="@color/colorWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/fabFavCategories"
+            app:layout_constraintEnd_toEndOf="@+id/fabFavCategories"
+            app:srcCompat="@drawable/ic_video" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabFavCategories"
+            app:pressedTranslationZ="12dp"
+            android:elevation="6dp"
+            app:fabSize="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorYellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/colorWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/fabMoreCategories"
+            app:layout_constraintEnd_toEndOf="@+id/fabMoreCategories"
+            app:srcCompat="@drawable/ic_heart_white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMoreCategories"
+            app:fabSize="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/colorPurple"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:tint="@color/colorWhite"
+            app:pressedTranslationZ="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

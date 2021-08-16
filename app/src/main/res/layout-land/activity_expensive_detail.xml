@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:scrollbars="vertical"
+    tools:context=".activities.ExpensiveDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablExpensiveDetailActivity"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarExpensiveDetailActivity"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:titleTextColor="@color/colorBlack">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imgExpensiveDetailWatch"
+        android:layout_width="350dp"
+        android:layout_height="295dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/scrollViewExpensiveDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ablExpensiveDetailActivity">
+
+        <ImageView
+            android:id="@+id/ivExpensiveDetailGreyHeart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:alpha="0"
+            android:contentDescription="@string/rolex_categories_detail_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avd_grey_heart"
+
+
+            />
+        <ImageView
+            android:id="@+id/ivExpensiveDetailRedHeart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:contentDescription="@string/rolex_categories_detail_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avd_red_heart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <com.dmallcott.dismissibleimageview.DismissibleImageView
+            android:id="@+id/ivExpensiveDetailImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4"
+            android:contentDescription="@string/rolex_categories_detail_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splashscreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvExpensiveLikerOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/ivExpensiveDetailLiker"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@android:color/transparent"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/ivExpDetailReactHeart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reaction_heart" />
+
+                <ImageView
+                    android:id="@+id/ivExpDetailReactHappy"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reaction_happy" />
+
+                <ImageView
+                    android:id="@+id/ivExpDetailReactLove"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reaction_love" />
+
+                <ImageView
+                    android:id="@+id/ivExpDetailReactSad"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reaction_sad" />
+
+                <ImageView
+                    android:id="@+id/ivExpDetailReactShocked"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reaction_shocked" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/ivExpensiveDetailLiker"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/rolex_categories_detail_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_heart_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/colorRed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linLayExpensiveDetail1"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/description_title_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/scrollViewExpensiveDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgExpensiveDetailWatch"
+        app:layout_constraintTop_toBottomOf="@id/ablExpensiveDetailActivity">
+
+        <TextView
+            android:id="@+id/tvExpensiveDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_detail_expensive_detail"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollViewExpensiveDetail"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_weight="1.5"
+        android:baselineAligned="false"
+        android:padding="16sp"
+        android:scrollbarSize="25sp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgExpensiveDetailWatch"
+        app:layout_constraintTop_toBottomOf="@id/linLayExpensiveDetail1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvExpensiveDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:text="@string/rolex_detail_expensive_description"
+                android:textColor="@color/colorDetailDescription"
+                android:textSize="12sp">
+
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

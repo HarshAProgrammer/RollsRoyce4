@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="save_front_page_scrolled_position"
+        app:title="@string/settings_save_front_page_scrolled_position_title"
+        app:summary="@string/settings_save_front_page_scrolled_position_summary" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:icon="@drawable/ic_link"
+        app:key="open_link_in_app"
+        app:title="@string/settings_open_link_in_app_title" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="confirm_to_exit"
+        app:icon="@drawable/ic_exit_24dp"
+        app:title="@string/settings_confirm_to_exit" />
+
+    <SwitchPreference
+        app:defaultValue="true"
+        app:key="enable_search_history"
+        app:title="@string/settings_enable_search_history_title"
+        app:summary="@string/only_for_logged_in_user" />
+
+    <ListPreference
+        app:defaultValue="auto"
+        app:entries="@array/settings_language"
+        app:entryValues="@array/settings_language_values"
+        app:key="language"
+        app:icon="@drawable/ic_language_24dp"
+        app:title="@string/settings_language_title"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/save_image_facts"
+        android:title="@string/save_image" />
+
+    <item
+        android:id="@+id/share_image_facts"
+        android:title="@string/share" />
+    <item
+        android:id="@+id/wallpaper_image_facts"
+        android:title="@string/set_as_wallpaper" />
+
+
+</menu>

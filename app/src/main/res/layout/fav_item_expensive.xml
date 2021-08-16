@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardView.Light"
+    android:id="@+id/cvFavExpensive"
+    android:layout_marginTop="8dp"
+    app:cardElevation="10dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="100dp"
+        android:id="@+id/ivFavExpensive"
+        android:contentDescription="@string/image_fav_expensive"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/splashscreen"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="@color/colorPrimaryDark"
+        app:civ_shadow_radius="5dp" />
+
+    <TextView
+        android:id="@+id/tvFavExpensive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_fav_expensive"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_gravity="center|start"
+        android:layout_marginStart="120dp"/>
+
+
+</androidx.cardview.widget.CardView>

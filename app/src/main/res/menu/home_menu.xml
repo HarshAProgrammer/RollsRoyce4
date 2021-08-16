@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/sort">
+        <menu>
+            <item
+                android:icon="@drawable/ic_sort_price"
+                android:title="@string/sort_by_price">
+                <menu>
+                    <item
+                        android:id="@+id/sort_home_price_low_to_high"
+                        android:icon="@drawable/ic_sort_price_low_to_high"
+                        android:title="@string/price_low_to_high" />
+                    <item
+                        android:id="@+id/sort_home_price_high_to_low"
+                        android:icon="@drawable/ic_sort_price_high_to_low"
+                        android:title="@string/price_high_to_low" />
+                </menu>
+
+            </item>
+
+            <item
+                android:icon="@drawable/ic_sort_name"
+                android:title="@string/sort_by_name">
+                <menu>
+                    <item
+                        android:id="@+id/sort_home_name_a_to_z"
+                        android:icon="@drawable/ic_sort_name_a_to_z"
+                        android:title="@string/name_a_to_z" />
+                    <item
+                        android:id="@+id/sort_home_name_z_to_a"
+                        android:icon="@drawable/ic_sort_name_z_to_a"
+                        android:title="@string/name_z_to_a" />
+                </menu>
+            </item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/home_videos"
+        android:title="@string/videos_home" />
+    <item
+        android:id="@+id/favourite_categories"
+        android:icon="@drawable/ic_sort_price_low_to_high"
+        android:title="@string/favourite" />
+
+
+</menu>

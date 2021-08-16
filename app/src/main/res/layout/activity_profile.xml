@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".activities.ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|enterAlways"
+            app:title="@string/app_name">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:paddingBottom="150dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_profile_pic"
+                android:contentDescription="@string/user_image_profile" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            app:drawableStartCompat="@drawable/ic_name_profile"
+            style="@style/TextViewStyle"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:textSize="18sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tvProfilePhoneNo"
+            app:drawableStartCompat="@drawable/ic_phone_no_profile"
+            style="@style/TextViewStyle"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvProfileEmail"
+            app:drawableStartCompat="@drawable/ic_email"
+            style="@style/TextViewStyle"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnProfileUpdate"
+            style="@style/StrokeButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/update_profile_profile" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            style="@style/StrokeButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/change_password_profile" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

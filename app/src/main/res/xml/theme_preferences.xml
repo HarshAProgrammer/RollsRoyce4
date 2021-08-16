@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <ListPreference
+        app:defaultValue="2"
+        app:entryValues="@array/settings_theme_values"
+        app:key="theme"
+        app:icon="@drawable/ic_outline_color_lens_24dp"
+        app:title="@string/settings_theme_title"
+        app:useSimpleSummaryProvider="true" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="amoled_dark"
+        app:icon="@drawable/ic_amoled_theme_preference_24dp"
+        app:title="@string/settings_amoled_dark_title" />
+
+    <PreferenceCategory
+        app:title="@string/settings_category_customization_title" />
+
+    <Preference
+        app:key="customize_light_theme"
+        app:icon="@drawable/ic_light_theme_preference_24dp"
+        app:title="@string/settings_customize_light_theme_title"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        app:key="customize_dark_theme"
+        app:icon="@drawable/ic_dark_theme_preference_24dp"
+        app:title="@string/settings_customize_dark_theme_title"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        app:key="customize_amoled_theme"
+        app:icon="@drawable/ic_amoled_theme_preference_24dp"
+        app:title="@string/settings_customize_amoled_theme_title"
+        app:isPreferenceVisible="false" />
+
+    <Preference
+        app:key="manage_themes"
+        app:icon="@drawable/ic_edit_24dp"
+        app:title="@string/settings_manage_themes_title" />
+
+    <Preference
+        app:icon="@drawable/ic_info_preference_24dp"
+        app:summary="@string/settings_custom_theme_cannot_apply_to_settings_page_summary"
+        app:enabled="false" />
+
+    <PreferenceCategory
+        app:title="@string/settings_category_material_you_title" />
+
+    <Preference
+        app:icon="@drawable/ic_info_preference_24dp"
+        app:summary="@string/settings_enable_material_you_warning_summary"
+        app:enabled="false" />
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:key="enable_material_you"
+        app:title="@string/settings_enable_material_you_title"
+        app:summary="@string/settings_enable_material_you_summary" />
+
+    <Preference
+        app:key="apply_material_you"
+        app:title="@string/settings_apply_material_you_title"
+        app:summary="@string/settings_apply_material_you_summary" />
+
+</PreferenceScreen>
