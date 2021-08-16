@@ -1,16 +1,16 @@
 {
   "project_info": {
     "project_number": "1060170093032",
-    "firebase_url": "https://rolex-sa.firebaseio.com",
-    "project_id": "rolex-sa",
-    "storage_bucket": "rolex-sa.appspot.com"
+    "firebase_url": "https://rollsroyce-sa.firebaseio.com",
+    "project_id": "rollsroyce-sa",
+    "storage_bucket": "rollsroyce-sa.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:1060170093032:android:027685c804add51d9cd45d",
         "android_client_info": {
-          "package_name": "com.rackluxury.rolex"
+          "package_name": "com.rackluxury.rollsroyce"
         }
       },
       "oauth_client": [

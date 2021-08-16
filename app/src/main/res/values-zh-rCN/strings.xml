@@ -128,7 +128,7 @@
     <string name="content_description_banner_imageview">"版块横幅图片"</string>
 
     <!-- 这个感觉不必翻译 -->
-    <string name="app_label">"Watches from Rolex"</string>
+    <string name="app_label">"Cars from RollsRoyce"</string>
     <string name="search_hint">"搜索您要找的"</string>
     <string name="no_posts_no_lazy_mode">"暂无可用帖子"</string>
     <string name="lazy_mode_start">"懒人模式已启用，滑动间隔 %1$.1f 秒"</string>
@@ -390,10 +390,10 @@
     <string name="settings_subreddit_title">"版块"</string>
 
     <!-- 这个应该不做翻译为好，它是指示infinity社区位置的。在关于界面 -->
-    <string name="settings_subreddit_summary">"r/Rolex"</string>
+    <string name="settings_subreddit_summary">"r/RollsRoyce"</string>
     <string name="settings_share_title">"分享"</string>
     <string name="settings_share_summary">"如果您喜欢此应用，可以分享给其他人"</string>
-    <string name="settings_version_title">"Watches from Rolex"</string>
+    <string name="settings_version_title">"Cars from RollsRoyce"</string>
     <string name="settings_version_summary">"版本 %s"</string>
     <string name="settings_category_customization_title">"自定义"</string>
     <string name="settings_customize_light_theme_title">"明亮主题"</string>
@@ -456,8 +456,8 @@
     <string name="error_getting_multi_reddit_data">"获取聚合版块数据错误"</string>
     <string name="error_loading_multi_reddit_list">"无法同步聚合版块"</string>
     <string name="error_loading_subscriptions">"无法同步订阅"</string>
-    <string name="share_this_app">"快来试试 Watches from Rolex，一个很棒的 Reddit 客户端！
-https://play.google.com/store/apps/details?id=com.rackluxury.rolex"</string>
+    <string name="share_this_app">"快来试试 Cars from RollsRoyce，一个很棒的 Reddit 客户端！
+https://play.google.com/store/apps/details?id=com.rackluxury.rollsroyce"</string>
     <string name="error_getting_subreddit_name">"获取版块名称错误"</string>
     <string name="share_post_link">"分享帖子链接"</string>
     <string name="share_image_link">"分享图片链接"</string>
@@ -739,7 +739,7 @@ https://play.google.com/store/apps/details?id=com.rackluxury.rolex"</string>
     <string name="username_preview">"u/Hostilenemy"</string>
 
     <!-- 此项也建议不要翻译，它大概是主题界面预览时显示社区位置的 -->
-    <string name="subreddit_preview">"r/Rolex"</string>
+    <string name="subreddit_preview">"r/RollsRoyce"</string>
     <string name="primary_text_preview">"主要文字"</string>
     <string name="secondary_text_preview">"次要文字"</string>
     <string name="post_title_preview">"这是一个帖子"</string>

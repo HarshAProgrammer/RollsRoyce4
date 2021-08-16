@@ -134,7 +134,7 @@ Toque para tentar novamente."</string>
     <string name="unfollowed">"Parou de Seguir"</string>
     <string name="unfollow_failed">"Falha ao Parar de Seguir"</string>
     <string name="content_description_banner_imageview">"Imagem do Banner do Subreddit"</string>
-    <string name="app_label">"Watches from Rolex"</string>
+    <string name="app_label">"Cars from RollsRoyce"</string>
     <string name="search_hint">"Busque qualquer coisa"</string>
     <string name="no_posts_no_lazy_mode">"Nenhum post disponível"</string>
     <string name="lazy_mode_start">"Modo Preguiçoso inicia em %1$.1fs"</string>
@@ -388,10 +388,10 @@ Toque para tentar novamente."</string>
     <string name="settings_reddit_account_title">"Conta Reddit"</string>
     <string name="settings_reddit_account_summary">"u/Hostilenemy"</string>
     <string name="settings_subreddit_title">"Subreddit"</string>
-    <string name="settings_subreddit_summary">"r/Rolex"</string>
+    <string name="settings_subreddit_summary">"r/RollsRoyce"</string>
     <string name="settings_share_title">"Compartilhar"</string>
     <string name="settings_share_summary">"Compartilhe esse App com outros se você está gostando dele"</string>
-    <string name="settings_version_title">"Watches from Rolex"</string>
+    <string name="settings_version_title">"Cars from RollsRoyce"</string>
     <string name="settings_version_summary">"Versão %s"</string>
     <string name="settings_category_customization_title">"Personalização"</string>
     <string name="settings_customize_light_theme_title">"Tema Claro"</string>
@@ -454,8 +454,8 @@ Toque para tentar novamente."</string>
     <string name="error_getting_multi_reddit_data">"Falha ao obter os dados do multireddit"</string>
     <string name="error_loading_multi_reddit_list">"Não foi possível sincronizar os multireddits"</string>
     <string name="error_loading_subscriptions">"Não foi possível sincronizar as inscrições"</string>
-    <string name="share_this_app">"Conheça o Watches from Rolex, um cliente incrível para o Reddit!
-https://play.google.com/store/apps/details?id=com.rackluxury.rolex"</string>
+    <string name="share_this_app">"Conheça o Cars from RollsRoyce, um cliente incrível para o Reddit!
+https://play.google.com/store/apps/details?id=com.rackluxury.rollsroyce"</string>
     <string name="error_getting_subreddit_name">"Erro ao obter o nome do subreddit"</string>
     <string name="share_post_link">"Compartilhar Link do Post"</string>
     <string name="share_image_link">"Compartilhar Link da Imagem"</string>
@@ -698,7 +698,7 @@ Baseado no tema Índigo Amoled"</string>
     <string name="delete_all_front_page_scrolled_positions_success">"Todas as posições de rolagem na primeira página excluídas com sucesso"</string>
     <string name="reset_all_settings_success">"Configurações redefinidas com sucesso"</string>
     <string name="username_preview">"u/Hostilenemy"</string>
-    <string name="subreddit_preview">"r/Rolex"</string>
+    <string name="subreddit_preview">"r/RollsRoyce"</string>
     <string name="primary_text_preview">"Texto primário"</string>
     <string name="secondary_text_preview">"Texto secundário"</string>
     <string name="post_title_preview">"Este é um post"</string>

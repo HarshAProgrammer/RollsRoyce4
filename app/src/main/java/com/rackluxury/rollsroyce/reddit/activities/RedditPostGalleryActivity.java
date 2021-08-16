@@ -442,7 +442,7 @@ public class RedditPostGalleryActivity extends BaseActivity implements FlairBott
     public void captureImage() {
         Intent pictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         try {
-            imageUri = FileProvider.getUriForFile(this, "com.rackluxury.rolex.reddit.provider",
+            imageUri = FileProvider.getUriForFile(this, "com.rackluxury.rollsroyce.reddit.provider",
                     File.createTempFile("temp_img", ".jpg", getExternalFilesDir(Environment.DIRECTORY_PICTURES)));
             pictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
             startActivityForResult(pictureIntent, CAPTURE_IMAGE_REQUEST_CODE);

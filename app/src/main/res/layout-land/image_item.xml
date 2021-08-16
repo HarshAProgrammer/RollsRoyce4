@@ -60,7 +60,7 @@
                             android:layout_height="100dp"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
-                            android:contentDescription="@string/rolex_main_image_expensive"
+                            android:contentDescription="@string/rollsroyce_main_image_expensive"
                             android:src="@drawable/splashscreen"
                             app:civ_border_color="@color/colorPrimary"
                             app:civ_border_width="4dp"

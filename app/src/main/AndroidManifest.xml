@@ -145,7 +145,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/rolex_appwidget_info" />
+                android:resource="@xml/rollsroyce_appwidget_info" />
         </receiver>
 
         <provider

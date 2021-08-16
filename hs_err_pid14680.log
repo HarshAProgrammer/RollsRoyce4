@@ -42,7 +42,7 @@ C2: 133113 13581       4       com.android.tools.r8.ir.conversion.o::a (366 byte
 ---------------  P R O C E S S  ---------------
 
 Java Threads: ( => current thread )
-  0x000000001dcab800 JavaThread "Cache worker for execution history cache (C:\Users\Kartik\AndroidStudioProjects\Rolex1\.gradle\6.1.1\executionHistory)" [_thread_blocked, id=364, stack(0x0000000025520000,0x0000000025620000)]
+  0x000000001dcab800 JavaThread "Cache worker for execution history cache (C:\Users\Kartik\AndroidStudioProjects \RollsRoyce\.gradle\6.1.1\executionHistory)" [_thread_blocked, id=364, stack(0x0000000025520000,0x0000000025620000)]
   0x000000001dcae800 JavaThread "Execution worker for ':' Thread 7" [_thread_in_Java, id=23572, stack(0x0000000025220000,0x0000000025320000)]
   0x000000001dcac000 JavaThread "Execution worker for ':' Thread 6" [_thread_in_native, id=16560, stack(0x0000000025120000,0x0000000025220000)]
   0x000000001dcad800 JavaThread "Execution worker for ':' Thread 5" [_thread_in_Java, id=660, stack(0x0000000025020000,0x0000000025120000)]
@@ -50,10 +50,10 @@ Java Threads: ( => current thread )
   0x000000001dcad000 JavaThread "Execution worker for ':' Thread 3" [_thread_blocked, id=2584, stack(0x0000000024e20000,0x0000000024f20000)]
   0x000000001dca4800 JavaThread "Execution worker for ':' Thread 2" [_thread_blocked, id=24092, stack(0x0000000024d20000,0x0000000024e20000)]
   0x000000001dca6000 JavaThread "Execution worker for ':'" [_thread_blocked, id=22584, stack(0x0000000024c20000,0x0000000024d20000)]
-  0x000000001d46b800 JavaThread "Cache worker for file content cache (C:\Users\Kartik\AndroidStudioProjects\Rolex1\.gradle\6.1.1\fileContent)" [_thread_blocked, id=22556, stack(0x0000000024720000,0x0000000024820000)]
+  0x000000001d46b800 JavaThread "Cache worker for file content cache (C:\Users\Kartik\AndroidStudioProjects \RollsRoyce\.gradle\6.1.1\fileContent)" [_thread_blocked, id=22556, stack(0x0000000024720000,0x0000000024820000)]
   0x000000001d46b000 JavaThread "Cache worker for file content cache (C:\Users\Kartik\.gradle\caches\6.1.1\fileContent)" [_thread_blocked, id=19448, stack(0x00000000243e0000,0x00000000244e0000)]
   0x000000001d46e800 JavaThread "Memory manager" [_thread_blocked, id=12348, stack(0x000000001cb00000,0x000000001cc00000)]
-  0x000000001d46a000 JavaThread "Cache worker for Build Output Cleanup Cache (C:\Users\Kartik\AndroidStudioProjects\Rolex1\.gradle\buildOutputCleanup)" [_thread_blocked, id=23448, stack(0x00000000237e0000,0x00000000238e0000)]
+  0x000000001d46a000 JavaThread "Cache worker for Build Output Cleanup Cache (C:\Users\Kartik\AndroidStudioProjects \RollsRoyce\.gradle\buildOutputCleanup)" [_thread_blocked, id=23448, stack(0x00000000237e0000,0x00000000238e0000)]
   0x000000001d462800 JavaThread "pool-1-thread-1" [_thread_blocked, id=3444, stack(0x00000000236e0000,0x00000000237e0000)]
   0x000000001d469800 JavaThread "Build operations Thread 8" [_thread_blocked, id=19956, stack(0x00000000231e0000,0x00000000232e0000)]
   0x000000001d461000 JavaThread "Build operations Thread 7" [_thread_blocked, id=5580, stack(0x00000000230e0000,0x00000000231e0000)]
@@ -66,8 +66,8 @@ Java Threads: ( => current thread )
   0x000000001b262000 JavaThread "Cache worker for execution history cache (C:\Users\Kartik\.gradle\caches\6.1.1\executionHistory)" [_thread_blocked, id=8708, stack(0x0000000020bd0000,0x0000000020cd0000)]
   0x000000001b265800 JavaThread "Cache worker for cache directory md-rule (C:\Users\Kartik\.gradle\caches\6.1.1\md-rule)" [_thread_blocked, id=11036, stack(0x0000000020ad0000,0x0000000020bd0000)]
   0x000000001b265000 JavaThread "Cache worker for cache directory md-supplier (C:\Users\Kartik\.gradle\caches\6.1.1\md-supplier)" [_thread_blocked, id=24492, stack(0x00000000209d0000,0x0000000020ad0000)]
-  0x000000001b25f000 JavaThread "Cache worker for file hash cache (C:\Users\Kartik\AndroidStudioProjects\Rolex1\.gradle\6.1.1\fileHashes)" [_thread_blocked, id=18216, stack(0x00000000204d0000,0x00000000205d0000)]
-  0x000000001b263800 JavaThread "Cache worker for checksums cache (C:\Users\Kartik\AndroidStudioProjects\Rolex1\.gradle\checksums)" [_thread_blocked, id=12420, stack(0x00000000203d0000,0x00000000204d0000)]
+  0x000000001b25f000 JavaThread "Cache worker for file hash cache (C:\Users\Kartik\AndroidStudioProjects \RollsRoyce\.gradle\6.1.1\fileHashes)" [_thread_blocked, id=18216, stack(0x00000000204d0000,0x00000000205d0000)]
+  0x000000001b263800 JavaThread "Cache worker for checksums cache (C:\Users\Kartik\AndroidStudioProjects \RollsRoyce\.gradle\checksums)" [_thread_blocked, id=12420, stack(0x00000000203d0000,0x00000000204d0000)]
   0x000000001b262800 JavaThread "Cache worker for file hash cache (C:\Users\Kartik\.gradle\caches\6.1.1\fileHashes)" [_thread_blocked, id=4412, stack(0x00000000200d0000,0x00000000201d0000)]
   0x000000001b260800 JavaThread "File lock request listener" [_thread_in_native, id=12336, stack(0x000000001fe70000,0x000000001ff70000)]
   0x000000001b093800 JavaThread "Cache worker for journal cache (C:\Users\Kartik\.gradle\caches\journal-1)" [_thread_blocked, id=18016, stack(0x000000001ffd0000,0x00000000200d0000)]

@@ -135,7 +135,7 @@ This translation does it work well in this kinda format. People use "since" in s
     <string name="unfollowed">"Takip bırakıldı"</string>
     <string name="unfollow_failed">"Takip bırakılamadı"</string>
     <string name="content_description_banner_imageview">"Subreddit Banner Resmi"</string>
-    <string name="app_label">"Watches from Rolex"</string>
+    <string name="app_label">"Cars from RollsRoyce"</string>
     <string name="search_hint">"Bir şey arayın"</string>
     <string name="no_posts_no_lazy_mode">"Hiç gönderi yok"</string>
     <string name="lazy_mode_start">"Uyuşuk Modu %1$.1fs'da başlıyor"</string>
@@ -391,10 +391,10 @@ Tekrar denemek için tıklayın."</string>
     <string name="settings_reddit_account_title">"Reddit Hesabı"</string>
     <string name="settings_reddit_account_summary">"u/Hostilenemy"</string>
     <string name="settings_subreddit_title">"Subreddit"</string>
-    <string name="settings_subreddit_summary">"r/Rolex"</string>
+    <string name="settings_subreddit_summary">"r/RollsRoyce"</string>
     <string name="settings_share_title">"Paylaş"</string>
     <string name="settings_share_summary">"Bu uygulamayı beğendiyseniz başkalarıyla paylaşın"</string>
-    <string name="settings_version_title">"Watches from Rolex"</string>
+    <string name="settings_version_title">"Cars from RollsRoyce"</string>
     <string name="settings_version_summary">"%s Sürümü"</string>
     <string name="settings_category_customization_title">"Özelleştirme"</string>
     <string name="settings_customize_light_theme_title">"Açık Tema"</string>
@@ -457,8 +457,8 @@ Tekrar denemek için tıklayın."</string>
     <string name="error_getting_multi_reddit_data">"Multireddit verileri alınırken hata oluştu"</string>
     <string name="error_loading_multi_reddit_list">"Multireddit senkronize edilemiyor"</string>
     <string name="error_loading_subscriptions">"Abonelikler senkronize edilemiyor"</string>
-    <string name="share_this_app">"Harika bir Reddit uygulaması olan Watches from Rolex'e bir göz atın!
-https://play.google.com/store/apps/details?id=com.rackluxury.rolex"</string>
+    <string name="share_this_app">"Harika bir Reddit uygulaması olan Cars from RollsRoyce'e bir göz atın!
+https://play.google.com/store/apps/details?id=com.rackluxury.rollsroyce"</string>
     <string name="error_getting_subreddit_name">"Subreddit adı alınırken hata oluştu"</string>
     <string name="share_post_link">"Gönderi Bağlantısını Paylaş"</string>
     <string name="share_image_link">"Görüntü Bağlantısını Paylaş"</string>
@@ -703,7 +703,7 @@ Amoled Tema Tabanı Oluştur"</string>
     <string name="delete_all_front_page_scrolled_positions_success">"Ön sayfadaki tüm kaydırılmış pozisyonlar başarıyla silindi"</string>
     <string name="reset_all_settings_success">"Tüm ayarlar başarıyla sıfırlandı"</string>
     <string name="username_preview">"u/Hostilenemy"</string>
-    <string name="subreddit_preview">"r/Rolex"</string>
+    <string name="subreddit_preview">"r/RollsRoyce"</string>
     <string name="primary_text_preview">"Birincil Metin"</string>
     <string name="secondary_text_preview">"İkincil Metin"</string>
     <string name="post_title_preview">"Bu bir gönderidir"</string>

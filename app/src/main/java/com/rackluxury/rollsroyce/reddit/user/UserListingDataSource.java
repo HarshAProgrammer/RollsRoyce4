@@ -62,7 +62,7 @@ public class UserListingDataSource extends PageKeyedDataSource<String, UserData>
 
                     @Override
                     public void onFetchUserListingDataFailed() {
-                        initialLoadStateLiveData.postValue(new NetworkState(NetworkState.Status.FAILED, "Error retrieving com.rackluxury.rolex.reddit.User list"));
+                        initialLoadStateLiveData.postValue(new NetworkState(NetworkState.Status.FAILED, "Error retrieving com.rackluxury.rollsroyce.reddit.User list"));
                     }
                 });
     }
@@ -91,7 +91,7 @@ public class UserListingDataSource extends PageKeyedDataSource<String, UserData>
 
                     @Override
                     public void onFetchUserListingDataFailed() {
-                        paginationNetworkStateLiveData.postValue(new NetworkState(NetworkState.Status.FAILED, "Error retrieving com.rackluxury.rolex.reddit.User list"));
+                        paginationNetworkStateLiveData.postValue(new NetworkState(NetworkState.Status.FAILED, "Error retrieving com.rackluxury.rollsroyce.reddit.User list"));
                     }
                 });
     }

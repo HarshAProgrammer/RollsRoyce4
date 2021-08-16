@@ -6,5 +6,5 @@
 
 
 -keep class com.rackluxury.rollsroyce.* {*;}
-#-keep class com.rackluxury.rolex.Request {*;}
+#-keep class com.rackluxury.rollsroyce.Request {*;}
 

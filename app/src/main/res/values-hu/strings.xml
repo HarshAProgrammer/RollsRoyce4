@@ -124,7 +124,7 @@
     <string name="unfollowed">"Követés megszüntetve"</string>
     <string name="unfollow_failed">"Követés megszüntetése sikertelen"</string>
     <string name="content_description_banner_imageview">"Subreddit banner kép"</string>
-    <string name="app_label">"Watches from Rolex"</string>
+    <string name="app_label">"Cars from RollsRoyce"</string>
     <string name="search_hint">"Keress rá bármire"</string>
     <string name="no_posts_no_lazy_mode">"Nincs rendelkezésre álló poszt"</string>
     <string name="lazy_mode_start">"Lusta mód kezdődik: %1$.1fs"</string>
@@ -380,7 +380,7 @@
     <string name="settings_reddit_account_title">"Reddit fiók"</string>
     <string name="settings_reddit_account_summary">"u/Hostilenemy"</string>
     <string name="settings_subreddit_title">"Subreddit"</string>
-    <string name="settings_subreddit_summary">"r/Rolex"</string>
+    <string name="settings_subreddit_summary">"r/RollsRoyce"</string>
     <string name="settings_share_title">"Megosztás"</string>
     <string name="settings_share_summary">"Ha tetszik az app oszd meg másokkal is"</string>
     <string name="settings_version_title">"Infiniti Reddithez"</string>
@@ -449,7 +449,7 @@
     <string name="error_loading_multi_reddit_list">"Nem lehet szinkronizálni a multiredditeket"</string>
     <string name="error_loading_subscriptions">"Nem lehet szinkronizálni a feliratkozásokat"</string>
     <string name="share_this_app">"Nézz rá az Infinityre, ami egy remek Reddit kliens!
-https://play.google.com/store/apps/details?id=com.rackluxury.rolex"</string>
+https://play.google.com/store/apps/details?id=com.rackluxury.rollsroyce"</string>
     <string name="error_getting_subreddit_name">"Hiba subreddit nevének megszerzésekor"</string>
     <string name="share_post_link">"Poszt link megosztása"</string>
     <string name="share_image_link">"Kép link megosztása"</string>
@@ -694,7 +694,7 @@ Az alap az indigó amoled téma"</string>
     <string name="delete_all_front_page_scrolled_positions_success">"A Kezdőlap összes görgetési pozíciójának törlése sikeres"</string>
     <string name="reset_all_settings_success">"Összes beállítás visszaállítása sikeres"</string>
     <string name="username_preview">"u/Hostilenemy"</string>
-    <string name="subreddit_preview">"r/Rolex"</string>
+    <string name="subreddit_preview">"r/RollsRoyce"</string>
     <string name="primary_text_preview">"Elsődleges szöveg"</string>
     <string name="secondary_text_preview">"Másodlagos szöveg"</string>
     <string name="post_title_preview">"Ez egy poszt"</string>

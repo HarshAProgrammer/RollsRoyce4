@@ -55,7 +55,7 @@ public class AboutPreferenceFragment extends PreferenceFragmentCompat {
                     activity.startActivity(playStoreIntent);
                 } else {
                     Intent intent = new Intent(activity, RedditLinkResolverActivity.class);
-                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.rackluxury.rolex"));
+                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.rackluxury.rollsroyce"));
                     activity.startActivity(intent);
                 }
                 return true;

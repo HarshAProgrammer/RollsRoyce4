@@ -8,9 +8,9 @@ public class CustomThemeSharedPreferencesUtils {
     public static final int LIGHT = 0;
     public static final int DARK = 1;
     public static final int AMOLED = 2;
-    public static final String LIGHT_THEME_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.light_theme";
-    public static final String DARK_THEME_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.dark_theme";
-    public static final String AMOLED_THEME_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.amoled_theme";
+    public static final String LIGHT_THEME_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.light_theme";
+    public static final String DARK_THEME_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.dark_theme";
+    public static final String AMOLED_THEME_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.amoled_theme";
     public static final String LIGHT_STATUS_BAR = "lightStatusBar";
     public static final String LIGHT_NAV_BAR = "lightNavBar";
     public static final String CHANGE_STATUS_BAR_ICON_COLOR_AFTER_TOOLBAR_COLLAPSED_IN_IMMERSIVE_INTERFACE = "changeStatusBarIconColorImmersive";

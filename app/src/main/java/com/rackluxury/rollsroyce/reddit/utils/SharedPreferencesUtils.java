@@ -41,7 +41,7 @@ public class SharedPreferencesUtils {
     public static final String SHOW_AVATAR_ON_THE_RIGHT = "show_avatar_on_the_right";
     public static final String DEFAULT_SEARCH_RESULT_TAB = "default_search_result_tab";
 
-    public static final String SORT_TYPE_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.sort_type";
+    public static final String SORT_TYPE_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.sort_type";
     public static final String SORT_TYPE_BEST_POST = "sort_type_best_post";
     public static final String SORT_TIME_BEST_POST = "sort_time_best_post";
     public static final String SORT_TYPE_SEARCH_POST = "sort_type_search_post";
@@ -58,7 +58,7 @@ public class SharedPreferencesUtils {
     public static final String SORT_TYPE_SEARCH_USER = "sort_type_search_user";
     public static final String SORT_TYPE_POST_COMMENT = "sort_type_post_comment";
 
-    public static final String POST_LAYOUT_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.post_layout";
+    public static final String POST_LAYOUT_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.post_layout";
     public static final String POST_LAYOUT_FRONT_PAGE_POST = "post_layout_best_post";
     public static final String POST_LAYOUT_SUBREDDIT_POST_BASE = "post_layout_subreddit_post_";
     public static final String POST_LAYOUT_MULTI_REDDIT_POST_BASE = "post_layout_multi_reddit_post_";
@@ -69,7 +69,7 @@ public class SharedPreferencesUtils {
     public static final int POST_LAYOUT_GALLERY = 2;
     public static final int POST_LAYOUT_CARD_2 = 3;
 
-    public static final String FRONT_PAGE_SCROLLED_POSITION_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.front_page_scrolled_position";
+    public static final String FRONT_PAGE_SCROLLED_POSITION_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.front_page_scrolled_position";
     public static final String FRONT_PAGE_SCROLLED_POSITION_FRONT_PAGE_BASE = "_front_page";
     public static final String FRONT_PAGE_SCROLLED_POSITION_ANONYMOUS = ".anonymous";
 
@@ -187,7 +187,7 @@ public class SharedPreferencesUtils {
     public static final String DEFAULT_LINK_POST_LAYOUT_KEY = "default_link_post_layout";
 
     public static final String DEFAULT_PREFERENCES_FILE = "ml.docilealligator.infinityforreddit_preferences";
-    public static final String MAIN_PAGE_TABS_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.main_page_tabs";
+    public static final String MAIN_PAGE_TABS_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.main_page_tabs";
     public static final String MAIN_PAGE_TAB_COUNT = "_main_page_tab_count";
     public static final String MAIN_PAGE_SHOW_TAB_NAMES = "_main_page_show_tab_names";
     public static final String MAIN_PAGE_TAB_1_TITLE = "_main_page_tab_1_title";
@@ -215,7 +215,7 @@ public class SharedPreferencesUtils {
     public static final String MAIN_PAGE_SHOW_SUBSCRIBED_SUBREDDITS = "_main_page_show_subscribed_subreddits";
     public static final String MAIN_PAGE_SHOW_FAVORITE_SUBSCRIBED_SUBREDDITS = "_main_page_show_favorite_subscribed_subreddits";
 
-    public static final String BOTTOM_APP_BAR_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.bottom_app_bar";
+    public static final String BOTTOM_APP_BAR_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.bottom_app_bar";
     public static final String MAIN_ACTIVITY_BOTTOM_APP_BAR_OPTION_COUNT = "main_activity_bottom_app_bar_option_count";
     public static final String MAIN_ACTIVITY_BOTTOM_APP_BAR_OPTION_1 = "main_activity_bottom_app_bar_option_1";
     public static final String MAIN_ACTIVITY_BOTTOM_APP_BAR_OPTION_2 = "main_activity_bottom_app_bar_option_2";
@@ -292,24 +292,24 @@ public class SharedPreferencesUtils {
     public static final int OTHER_ACTIVITIES_BOTTOM_APP_BAR_FAB_HIDE_READ_POSTS = 8;
     public static final int OTHER_ACTIVITIES_BOTTOM_APP_BAR_FAB_FILTER_POSTS = 9;
 
-    public static final String NSFW_AND_SPOILER_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.nsfw_and_spoiler";
+    public static final String NSFW_AND_SPOILER_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.nsfw_and_spoiler";
     public static final String NSFW_BASE = "_nsfw";
     public static final String BLUR_NSFW_BASE = "_blur_nsfw";
     public static final String DO_NOT_BLUR_NSFW_IN_NSFW_SUBREDDITS = "do_not_blur_nsfw_in_nsfw_subreddits";
     public static final String BLUR_SPOILER_BASE = "_blur_spoiler";
 
-    public static final String POST_HISTORY_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.post_history";
+    public static final String POST_HISTORY_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.post_history";
     public static final String MARK_POSTS_AS_READ_BASE = "_mark_posts_as_read";
     public static final String MARK_POSTS_AS_READ_AFTER_VOTING_BASE = "_mark_posts_as_read_after_voting";
     public static final String MARK_POSTS_AS_READ_ON_SCROLL_BASE = "_mark_posts_as_read_on_scroll";
     public static final String HIDE_READ_POSTS_AUTOMATICALLY_BASE = "_hide_read_posts_automatically";
 
-    public static final String CURRENT_ACCOUNT_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.current_account";
+    public static final String CURRENT_ACCOUNT_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.current_account";
     public static final String ACCOUNT_NAME = "account_name";
     public static final String ACCESS_TOKEN = "access_token";
     public static final String ACCOUNT_IMAGE_URL = "account_image_url";
 
-    public static final String NAVIGATION_DRAWER_SHARED_PREFERENCES_FILE = "com.rackluxury.rolex.reddit.navigation_drawer";
+    public static final String NAVIGATION_DRAWER_SHARED_PREFERENCES_FILE = "com.rackluxury.rollsroyce.reddit.navigation_drawer";
     public static final String COLLAPSE_ACCOUNT_SECTION = "collapse_account_section";
     public static final String COLLAPSE_REDDIT_SECTION = "collapse_reddit_section";
     public static final String COLLAPSE_POST_SECTION = "collapse_post_section";

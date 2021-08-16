@@ -124,7 +124,7 @@
     <string name="unfollowed">"Entfolgt"</string>
     <string name="unfollow_failed">"Entfolgen fehlgeschlagen"</string>
     <string name="content_description_banner_imageview">"Subreddit Banner-Bild"</string>
-    <string name="app_label">"Watches from Rolex"</string>
+    <string name="app_label">"Cars from RollsRoyce"</string>
     <string name="search_hint">"Alles durchsuchen"</string>
     <string name="no_posts_no_lazy_mode">"Keine Beiträge verfügbar"</string>
     <string name="lazy_mode_start">"Faulheitsmodus startet in %1$.1fs"</string>
@@ -395,10 +395,10 @@ Funktioniert vielleicht nicht auf Android 11"</string>
     <string name="settings_reddit_account_title">"Reddit-Konto"</string>
     <string name="settings_reddit_account_summary">"u/Hostilenemy"</string>
     <string name="settings_subreddit_title">"Subreddit"</string>
-    <string name="settings_subreddit_summary">"r/Rolex"</string>
+    <string name="settings_subreddit_summary">"r/RollsRoyce"</string>
     <string name="settings_share_title">"Teilen"</string>
     <string name="settings_share_summary">"Teile diese App mit anderen Leuten, wenn sie dir gefällt"</string>
-    <string name="settings_version_title">"Watches from Rolex"</string>
+    <string name="settings_version_title">"Cars from RollsRoyce"</string>
     <string name="settings_version_summary">"Version %s"</string>
     <string name="settings_category_customization_title">"Anpassung"</string>
     <string name="settings_customize_light_theme_title">"Helles Thema"</string>
@@ -461,7 +461,7 @@ Funktioniert vielleicht nicht auf Android 11"</string>
     <string name="error_getting_multi_reddit_data">"Fehler beim Abrufen der Multireddit-Daten"</string>
     <string name="error_loading_multi_reddit_list">"Kann Multireddits nicht synchronisieren"</string>
     <string name="error_loading_subscriptions">"Kann Abonnements nicht synchronisieren"</string>
-    <string name="share_this_app">"Schau dir Watches from Rolex an, ein super Reddit-Client! https://play.google.com/store/apps/details?id=com.rackluxury.rolex"</string>
+    <string name="share_this_app">"Schau dir Cars from RollsRoyce an, ein super Reddit-Client! https://play.google.com/store/apps/details?id=com.rackluxury.rollsroyce"</string>
     <string name="error_getting_subreddit_name">"Fehler beim Abrufen des Subreddit-Namens"</string>
     <string name="share_post_link">"Beitrags-Link teilen"</string>
     <string name="share_image_link">"Bild-Link teilen"</string>
@@ -725,7 +725,7 @@ Funktioniert vielleicht nicht auf Android 11"</string>
     <!-- Fuzzy -->
     <string name="reset_all_settings_success">"Alle Einstellungen erfolgreich gelöscht"</string>
     <string name="username_preview">"u/Hostilenemy"</string>
-    <string name="subreddit_preview">"r/Rolex"</string>
+    <string name="subreddit_preview">"r/RollsRoyce"</string>
     <string name="primary_text_preview">"Primärer Text"</string>
     <string name="secondary_text_preview">"Sekundärer Text"</string>
     <string name="post_title_preview">"Dies ist ein Beitrag"</string>

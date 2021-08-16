@@ -38,7 +38,7 @@ public class CompanyInfo extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         if(getSupportActionBar() != null){
-            getSupportActionBar().setTitle("Rolex Inc.");
+            getSupportActionBar().setTitle("Rolls Royce Inc.");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
@@ -107,7 +107,7 @@ public class CompanyInfo extends AppCompatActivity {
 
             switch (i) {
                 case 0:
-                    sliderView.setDescription("Why are Rolex watches so valuable?");
+                    sliderView.setDescription("Why are Rolls Royce watches so valuable?");
                     sliderView.setImageDrawable(R.drawable.valuable_company);
                     break;
                 case 1:
@@ -128,7 +128,7 @@ public class CompanyInfo extends AppCompatActivity {
                     break;
                 case 5:
                     sliderView.setImageDrawable(R.drawable.investment_company);
-                    sliderView.setDescription("Are Rolex watches a good investment?");
+                    sliderView.setDescription("Are Rolls Royce watches a good investment?");
                     break;
             }
 

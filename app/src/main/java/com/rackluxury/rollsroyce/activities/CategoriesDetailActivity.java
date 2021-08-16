@@ -367,7 +367,7 @@ public class CategoriesDetailActivity extends AppCompatActivity {
             bitmap = drawable.getBitmap();
 
             try {
-                File file = new File(getApplicationContext().getExternalCacheDir(), File.separator + "Watches from Rolex.png");
+                File file = new File(getApplicationContext().getExternalCacheDir(), File.separator + "Cars from RollsRoyce.png");
                 FileOutputStream fOut = new FileOutputStream(file);
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
                 fOut.flush();
@@ -424,7 +424,7 @@ public class CategoriesDetailActivity extends AppCompatActivity {
         drawable = (BitmapDrawable) categoriesImage.getDrawable();
         bitmap = drawable.getBitmap();
         File filePath = Environment.getExternalStorageDirectory();
-        File dir = new File(filePath.getAbsolutePath() + "/Watches From Rolex/");
+        File dir = new File(filePath.getAbsolutePath() + "/Cars from RollsRoyce/");
         dir.mkdir();
         File file = new File(dir, System.currentTimeMillis() + ".jpg");
         try {

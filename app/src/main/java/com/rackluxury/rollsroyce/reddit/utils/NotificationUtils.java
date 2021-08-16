@@ -31,7 +31,7 @@ public class NotificationUtils {
     private static final int SUMMARY_BASE_ID_UNREAD_MESSAGE = 0;
     private static final int NOTIFICATION_BASE_ID_UNREAD_MESSAGE = 1;
 
-    private static final String GROUP_USER_BASE = "com.rackluxury.rolex.reddit.";
+    private static final String GROUP_USER_BASE = "com.rackluxury.rollsroyce.reddit.";
 
     public static NotificationCompat.Builder buildNotification(NotificationManagerCompat notificationManager,
                                                                Context context, String title, String content,

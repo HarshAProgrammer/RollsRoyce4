@@ -168,7 +168,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
 
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Blog Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rolex/drawable/blog_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/blog_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override

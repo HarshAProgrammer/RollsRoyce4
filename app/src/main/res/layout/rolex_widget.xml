@@ -5,17 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
-        android:id="@+id/rolex_widget_image"
+        android:id="@+id/rollsroyce_widget_image"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_above="@+id/rolex_widget_button"
+        android:layout_above="@+id/rollsroyce_widget_button"
         android:layout_centerHorizontal="true"
         android:background="#FFF"
         android:src="@drawable/widget_icon"
         android:visibility="gone"
         tools:visibility="visible" />
     <Button
-        android:id="@+id/rolex_widget_button"
+        android:id="@+id/rollsroyce_widget_button"
         style="@style/StrokeButtonStyle"
         android:background="@color/colorWhite"
         android:layout_width="100dp"

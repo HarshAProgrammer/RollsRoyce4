@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="12dp"
-        android:contentDescription="@string/rolex_inc"
+        android:contentDescription="@string/rollsroyce_inc"
         android:src="@drawable/splashscreen"
         app:layout_constraintBottom_toTopOf="@id/tvVersionAbout"
         app:layout_constraintEnd_toEndOf="parent"

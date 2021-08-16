@@ -1,9 +1,5 @@
 package com.rackluxury.rollsroyce.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
-
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -17,8 +13,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.rackluxury.rollsroyce.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.rackluxury.rollsroyce.R;
 
 import tyrantgit.explosionfield.ExplosionField;
 
@@ -95,7 +95,7 @@ public class AboutUsActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 explosionField.explode(privacyImage);
-                String url = "https://rolexwatchessa.blogspot.com/2020/08/watches-from-rolex-privacy-policy.html";
+                String url = "https://rollsroycemotorcars.info.blogspot.com/2020/08/watches-from-rollsroyce-privacy-policy.html";
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -108,7 +108,7 @@ public class AboutUsActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 explosionField.explode(termsImage);
-                String url = "https://rolexwatchessa.blogspot.com/2020/08/watches-from-rolex-terms-and-condition.html";
+                String url = "https://rollsroycemotorcars.info.blogspot.com/2020/08/watches-from-rollsroyce-terms-and-condition.html";
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -122,7 +122,7 @@ public class AboutUsActivity extends AppCompatActivity implements
             public void onClick(View view) {
                 explosionField.explode(feedbackImage);
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto", "rolexwatchessa@gmail.com", null));
+                        "mailto", "rollsroycemotorcars.info@gmail.com", null));
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Theme of mail");
                 startActivity(Intent.createChooser(intent, "Select post client"));
             }
