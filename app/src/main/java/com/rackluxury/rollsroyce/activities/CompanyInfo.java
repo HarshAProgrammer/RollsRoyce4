@@ -107,7 +107,7 @@ public class CompanyInfo extends AppCompatActivity {
 
             switch (i) {
                 case 0:
-                    sliderView.setDescription("Why are Rolls Royce watches so valuable?");
+                    sliderView.setDescription("Why are Rolls Royce Motor Cars so valuable?");
                     sliderView.setImageDrawable(R.drawable.valuable_company);
                     break;
                 case 1:
@@ -128,7 +128,7 @@ public class CompanyInfo extends AppCompatActivity {
                     break;
                 case 5:
                     sliderView.setImageDrawable(R.drawable.investment_company);
-                    sliderView.setDescription("Are Rolls Royce watches a good investment?");
+                    sliderView.setDescription("Are Rolls Royce Motor Cars a good investment?");
                     break;
             }
 

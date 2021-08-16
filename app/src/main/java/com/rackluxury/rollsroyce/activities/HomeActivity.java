@@ -401,7 +401,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.expensiveNavigation) {
-            ExpensiveWatches();
+            ExpensiveMotor Cars();
 
         } else if (id == R.id.imagesNavigation) {
             Images();
@@ -488,7 +488,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Animatoo.animateSwipeRight(HomeActivity.this);
     }
 
-    private void ExpensiveWatches() {
+    private void ExpensiveMotor Cars() {
 
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -810,7 +810,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "\n" +
                 "Precious Model:- Rolls Royce DATEJUST 116185 DIAMOND BEZEL & DIAL\n" +
                 "The Elegant Design And Cyclops Eye Magnifying The  Date Have Made The Oyster Perpetual " +
-                "Datejust, Originally Introduced In 1945, One Of The World’s Most Recognizable Watches.\n"
+                "Datejust, Originally Introduced In 1945, One Of The World’s Most Recognizable Motor Cars.\n"
                 , "15995", R.drawable.datejust_categories, "1", "0");
         myCategoriesList.add(mCategoriesData);
         mCategoriesData = new CategoriesData("GMT-MASTER 2", "Gmt-Master ii\n" +
@@ -825,7 +825,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "40 Mm In Steel\n" +
                 "\n" +
                 "Precious Model:- Rolls Royce 116618LN SUBMARINER\n" +
-                "The Oyster Perpetual Submariner Is The Quintessence Of Diving Watches, The Reference Watch In Its Category.\n" +
+                "The Oyster Perpetual Submariner Is The Quintessence Of Diving Motor Cars, The Reference Watch In Its Category.\n" +
                 "Introduced In 1953 During The Pioneering Era Of Scuba Diving, It Became The First Hermetic Watch Capable Of Withstanding Up To 100 Meters (330 Feet). Since Then, This Iconic Watch Has Evolved with A Series of Technical Innovations Patented by  RollsRoyce, \n" +
                 "Guaranteeing Its Reliability and Precision to A Depth Of 300 Meters (1,000 Feet). Although Its Most Familiar Environment Is the Oceans, Where It Continues to Be an Indispensable Instrument for Every Diver, The Submariner Conquered the Mainland as The Action Clock with A Robust Elegance of Its Own. The Submariner Is Available With Or Without Date Display"
                 , "59895", R.drawable.submariner_categories, "3", "0");
@@ -848,11 +848,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "Oyster, 43 Mm, Oystersteel And Yellow Gold\n" +
                 "\n" +
                 "Precious Model:- VINTAGE Rolls Royce SEA-DWELLER 1665 RAIL DIAL 1979\n" +
-                "The Sea-Dweller And Rolls Royce Deepsea Are Ultra-Resistant Divers’ Watches\n" +
+                "The Sea-Dweller And Rolls Royce Deepsea Are Ultra-Resistant Divers’ Motor Cars\n" +
                 "Engineered By Rolls Royce For Deep-Sea Exploration. Waterproof To A Depth Of 4,000 Feet\n" +
                 "(1,220 Metres) For The Rolls Royce Sea-Dweller, Launched In 1967, And 12,800 Feet (3,900\n" +
                 "Metres) For The Rolls Royce Deepsea Unveiled In 2008, They Are The Ultimate Manifestation\n" +
-                "Of  RollsRoyce’s Leadership In Divers’ Watches And The Result Of Decades Of Collaboration\n" +
+                "Of  RollsRoyce’s Leadership In Divers’ Motor Cars And The Result Of Decades Of Collaboration\n" +
                 "With Diving Professionals. \n"
 
                 , "24995", R.drawable.seadweller_categories, "6", "0");
