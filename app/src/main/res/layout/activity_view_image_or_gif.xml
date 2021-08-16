@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    tools:application="com.rackluxury.rolex.reddit.activities.ViewImageActivity">
+    tools:application="com.rackluxury.rollsroyce.reddit.activities.ViewImageActivity">
 
     <ProgressBar
         android:id="@+id/progress_bar_view_image_or_gif_activity"

@@ -18,7 +18,7 @@
             android:clickable="true"
             android:focusable="true">
 
-            <com.rackluxury.rolex.reddit.customviews.CustomToroContainer
+            <com.rackluxury.rollsroyce.reddit.customviews.CustomToroContainer
                 android:id="@+id/post_detail_recycler_view_view_post_detail_fragment"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:application="com.rackluxury.rolex.reddit.fragments.PostFragment">
+    tools:application="com.rackluxury.rollsroyce.reddit.fragments.PostFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout_post_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.rackluxury.rolex.reddit.customviews.CustomToroContainer
+        <com.rackluxury.rollsroyce.reddit.customviews.CustomToroContainer
             android:id="@+id/recycler_view_post_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

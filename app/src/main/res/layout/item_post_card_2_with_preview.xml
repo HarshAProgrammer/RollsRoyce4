@@ -18,7 +18,7 @@
         app:cardElevation="2dp"
         app:cardCornerRadius="8dp">
 
-        <com.rackluxury.rolex.reddit.customviews.AspectRatioGifImageView
+        <com.rackluxury.rollsroyce.reddit.customviews.AspectRatioGifImageView
             android:id="@+id/image_view_item_post_card_2_with_preview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
         app:flChildSpacingForLastRow="align"
         app:flRowSpacing="8dp">
 
-        <com.rackluxury.rolex.reddit.customviews.AspectRatioGifImageView
+        <com.rackluxury.rollsroyce.reddit.customviews.AspectRatioGifImageView
             android:id="@+id/icon_gif_image_view_item_post_card_2_with_preview"
             android:layout_width="24dp"
             android:layout_height="24dp" />

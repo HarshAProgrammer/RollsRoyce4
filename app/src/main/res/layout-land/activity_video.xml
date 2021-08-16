@@ -58,7 +58,7 @@
             android:layout_height="wrap_content">
 
 
-            <com.rackluxury.rolex.activities.VideoPlayerRecyclerView
+            <com.rackluxury.rollsroyce.activities.VideoPlayerRecyclerView
                 android:id="@+id/rvVideoActivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -70,7 +70,7 @@
                 app:layout_constraintTop_toBottomOf="@id/ablVideo">
 
 
-            </com.rackluxury.rolex.activities.VideoPlayerRecyclerView>
+            </com.rackluxury.rollsroyce.activities.VideoPlayerRecyclerView>
         </com.facebook.shimmer.ShimmerFrameLayout>
 
     </FrameLayout>

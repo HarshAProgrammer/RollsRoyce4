@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.rackluxury.rolex">
+    package="com.rackluxury.rollsroyce">
 
     <queries>
         <intent>
@@ -31,7 +31,7 @@
 
 
     <application
-        android:name="com.rackluxury.rolex.reddit.Infinity"
+        android:name="com.rackluxury.rollsroyce.reddit.Infinity"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
@@ -49,7 +49,7 @@
             android:resource="@color/fcmNotificationColor" />
 
         <service
-            android:name=".activities.ExpensiveNotificationService"
+            android:name="com.rackluxury.rollsroyce.activities.ExpensiveNotificationService"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECIEVE" />
@@ -57,63 +57,63 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".activities.FavouriteCategoriesActivity" />
-        <activity android:name=".activities.IntroActivity">
+        <activity android:name="com.rackluxury.rollsroyce.activities.FavouriteCategoriesActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.FavouriteExpensiveActivity" />
-        <activity android:name=".activities.FirstSplashScreenActivity" />
-        <activity android:name=".activities.SecondSplashScreenActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.FavouriteExpensiveActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.FirstSplashScreenActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.SecondSplashScreenActivity" />
         <activity
-            android:name=".activities.LoginOrRegisterActivity"
+            android:name="com.rackluxury.rollsroyce.activities.LoginOrRegisterActivity"
             android:launchMode="singleTop" />
-        <activity android:name=".activities.RegistrationActivity" />
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.ForgotPassword" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.RegistrationActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.LoginActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.ForgotPassword" />
         <activity
-            android:name=".activities.HomeActivity"
+            android:name="com.rackluxury.rollsroyce.activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.VideoActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.VideoActivity" />
         <activity
-            android:name=".activities.CategoriesDetailActivity"
+            android:name="com.rackluxury.rollsroyce.activities.CategoriesDetailActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity android:name=".activities.ExpensiveCheckerActivity"
+        <activity android:name="com.rackluxury.rollsroyce.activities.ExpensiveCheckerActivity"
                     android:launchMode="singleTop"/>
-        <activity android:name=".activities.BlogCheckerActivity"
+        <activity android:name="com.rackluxury.rollsroyce.activities.BlogCheckerActivity"
             android:launchMode="singleTop"/>
         <activity
-            android:name=".activities.ExpensiveActivity"
-            android:parentActivityName="activities.HomeActivity" />
+            android:name="com.rackluxury.rollsroyce.activities.ExpensiveActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.activities.HomeActivity" />
         <activity
-            android:name=".activities.ExpensiveDetailActivity"
+            android:name="com.rackluxury.rollsroyce.activities.ExpensiveDetailActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity android:name=".activities.ImagesActivity" />
-        <activity android:name=".activities.ImagesDetailActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.ImagesActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.ImagesDetailActivity" />
 
         <activity
-            android:name="com.rackluxury.rolex.youtube.YouTubeActivity"
+            android:name="com.rackluxury.rollsroyce.youtube.YouTubeActivity"
             android:theme="@style/AppThemeYoutube"
             android:label="@string/app_name" />
 
 
 
         <activity
-            android:name=".activities.ProfileActivity"
+            android:name="com.rackluxury.rollsroyce.activities.ProfileActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.UpdatePasswordActivity" />
-        <activity android:name=".activities.UpdateProfileActivity" />
-        <activity android:name=".activities.BillingActivity" />
-        <activity android:name=".activities.FactsActivity" />
-        <activity android:name=".activities.FactsDetailActivity" />
-        <activity android:name=".activities.CompanyInfo" />
-        <activity android:name=".activities.AboutUsActivity" />
-        <activity android:name=".blog.BlogActivity" />
-        <activity android:name=".blog.BlogDetailActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.UpdatePasswordActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.UpdateProfileActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.BillingActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.FactsActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.FactsDetailActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.CompanyInfo" />
+        <activity android:name="com.rackluxury.rollsroyce.activities.AboutUsActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.blog.BlogActivity" />
+        <activity android:name="com.rackluxury.rollsroyce.blog.BlogDetailActivity" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -138,7 +138,7 @@
 
 
 
-        <receiver android:name=".activities.RolexAppWidgetProvider">
+        <receiver android:name="com.rackluxury.rollsroyce.activities.RolexAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -161,172 +161,172 @@
 
 
 
-        <activity android:name=".reddit.activities.RedditTrendingActivity"
+        <activity android:name="com.rackluxury.rollsroyce.reddit.activities.RedditTrendingActivity"
             android:label="@string/trending_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditPostGalleryActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditPostGalleryActivity"
             android:label="@string/post_gallery_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditRPANActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditRPANActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
             android:label="@string/rpan_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.TranslucentStatusBar"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".reddit.activities.RedditLockScreenActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditLockScreenActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.AnonymousSubscriptionsActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.AnonymousSubscriptionsActivity"
             android:label="@string/subscriptions"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.RedditWebViewActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditWebViewActivity"
             android:label=""
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.SuicidePreventionActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.SuicidePreventionActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.MultiredditSelectionActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.MultiredditSelectionActivity"
             android:label="@string/multireddit_selection_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.RedditSearchUsersResultActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSearchUsersResultActivity"
             android:label="@string/search_users_result_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.PostFilterUsageListingActivity"
-            android:parentActivityName=".reddit.activities.RedditSettingsActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.PostFilterUsageListingActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditSettingsActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.RedditPostFilterPreferenceActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditPostFilterPreferenceActivity"
             android:label="@string/post_filter_preference_activity_label"
-            android:parentActivityName=".reddit.activities.RedditSettingsActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditSettingsActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.CustomizePostFilterActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.CustomizePostFilterActivity"
             android:label="@string/customize_post_filter_activity_label"
-            android:parentActivityName=".reddit.activities.RedditSettingsActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditSettingsActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.FetchRandomSubredditOrPostActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.FetchRandomSubredditOrPostActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.GiveAwardActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.GiveAwardActivity"
             android:label="@string/give_award_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.SelectUserFlairActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.SelectUserFlairActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.FullMarkdownActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.FullMarkdownActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditSubmitCrosspostActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSubmitCrosspostActivity"
             android:label="@string/submit_crosspost_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
 
         <service
-            android:name=".reddit.services.RedditDownloadMediaService"
+            android:name="com.rackluxury.rollsroyce.reddit.services.RedditDownloadMediaService"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".reddit.activities.RedditViewRedditGalleryActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewRedditGalleryActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Draggable" />
         <activity
-            android:name=".reddit.activities.SendPrivateMessageActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.SendPrivateMessageActivity"
             android:label="@string/send_private_message_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
 
         <service
-            android:name=".reddit.services.RedditDownloadRedditVideoService"
+            android:name="com.rackluxury.rollsroyce.reddit.services.RedditDownloadRedditVideoService"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".reddit.activities.RedditViewPrivateMessagesActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewPrivateMessagesActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditViewImgurMediaActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewImgurMediaActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Draggable" />
         <activity
-            android:name=".reddit.activities.ReportActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.ReportActivity"
             android:label="@string/report_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.SelectedSubredditsAndUsersActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.SelectedSubredditsAndUsersActivity"
             android:label="@string/selected_subeddits_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditEditMultiRedditActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditEditMultiRedditActivity"
             android:label="@string/edit_multi_reddit_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditCustomThemePreviewActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditCustomThemePreviewActivity"
             android:label="@string/theme_preview_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.SlidableWithTranslucentWindow" />
         <activity
-            android:name=".reddit.activities.CustomThemeListingActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.CustomThemeListingActivity"
             android:label="@string/custom_theme_listing_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.RedditCustomizeThemeActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditCustomizeThemeActivity"
             android:label="@string/customize_theme_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar" />
         <activity
-            android:name=".reddit.activities.RedditSubredditMultiselectionActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSubredditMultiselectionActivity"
             android:label="@string/subreddit_multiselection_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.CreateMultiRedditActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.CreateMultiRedditActivity"
             android:label="@string/create_multi_reddit_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditViewMultiRedditDetailActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewMultiRedditDetailActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.AccountSavedThingActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.AccountSavedThingActivity"
             android:label="@string/account_saved_thing_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
-        <activity android:name=".reddit.activities.ShareDataResolverActivity">
+        <activity android:name="com.rackluxury.rollsroyce.reddit.activities.ShareDataResolverActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -350,41 +350,41 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".reddit.activities.RedditSettingsActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSettingsActivity"
             android:label="@string/settings_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/PreferenceActivityTheme" />
         <activity
-            android:name=".reddit.activities.RedditInboxActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditInboxActivity"
             android:label="@string/view_message_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditAccountPostsActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditAccountPostsActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditEditCommentActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditEditCommentActivity"
             android:label="@string/edit_comment_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditEditPostActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditEditPostActivity"
             android:label="@string/edit_post_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditFilteredPostsActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditFilteredPostsActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditSearchSubredditsResultActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSearchSubredditsResultActivity"
             android:label="@string/search_subreddits_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
-        <activity android:name=".reddit.activities.RedditLinkResolverActivity">
+        <activity android:name="com.rackluxury.rollsroyce.reddit.activities.RedditLinkResolverActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -460,99 +460,99 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".reddit.activities.RedditSearchActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSearchActivity"
             android:label="@string/search_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".reddit.activities.RedditRulesActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditRulesActivity"
             android:label="@string/rules_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditPostVideoActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditPostVideoActivity"
             android:label="@string/post_video_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditPostImageActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditPostImageActivity"
             android:label="@string/post_image_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditPostLinkActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditPostLinkActivity"
             android:label="@string/post_link_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditSubscribedThingListingActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSubscribedThingListingActivity"
             android:label="@string/subscriptions"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditSubredditSelectionActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditSubredditSelectionActivity"
             android:label="@string/subreddit_selection_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditPostTextActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditPostTextActivity"
             android:label="@string/post_text_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.RedditCommentActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditCommentActivity"
             android:label="@string/comment_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".reddit.activities.SearchResultActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.SearchResultActivity"
             android:label="@string/search_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:label="@string/application_name"
             android:theme="@style/AppThemeReddit.Launcher"
             android:windowSoftInputMode="adjustPan">
 
         </activity>
         <activity
-            android:name=".reddit.activities.RedditLoginActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditLoginActivity"
             android:label="@string/login_activity_label"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
         <activity
-            android:name=".reddit.activities.ViewImageOrGifActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.ViewImageOrGifActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.SlidableWithActionBar" />
         <activity
-            android:name=".reddit.activities.RedditViewVideoActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewVideoActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Draggable" />
         <activity
-            android:name=".reddit.activities.RedditViewPostDetailActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewPostDetailActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".reddit.activities.RedditViewSubredditDetailActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewSubredditDetailActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.SlidableWithTranslucentWindow" />
         <activity
-            android:name=".reddit.activities.RedditViewUserDetailActivity"
-            android:parentActivityName=".reddit.activities.RedditMainActivity"
+            android:name="com.rackluxury.rollsroyce.reddit.activities.RedditViewUserDetailActivity"
+            android:parentActivityName="com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.SlidableWithTranslucentWindow" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.rackluxury.rolex.reddit.provider"
+            android:authorities="com.rackluxury.rollsroyce.reddit.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -570,11 +570,11 @@
         </provider>
 
         <service
-            android:name=".reddit.services.SubmitPostService"
+            android:name="com.rackluxury.rollsroyce.reddit.services.SubmitPostService"
             android:enabled="true"
             android:exported="false" />
         <service
-            android:name=".reddit.services.MaterialYouService"
+            android:name="com.rackluxury.rollsroyce.reddit.services.MaterialYouService"
             android:exported="false" />
 
 

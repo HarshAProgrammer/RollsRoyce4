@@ -3,4 +3,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/recycler_view_acknowledgement_fragment"
-    tools:context="com.rackluxury.rolex.reddit.settings.AcknowledgementFragment" />
+    tools:context="com.rackluxury.rollsroyce.reddit.settings.AcknowledgementFragment" />

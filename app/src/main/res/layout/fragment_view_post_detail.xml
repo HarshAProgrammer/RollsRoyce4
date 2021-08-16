@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.rackluxury.rolex.reddit.customviews.CustomToroContainer
+        <com.rackluxury.rollsroyce.reddit.customviews.CustomToroContainer
             android:id="@+id/post_detail_recycler_view_view_post_detail_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

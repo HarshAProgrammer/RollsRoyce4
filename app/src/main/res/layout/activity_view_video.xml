@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true"
     app:dragUpEnabled="true"
-    tools:application="com.rackluxury.rolex.reddit.activities.RedditViewVideoActivity">
+    tools:application="com.rackluxury.rollsroyce.reddit.activities.RedditViewVideoActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
