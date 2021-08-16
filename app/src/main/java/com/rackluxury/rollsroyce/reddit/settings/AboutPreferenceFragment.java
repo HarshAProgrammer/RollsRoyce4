@@ -87,7 +87,7 @@ public class AboutPreferenceFragment extends PreferenceFragmentCompat {
         if (subredditPreference != null) {
             subredditPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(activity, RedditLinkResolverActivity.class);
-                intent.setData(Uri.parse("https://www.reddit.com/r/Rolex"));
+                intent.setData(Uri.parse("https://www.reddit.com/r /RollsRoyce"));
                 activity.startActivity(intent);
                 return true;
             });

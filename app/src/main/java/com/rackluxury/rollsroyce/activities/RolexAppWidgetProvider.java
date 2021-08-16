@@ -11,7 +11,7 @@ import android.widget.RemoteViews;
 
 import com.rackluxury.rollsroyce.R;
 
-public class RolexAppWidgetProvider extends AppWidgetProvider {
+public class  RollsRoyceAppWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         for (int appWidgetId : appWidgetIds) {

@@ -138,7 +138,7 @@
 
 
 
-        <receiver android:name="com.rackluxury.rollsroyce.activities.RolexAppWidgetProvider">
+        <receiver android:name="com.rackluxury.rollsroyce.activities.RollsRoyceAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>

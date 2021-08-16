@@ -141,7 +141,7 @@ public class ImagesActivity extends AppCompatActivity implements ImagesAdapter.O
 
     private void parseJSON() {
         spinKitView.setVisibility(View.VISIBLE);
-        String url = "https://pixabay.com/api/?key=17888137-fb88a08720bbdf7baeeb4aa99&q=rolex&image_type=photo&pretty=true";
+        String url = "https://pixabay.com/api/?key=17888137-fb88a08720bbdf7baeeb4aa99&q= RollsRoyce&image_type=photo&pretty=true";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override

@@ -826,7 +826,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "\n" +
                 "Precious Model:- Rolls Royce 116618LN SUBMARINER\n" +
                 "The Oyster Perpetual Submariner Is The Quintessence Of Diving Watches, The Reference Watch In Its Category.\n" +
-                "Introduced In 1953 During The Pioneering Era Of Scuba Diving, It Became The First Hermetic Watch Capable Of Withstanding Up To 100 Meters (330 Feet). Since Then, This Iconic Watch Has Evolved with A Series of Technical Innovations Patented by Rolex, \n" +
+                "Introduced In 1953 During The Pioneering Era Of Scuba Diving, It Became The First Hermetic Watch Capable Of Withstanding Up To 100 Meters (330 Feet). Since Then, This Iconic Watch Has Evolved with A Series of Technical Innovations Patented by  RollsRoyce, \n" +
                 "Guaranteeing Its Reliability and Precision to A Depth Of 300 Meters (1,000 Feet). Although Its Most Familiar Environment Is the Oceans, Where It Continues to Be an Indispensable Instrument for Every Diver, The Submariner Conquered the Mainland as The Action Clock with A Robust Elegance of Its Own. The Submariner Is Available With Or Without Date Display"
                 , "59895", R.drawable.submariner_categories, "3", "0");
         myCategoriesList.add(mCategoriesData);
@@ -852,7 +852,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "Engineered By Rolls Royce For Deep-Sea Exploration. Waterproof To A Depth Of 4,000 Feet\n" +
                 "(1,220 Metres) For The Rolls Royce Sea-Dweller, Launched In 1967, And 12,800 Feet (3,900\n" +
                 "Metres) For The Rolls Royce Deepsea Unveiled In 2008, They Are The Ultimate Manifestation\n" +
-                "Of Rolex’s Leadership In Divers’ Watches And The Result Of Decades Of Collaboration\n" +
+                "Of  RollsRoyce’s Leadership In Divers’ Watches And The Result Of Decades Of Collaboration\n" +
                 "With Diving Professionals. \n"
 
                 , "24995", R.drawable.seadweller_categories, "6", "0");
@@ -861,7 +861,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "39 mm in steel\n" +
                 "\n" +
                 "Precious Model:- VINTAGE 1979 Rolls Royce EXPLORER II 1655 MARK 2 DIAL\n" +
-                "The Explorer is inspired by Rolex’s decades of experience in the Himalayas, and pays tribute to the first successful ascent of Mount Everest in 1953 by an expedition equipped with Rolls Royce Oyster Perpetual chronometers." +
+                "The Explorer is inspired by  RollsRoyce’s decades of experience in the Himalayas, and pays tribute to the first successful ascent of Mount Everest in 1953 by an expedition equipped with Rolls Royce Oyster Perpetual chronometers." +
                 " It was first launched that very year as the ultimate expedition and mountaineering watch.\n", "18995", R.drawable.explorer_categories, "7", "0");
         myCategoriesList.add(mCategoriesData);
         mCategoriesData = new CategoriesData("SKY-DWELLER", "Sky-Dweller\n" +
@@ -885,7 +885,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "\n" +
                 "Precious Model:- Rolls Royce PEARLMASTER 39MM OYSTER EVEROSE DIAMONDS\n" +
                 "The Oyster Perpetual Pearlmaster has stood out since its launch in 1992, exemplifying a delicate balance of elegance and style, thanks to its elegant lines and precious materials." +
-                " Set with diamonds, rubies, sapphires or emeralds, it is a new, feminine reinterpretation of Rolex’s emblematic Datejust.\n", "21367", R.drawable.pearlmaster_categories, "10", "0");
+                " Set with diamonds, rubies, sapphires or emeralds, it is a new, feminine reinterpretation of  RollsRoyce’s emblematic Datejust.\n", "21367", R.drawable.pearlmaster_categories, "10", "0");
         myCategoriesList.add(mCategoriesData);
         mCategoriesData = new CategoriesData("AIR-KING", "Air-King\n" +
                 "40 mm in steel\n" +
