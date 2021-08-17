@@ -95,7 +95,7 @@ public class AboutUsActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 explosionField.explode(privacyImage);
-                String url = "https://rollsroycemotorcars.info.blogspot.com/2020/08/Motor Cars-from-rollsroyce-privacy-policy.html";
+                String url = "https://rollsroycecompany.blogspot.com/2021/08/watches-from-rolex-privacy-policy.html";
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -108,7 +108,7 @@ public class AboutUsActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 explosionField.explode(termsImage);
-                String url = "https://rollsroycemotorcars.info.blogspot.com/2020/08/Motor Cars-from-rollsroyce-terms-and-condition.html";
+                String url = "https://rollsroycecompany.blogspot.com/2021/08/watches-from-rolex-terms-and-condition.html";
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
