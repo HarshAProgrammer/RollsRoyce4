@@ -797,104 +797,58 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         GridLayoutManager gridLayoutManager = new GridLayoutManager(HomeActivity.this, 1);
         categoriesRecyclerView.setLayoutManager(gridLayoutManager);
         myCategoriesList = new ArrayList<>();
-        mCategoriesData = new CategoriesData("DAY-DATE", "Day-Date\n" +
-                "36 mm in Everose gold\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce PLATINUM PRESIDENT 228206 ICE BLUE DIAMOND DIAL\n" +
-                "From Its Launch In 1956, The Day-Date Was Immediately\n" +
-                "Recognised as The Watch Worn by Influential People.\n" +
-                "The Day-Date Was the First Calendar Wristwatch to Display the Day, As Well As the Date, In Its Entirety. Faithful To Its Noble Origins, The Day-Date Is Made Exclusively Of Gold Or Platinum, The Precious Metals\n", "49995", R.drawable.daydate_categories, "0", "0");
+        mCategoriesData = new CategoriesData("2021 Rolls-Royce Cullinan", "•\tBase price: $340,350\n" +
+                "•\tEngine: 6.8L twin-turbocharged V12\n" +
+                "•\tPower: 563 hp @ 5,000 rpm\n" +
+                "•\tTorque: 663 lb-ft @ 1,700 rpm\n" +
+                "•\t0-60 mph: 4.8 s\n" +
+                "•\tTop Speed: 155 mph\n" +
+                "The newest addition to the Rolls-Royce lineup is the automaker’s only SUV. While unapologetically different from anything else on offer, it still stands out as a Rolls-Royce thanks to its distinguishable and familiar rectangular front grill. Its DNA is not just limited to outward appearances though, as the opulent interior design elements and phenomenal V12 performance that we become familiar with from the brand, live on in this all-terrain automobile. There are no big updates to the Cullinan for the 2021 model year.\n", "340350", R.drawable.first_categories, "0", "0");
         myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("DATE-JUST", "DateJust\n" +
-                "36 mm in steel and yellow gold\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce DATEJUST 116185 DIAMOND BEZEL & DIAL\n" +
-                "The Elegant Design And Cyclops Eye Magnifying The  Date Have Made The Oyster Perpetual " +
-                "Datejust, Originally Introduced In 1945, One Of The World’s Most Recognizable Motor Cars.\n"
-                , "15995", R.drawable.datejust_categories, "1", "0");
+        mCategoriesData = new CategoriesData("2021 Rolls-Royce Ghost", "•\tBase price: $320,000\n" +
+                "•\tEngine: 6.8L twin-turbocharged V12\n" +
+                "•\tPower: 563 hp @ 5000 rpm\n" +
+                "•\tTorque: 627 lb-ft @ 1600 rpm\n" +
+                "•\t0-60 mph: 4.3 s\n" +
+                "•\tTop Speed: 155 mph\n" +
+                "The ‘entry-level’ Rolls-Royce was been completely redesigned for the 2021 model year and also carries some tweaks into 2021 too. It gets its unique chassis – it had been built upon the BMW 7-series frame until this change. The interior also offers generous space for both front- and rear-seat passengers to relax in comfort. The 2021 Ghost gets fancier appointments and more modern technology than before. The upgrades make this a clever luxury car that has no equal to any other brand.\n"
+                , "320000", R.drawable.second_categories, "1", "0");
         myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("GMT-MASTER 2", "Gmt-Master ii\n" +
-                "40 mm in gold\n" +
-                "\n" +
-                "Precious Model:- VINTAGE Rolls Royce GMT-MASTER 6542 BAKELITE BEZEL NIPPLE DIAL\n" +
-                "The GMT-Master, Introduced In 1955, Was Developed To Meet The Needs Of International Pilots. The GMT-Master II, Unveiled In 2005, Has Proved to Be Even More Invaluable to Those Whose Professions Involve Long-Distance Travel.\n" +
-                "Featuring A Rotatable 24-Hour Graduated Bezel and A Separate 24-Hour Hand, It Allows Those Who Travel the World to Read Three Different Time Zones. Two Simultaneously.\n"
-                , "174950", R.drawable.gmtmaster2_categories, "2", "0");
+        mCategoriesData = new CategoriesData("2020 Rolls-Royce Phantom", "•\tBase price: $463,350\n" +
+                "•\tEngine: 6.8L twin-turbocharged V12\n" +
+                "•\tPower: 563 hp @ 5,000 rpm\n" +
+                "•\tTorque: 663 lb-ft @ 1,700 rpm\n" +
+                "•\t0-60 mph: 5.0 s\n" +
+                "•\tTop Speed: 155 mph\n" +
+                "The Rolls-Royce Phantom is the status symbol car to rule all status symbol cars. Armed with a new platform for the 2020 model year, the Phantom has also been designed to be fitted with an EV powertrain in the future. Many say that the Phantom has created its class of car for itself, and the new iteration looks to extend that trend for the long run; improving the model now and preparing it for relevancy in the more distant future. There are no announcement updates for the 2021 model year.\n"
+                , "463350", R.drawable.third_categories, "2", "0");
         myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("SUBMARINER", "Submariner Date\n" +
-                "40 Mm In Steel\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce 116618LN SUBMARINER\n" +
-                "The Oyster Perpetual Submariner Is The Quintessence Of Diving Motor Cars, The Reference Watch In Its Category.\n" +
-                "Introduced In 1953 During The Pioneering Era Of Scuba Diving, It Became The First Hermetic Watch Capable Of Withstanding Up To 100 Meters (330 Feet). Since Then, This Iconic Watch Has Evolved with A Series of Technical Innovations Patented by  RollsRoyce, \n" +
-                "Guaranteeing Its Reliability and Precision to A Depth Of 300 Meters (1,000 Feet). Although Its Most Familiar Environment Is the Oceans, Where It Continues to Be an Indispensable Instrument for Every Diver, The Submariner Conquered the Mainland as The Action Clock with A Robust Elegance of Its Own. The Submariner Is Available With Or Without Date Display"
-                , "59895", R.drawable.submariner_categories, "3", "0");
+        mCategoriesData = new CategoriesData("2021 Rolls-Royce Wraith", "•\tBase price: $343,350\n" +
+                "•\tEngine: 6.6L twin-turbocharged V12\n" +
+                "•\tPower: 624 hp @ 5,600 rpm\n" +
+                "•\tTorque: 605 lb-ft @ 1,500 rpm\n" +
+                "•\t0-60 mph: 4.1 s\n" +
+                "•\tTop Speed: 155 mph\n" +
+                "Virtually unchanged for 2021, the current iteration of the Rolls-Royce Wraith shares the same BMW F01 platform and was based on the outgoing Ghost, and will continue to do so for at least the meantime. The Wraith is the sportier version of the two, having been purposed in a coupe guise and shorter wheelbase for starters. A power bump, some weight loss, and a specially tuned suspension, further its call for an improved performance focus.\n"
+                , "343350", R.drawable.fourth_categories, "3", "0");
         myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("COSMOGRAPH DAYTONA", "Cosmograph Daytona\n" +
-                "40 Mm In Everose Gold\n" +
-                "\n" +
-                "Precious Model:- 18K YELLOW GOLD Rolls Royce DAYTONA WHITE DIAL\n" +
-                "The Cosmograph Daytona, Introduced In 1963, Was Designed To Meet The Demands Of Professional Racing Drivers. With Its Highly Reliable Chronograph and Bezel with Tachymetric Scale, It Allows Drivers to Perfectly Measure Average Speeds Up To 400 Kilometres or Miles Per Hour, As They Choose. An Icon Eternally Joined In Name And Function To The High-Performance World Of Motor Sport.\n", "23995", R.drawable.cosmographdaytona_categories, "4", "0");
-        myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("YACHT-MASTER", "Yacht-Master\n" +
-                "40 Mm In Steel\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce YACHT-MASTER 226659 WHITE GOLD\n" +
-                "Sleek, Sporty, Distinguished: The Oyster Perpetual Yacht Master Symbolises The Privileged Ties Between Rolls Royce And The World Of Sailing That Stretch Back To The 1950s. It Is The Only Oyster Professional Model Offered In Three Sizes:\n" +
-                "40, 35 And 29 Mm.\n"
-                , "28995", R.drawable.yachtmaster_categories, "5", "0");
-        myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("SEA-DWELLER", "Sea-Dweller\n" +
-                "Oyster, 43 Mm, Oystersteel And Yellow Gold\n" +
-                "\n" +
-                "Precious Model:- VINTAGE Rolls Royce SEA-DWELLER 1665 RAIL DIAL 1979\n" +
-                "The Sea-Dweller And Rolls Royce Deepsea Are Ultra-Resistant Divers’ Motor Cars\n" +
-                "Engineered By Rolls Royce For Deep-Sea Exploration. Waterproof To A Depth Of 4,000 Feet\n" +
-                "(1,220 Metres) For The Rolls Royce Sea-Dweller, Launched In 1967, And 12,800 Feet (3,900\n" +
-                "Metres) For The Rolls Royce Deepsea Unveiled In 2008, They Are The Ultimate Manifestation\n" +
-                "Of  RollsRoyce’s Leadership In Divers’ Motor Cars And The Result Of Decades Of Collaboration\n" +
-                "With Diving Professionals. \n"
+        mCategoriesData = new CategoriesData("2021 Rolls-Royce Dawn", "•\tBase price: $368,850\n" +
+                "•\tEngine: 6.8L twin-turbocharged V12\n" +
+                "•\tPower: 563 hp @ 5,000 rpm\n" +
+                "•\tTorque: 663 lb-ft @ 1,700 rpm\n" +
+                "•\t0-60 mph: 4.8 s\n" +
+                "•\tTop Speed: 155 mph\n" +
+                "The Rolls-Royce Dawn is the soft-top version of the Wraith, but at the same time, it’s not. 80 percent of the Wraith’s body panels are unique, meaning that the Dawn is much more than just the coupe version with its roof sheared off. Mind you, the drop-top factor you get from the Dawn is still its most endearing feature, allowing you to partake in the Rolls-Royce wind-through-your-hair experience like no other car in the lineup can deliver. No changes for the 2021 model year.\n"
 
-                , "24995", R.drawable.seadweller_categories, "6", "0");
+                , "368850", R.drawable.fifth_categories, "4", "0");
         myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("EXPLORER II", "Explorer II\n" +
-                "39 mm in steel\n" +
-                "\n" +
-                "Precious Model:- VINTAGE 1979 Rolls Royce EXPLORER II 1655 MARK 2 DIAL\n" +
-                "The Explorer is inspired by  RollsRoyce’s decades of experience in the Himalayas, and pays tribute to the first successful ascent of Mount Everest in 1953 by an expedition equipped with Rolls Royce Oyster Perpetual chronometers." +
-                " It was first launched that very year as the ultimate expedition and mountaineering watch.\n", "18995", R.drawable.explorer_categories, "7", "0");
-        myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("SKY-DWELLER", "Sky-Dweller\n" +
-                "42 mm in white gold\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce SKY-DWELLER 326938\n" +
-                "A technological masterpiece protected by 14 patents,\n" +
-                "the Oyster Perpetual Sky-Dweller provides the information global travellers need to keep track of time at a glance.\n" +
-                "Launched in 2012, the Sky-Dweller is a compelling timepiece of revolutionary design that blends to perfection mechanical sophistication and ease of use.\n", "37995", R.drawable.skydweller_categories, "8", "0");
-        myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("MILGAUSS", "Milgauss\n" +
-                "40 mm in steel\n" +
-                "\n" +
-                "Precious Model:- VINTAGE 1967 Rolls Royce MILGAUSS 1019 CERN DIAL\n" +
-                "The Milgauss, introduced in 1956, was designed to meet the demands of the scientific community and is capable of withstanding magnetic fields of up to 1,000 gauss.\n" +
-                "It became known notably as the watch worn by scientists at the European Organization for Nuclear Research (CERN) in Geneva. The new-generation Milgauss, introduced in\n" +
-                "2007, features several innovative components that enhance protection from magnetic interference.\n", "32295", R.drawable.milgauss_categories, "9", "0");
-        myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("PEARLMASTER", "The Oyster Perpetual Pearlmaster\n" +
-                "26 mm in steel\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce PEARLMASTER 39MM OYSTER EVEROSE DIAMONDS\n" +
-                "The Oyster Perpetual Pearlmaster has stood out since its launch in 1992, exemplifying a delicate balance of elegance and style, thanks to its elegant lines and precious materials." +
-                " Set with diamonds, rubies, sapphires or emeralds, it is a new, feminine reinterpretation of  RollsRoyce’s emblematic Datejust.\n", "21367", R.drawable.pearlmaster_categories, "10", "0");
-        myCategoriesList.add(mCategoriesData);
-        mCategoriesData = new CategoriesData("AIR-KING", "Air-King\n" +
-                "40 mm in steel\n" +
-                "\n" +
-                "Precious Model:- Rolls Royce AIR-KING 116900 BLACK ARABIC DIAL\n" +
-                "The Rolls Royce Air-King pays tribute to the pioneers of flight and the Oyster’s roles in\n" +
-                "the epic story of aviation. With its 40mm case in Oystersteel, solid-link Oyster\n" +
-                "bracelet with Oysterclasp, and distinctive black dial, the Air-King perpetuates the\n" +
-                "aeronautical heritage of the original Rolls Royce Oyster.\n", "5795", R.drawable.airking_categories, "11", "0");
+        mCategoriesData = new CategoriesData("2021 Rolls-Royce Phantom EWB", "•\tBase price: $484,425\n" +
+                "•\tEngine: 6.8L twin-turbocharged V12\n" +
+                "•\tPower: 563 hp @ 5000 rpm\n" +
+                "•\tTorque: 627 lb-ft @ 1600 rpm\n" +
+                "•\t0-60 mph: 4.3 s\n" +
+                "•\tTop Speed: 155 mph\n" +
+                "In this case, EWB stands for ‘extended wheelbase’, alluding to what could be duly described as a stretched-out Phantom. If one were to ever be chauffeured around in a car, this one would probably top most wishlists. Aside from the glaringly obvious, the EWB also has some unique offerings that can only be seen from inside the car, such as the “private gallery”. The aforementioned is created by a single panel of glass that spans the entire fascia to house a unique gallery displaying bespoke artwork.\n", "492425", R.drawable.sixth_categories, "5", "0");
         myCategoriesList.add(mCategoriesData);
 
         myCategoriesAdapter = new MyCategoriesAdapter(HomeActivity.this, myCategoriesList);
