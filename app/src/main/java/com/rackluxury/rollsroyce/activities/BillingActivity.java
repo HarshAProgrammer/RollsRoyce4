@@ -1,18 +1,20 @@
 package com.rackluxury.rollsroyce.activities;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
@@ -25,8 +27,8 @@ import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.android.billingclient.api.SkuDetailsResponseListener;
-import com.rackluxury.rollsroyce.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.rackluxury.rollsroyce.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -160,6 +162,20 @@ public class BillingActivity extends AppCompatActivity implements PurchasesUpdat
                     billingClient.consumeAsync(consumeParams, consumeResponseListener);
                     //now you can purchase same categories again and again
                     //Here we give coins to user.
+                    LayoutInflater inflater = LayoutInflater.from(BillingActivity.this);
+                    View view = inflater.inflate(R.layout.alert_dialog_purchased, null);
+                    Button acceptButton = view.findViewById(R.id.btnOkAlertPurchased);
+                    final AlertDialog alertDialog = new AlertDialog.Builder(BillingActivity.this)
+                            .setView(view)
+                            .show();
+
+                    acceptButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            alertDialog.dismiss();
+
+                        }
+                    });
                     tv.setText(R.string.success_billing);
                     Toasty.success(BillingActivity.this, "Thank You For The Watch", Toast.LENGTH_LONG).show();
                 }

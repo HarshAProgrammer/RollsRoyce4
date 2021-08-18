@@ -1,8 +1,10 @@
 package com.rackluxury.rollsroyce.activities;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -166,6 +168,20 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
 
                     FirebaseMessaging.getInstance().unsubscribeFromTopic("purchase_blog");
 
+                    LayoutInflater inflater = LayoutInflater.from(BlogCheckerActivity.this);
+                    View view = inflater.inflate(R.layout.alert_dialog_purchased, null);
+                    Button acceptButton = view.findViewById(R.id.btnOkAlertPurchased);
+                    final AlertDialog alertDialog = new AlertDialog.Builder(BlogCheckerActivity.this)
+                            .setView(view)
+                            .show();
+
+                    acceptButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            alertDialog.dismiss();
+
+                        }
+                    });
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Blog Purchased");
                     Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/blog_checker");

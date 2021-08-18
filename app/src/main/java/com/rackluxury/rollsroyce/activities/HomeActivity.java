@@ -401,7 +401,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.expensiveNavigation) {
-            ExpensiveMotor Cars();
+            ExpensiveMotorCars();
 
         } else if (id == R.id.imagesNavigation) {
             Images();
@@ -488,7 +488,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Animatoo.animateSwipeRight(HomeActivity.this);
     }
 
-    private void ExpensiveMotor Cars() {
+    private void ExpensiveMotorCars() {
 
 
         firebaseAuth = FirebaseAuth.getInstance();
