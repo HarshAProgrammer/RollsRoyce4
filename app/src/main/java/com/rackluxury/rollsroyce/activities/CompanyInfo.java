@@ -1,15 +1,15 @@
 package com.rackluxury.rollsroyce.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.rackluxury.rollsroyce.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.rackluxury.rollsroyce.R;
 import com.ramotion.foldingcell.FoldingCell;
 import com.smarteist.autoimageslider.DefaultSliderView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
@@ -34,7 +34,7 @@ public class CompanyInfo extends AppCompatActivity {
         final FoldingCell fc3 = findViewById(R.id.folding_cell3);
         final FoldingCell fc4 = findViewById(R.id.folding_cell4);
         final FoldingCell fc5 = findViewById(R.id.folding_cell5);
-        final FoldingCell fc6 = findViewById(R.id.folding_cell6);
+
 
         setSupportActionBar(toolbar);
         if(getSupportActionBar() != null){
@@ -92,43 +92,34 @@ public class CompanyInfo extends AppCompatActivity {
                 fc5.toggle(false);
             }
         });
-        fc6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fc6.toggle(false);
-            }
-        });
+
     }
 
     private void setSliderViews() {
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i <= 4; i++) {
 
             DefaultSliderView sliderView = new DefaultSliderView(CompanyInfo.this);
 
             switch (i) {
                 case 0:
-                    sliderView.setDescription("Why are Rolls Royce Motor Cars so valuable?");
-                    sliderView.setImageDrawable(R.drawable.valuable_company);
+                    sliderView.setDescription("Classiest design and automotive mascot");
+                    sliderView.setImageDrawable(R.drawable.first_company);
                     break;
                 case 1:
-                    sliderView.setDescription("Leading innovation");
-                    sliderView.setImageDrawable(R.drawable.innovation_company);
+                    sliderView.setDescription("Premium high-quality materials");
+                    sliderView.setImageDrawable(R.drawable.second_company);
                     break;
                 case 2:
-                    sliderView.setDescription("Rare and precious materials");
-                    sliderView.setImageDrawable(R.drawable.precious_company);
+                    sliderView.setImageDrawable(R.drawable.third_company);
+                    sliderView.setDescription("Starlight roof for a ride like no other");
                     break;
                 case 3:
-                    sliderView.setImageDrawable(R.drawable.manufacturing_company);
-                    sliderView.setDescription("Outstanding manufacturing process");
+                    sliderView.setImageDrawable(R.drawable.fourth_company);
+                    sliderView.setDescription("Meter to show power being utilized");
                     break;
                 case 4:
-                    sliderView.setImageDrawable(R.drawable.dedication_company);
-                    sliderView.setDescription("Dedication, time and attention to details");
-                    break;
-                case 5:
-                    sliderView.setImageDrawable(R.drawable.investment_company);
-                    sliderView.setDescription("Are Rolls Royce Motor Cars a good investment?");
+                    sliderView.setImageDrawable(R.drawable.fifth_company);
+                    sliderView.setDescription("Minimalistic dashboard controls");
                     break;
             }
 
