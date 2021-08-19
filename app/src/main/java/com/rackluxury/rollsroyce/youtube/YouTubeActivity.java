@@ -35,18 +35,12 @@ public class YouTubeActivity extends AppCompatActivity {
     private static final String[] YOUTUBE_PLAYLISTS = {
 
 
-            "PL8-Hm7AFPoqlHPxLHVF748iSmzghUSPKB",
-            "PL40C57B5E839A0683",
-            "PLntzSqFB2HFzh4YYPz_5DpjiUcDfLDRI9",
-            "PLntzSqFB2HFyPFxVeZP09XEpHE2yqHhko",
-            "PLntzSqFB2HFx5sMHh4cwlALj1sELZcFSL",
-            "PLntzSqFB2HFz1x2GbWO794rPHG4yJ9I3I",
-            "PLEACE5D46B2C9C052",
-            "PLntzSqFB2HFw7k6JePtXY_ROVuhOJarw3",
-            "PLntzSqFB2HFx5iPWbKH4nTuuiydF5ZX3x",
-            "PLntzSqFB2HFxL-36iPQunokoHmamfxdLP",
-            "PL063C7410CCBD2F5A",
-            "PLBBFDAF30AA59B43F"
+            "PL13942774104C7D9A",
+            "PLB2BE360560B5CBAF",
+            "PLcdwSiCBZED5kkaXTo4YXPdkxO2ybrxIa",
+            "PLcdwSiCBZED7sYNKxttLgaTTU2mEGljud",
+            "PLcdwSiCBZED5vHLZdrq1dKijeVDuga4iZ"
+
     };
     private final GsonFactory mJsonFactory = new GsonFactory();
     private final HttpTransport mTransport = AndroidHttp.newCompatibleTransport();
