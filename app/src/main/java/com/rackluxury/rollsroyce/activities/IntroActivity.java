@@ -57,7 +57,7 @@ public class IntroActivity extends AppCompatActivity {
 
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Motor Cars","Discover wide range of Motor Cars",R.drawable.Motor Cars_intro));
+        mList.add(new ScreenItem("Motor Cars","Discover wide range of Motor Cars",R.drawable.watches_intro));
         mList.add(new ScreenItem("Video Library","Watch our video library, showcasing lots of display videos.",R.drawable.video_intro));
         mList.add(new ScreenItem("Facts","Know Interesting Facts",R.drawable.facts_intro));
         mList.add(new ScreenItem("Why we are at the top","Recognize our core values",R.drawable.enterprise_intro));
