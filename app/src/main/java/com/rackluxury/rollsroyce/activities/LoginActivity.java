@@ -22,11 +22,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.github.ybq.android.spinkit.SpinKitView;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.rackluxury.rollsroyce.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
@@ -36,15 +31,19 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.github.ybq.android.spinkit.SpinKitView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.rackluxury.rollsroyce.R;
 
 import es.dmoral.toasty.Toasty;
 
@@ -306,7 +305,7 @@ public class LoginActivity extends AppCompatActivity implements
 
 
     public void openRegistrationActivityFromLogin() {
-        Intent openRegistrationActivityFromLogin = new Intent(LoginActivity.this, RegistrationActivity.class);
+        Intent openRegistrationActivityFromLogin = new Intent(LoginActivity.this, com.rackluxury.rollsroyce.activities.RegistrationActivity.class);
         startActivity(openRegistrationActivityFromLogin);
         finish();
         Animatoo.animateSwipeLeft(LoginActivity.this);

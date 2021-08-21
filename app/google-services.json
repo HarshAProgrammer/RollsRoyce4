@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "1018499649594",
+    "firebase_url": "https://rolls-royce-cars-default-rtdb.firebaseio.com",
     "project_id": "rolls-royce-cars",
     "storage_bucket": "rolls-royce-cars.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1018499649594:android:56333e9894d349dc2ea503",
+        "mobilesdk_app_id": "1:1018499649594:android:6dd87c0e8bef3b9e2ea503",
         "android_client_info": {
           "package_name": "com.rackluxury.rollsroyce"
         }

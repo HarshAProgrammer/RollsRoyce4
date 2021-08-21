@@ -1,8 +1,6 @@
 package com.rackluxury.rollsroyce.blog;
 
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioAttributes;
@@ -27,19 +25,15 @@ import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.github.ybq.android.spinkit.SpinKitView;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
-import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrConfig;
-import com.r0adkll.slidr.model.SlidrListener;
 import com.rackluxury.rollsroyce.R;
+
 
 public class BlogDetailActivity extends AppCompatActivity {
 
     private SpinKitView spinKitView;
     private Toolbar toolbar;
     private WebView webview;
-    private SharedPreferences prefs;
+
     private ConstraintLayout layout;
     private AnimatedVectorDrawable avd2;
     private AnimatedVectorDrawableCompat avd;
@@ -177,39 +171,10 @@ public class BlogDetailActivity extends AppCompatActivity {
         });
 
 
-        SlidrConfig config = new SlidrConfig.Builder()
-                .listener(new SlidrListener() {
-                    @Override
-                    public void onSlideStateChanged(int state) {
 
-                    }
 
-                    @Override
-                    public void onSlideChange(float percent) {
 
-                    }
 
-                    @Override
-                    public void onSlideOpened() {
-
-                    }
-
-                    @Override
-                    public boolean onSlideClosed() {
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putBoolean("blogDetailFirst", false);
-                        editor.apply();
-                        return false;
-                    }
-                }).build();
-
-        Slidr.attach(this, config);
-
-        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        boolean firstStart = prefs.getBoolean("blogDetailFirst", true);
-        if (firstStart) {
-            onFirst();
-        }
 
         spinKitView.setVisibility(View.VISIBLE);
         webview.setVisibility(View.INVISIBLE);
@@ -234,24 +199,6 @@ public class BlogDetailActivity extends AppCompatActivity {
         webview.loadUrl(getIntent().getStringExtra("url"));
     }
 
-    public void onFirst() {
-        Snackbar snackbar = Snackbar.make(layout, "Swipe Right to Dismiss", Snackbar.LENGTH_LONG)
-                .setDuration(10000)
-                .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
-                .setAction("OKAY", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putBoolean("blogDetailFirst", false);
-                        editor.apply();
-                    }
-                })
-                .setActionTextColor(Color.WHITE)
-                .setTextColor(Color.WHITE);
-
-        snackbar.show();
-
-    }
 
 
     private void initToolbar() {

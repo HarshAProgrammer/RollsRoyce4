@@ -123,14 +123,14 @@ public class LoginOrRegisterActivity extends AppCompatActivity implements
 
     public void login(View view) {
         finish();
-        startActivity(new Intent(LoginOrRegisterActivity.this, LoginActivity.class));
+        startActivity(new Intent(LoginOrRegisterActivity.this, com.rackluxury.rollsroyce.activities.LoginActivity.class));
         Animatoo.animateSlideRight(LoginOrRegisterActivity.this);
 
     }
 
     public void getStarted(View view) {
         finish();
-        startActivity(new Intent(LoginOrRegisterActivity.this, RegistrationActivity.class));
+        startActivity(new Intent(LoginOrRegisterActivity.this, com.rackluxury.rollsroyce.activities.RegistrationActivity.class));
         Animatoo.animateSlideLeft(LoginOrRegisterActivity.this);
     }
 
@@ -183,13 +183,13 @@ public class LoginOrRegisterActivity extends AppCompatActivity implements
 
     private void onSwipeLeft() {
         finish();
-        startActivity(new Intent(LoginOrRegisterActivity.this, RegistrationActivity.class));
+        startActivity(new Intent(LoginOrRegisterActivity.this, com.rackluxury.rollsroyce.activities.RegistrationActivity.class));
         Animatoo.animateSlideLeft(LoginOrRegisterActivity.this);
     }
 
     private void onSwipeRight() {
         finish();
-        startActivity(new Intent(LoginOrRegisterActivity.this, LoginActivity.class));
+        startActivity(new Intent(LoginOrRegisterActivity.this, com.rackluxury.rollsroyce.activities.LoginActivity.class));
         Animatoo.animateSlideRight(LoginOrRegisterActivity.this);
 
     }
