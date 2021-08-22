@@ -28,13 +28,7 @@
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme">
 
-                <ImageButton
-                    android:id="@+id/backbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"
-                    android:src="@drawable/ic_arrow_back_white_24dp"
-                    android:tint="@color/colorWhite" />
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -96,50 +90,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
         android:textSize="26sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/discover_expensive"
-        android:layout_centerVertical="true"
-        android:weightSum="3"
-        android:orientation="horizontal">
-        <com.google.android.material.card.MaterialCardView
-            android:foreground="?android:attr/selectableItemBackground"
-            android:layout_width="140dp"
-            android:checkable="true"
-            android:layout_height="60dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            app:cardCornerRadius="30dp"/>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:checkable="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            app:cardCornerRadius="30dp"/>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:checkable="true"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            app:cardCornerRadius="30dp"/>
-
-    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnExpensiveChecker"
