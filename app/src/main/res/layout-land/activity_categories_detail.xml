@@ -31,7 +31,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/imgCategoriesDetailWatch"
+        android:id="@+id/imgCategoriesDetailCar"
         android:layout_width="350dp"
         android:layout_height="295dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -177,14 +177,14 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/scrollViewCategoriesDetail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgCategoriesDetailWatch"
+        app:layout_constraintStart_toEndOf="@id/imgCategoriesDetailCar"
         app:layout_constraintTop_toBottomOf="@id/ablCategoriesDetail">
 
         <TextView
             android:id="@+id/tvCategoriesDetailName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rollsroyce_watch_name_categories_detail"
+            android:text="@string/rollsroyce_car_name_categories_detail"
             android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="12sp" />
@@ -202,7 +202,7 @@
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgCategoriesDetailWatch"
+        app:layout_constraintStart_toEndOf="@id/imgCategoriesDetailCar"
         app:layout_constraintTop_toBottomOf="@id/linLayCategoriesDetail1">
 
         <LinearLayout

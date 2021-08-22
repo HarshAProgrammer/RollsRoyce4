@@ -44,7 +44,7 @@ public class BillingActivity extends AppCompatActivity implements PurchasesUpdat
     private Button buy_btn;
     private BillingClient billingClient;
     private final List<String> skulist = new ArrayList<>();
-    private final String categories = "buy_us_a_watch";
+    private final String categories = "buy_us_a_car";
 
     public static final int SWIPE_THRESHOLD = 100;
     public static final int SWIPE_VELOCITY_THRESHOLD = 100;
@@ -74,7 +74,7 @@ public class BillingActivity extends AppCompatActivity implements PurchasesUpdat
         setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Buy us a Watch");
+            getSupportActionBar().setTitle("Buy us a Car");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
@@ -177,7 +177,7 @@ public class BillingActivity extends AppCompatActivity implements PurchasesUpdat
                         }
                     });
                     tv.setText(R.string.success_billing);
-                    Toasty.success(BillingActivity.this, "Thank You For The Watch", Toast.LENGTH_LONG).show();
+                    Toasty.success(BillingActivity.this, "Thank You For The Car", Toast.LENGTH_LONG).show();
                 }
             }
         } catch (Exception e) {

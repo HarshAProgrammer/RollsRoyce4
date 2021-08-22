@@ -56,7 +56,7 @@ public class BlogDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_detail);
         layout = findViewById(R.id.conLayBlogDetail);
-        spinKitView = findViewById(R.id.skBlogDetail);
+        spinKitView = findViewById(R.id.skBlogDetail);e
         toolbar = findViewById(R.id.toolbarBlogDetail);
         webview = findViewById(R.id.wvBlogDetail);
         liker = findViewById(R.id.ivBlogDetailLiker);

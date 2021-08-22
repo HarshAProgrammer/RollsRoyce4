@@ -31,7 +31,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/imgExpensiveDetailWatch"
+        android:id="@+id/imgExpensiveDetailCar"
         android:layout_width="350dp"
         android:layout_height="295dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -173,7 +173,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/scrollViewExpensiveDetail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgExpensiveDetailWatch"
+        app:layout_constraintStart_toEndOf="@id/imgExpensiveDetailCar"
         app:layout_constraintTop_toBottomOf="@id/ablExpensiveDetailActivity">
 
         <TextView
@@ -198,7 +198,7 @@
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imgExpensiveDetailWatch"
+        app:layout_constraintStart_toEndOf="@id/imgExpensiveDetailCar"
         app:layout_constraintTop_toBottomOf="@id/linLayExpensiveDetail1">
 
         <LinearLayout

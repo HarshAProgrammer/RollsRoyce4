@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="32dp"
-            android:text="@string/rollsroyce_watch_name_categories_detail"
+            android:text="@string/rollsroyce_car_name_categories_detail"
             android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="12sp" />

@@ -31,7 +31,7 @@
         <item
             android:id="@+id/billingNavigation"
             android:icon="@drawable/ic_buy_main"
-            android:title="@string/buy_us_a_watch_nav_home" />
+            android:title="@string/buy_us_a_car_nav_home" />
         <item
             android:id="@+id/factsNavigation"
             android:icon="@drawable/ic_facts_main"
