@@ -5,78 +5,69 @@ import com.rackluxury.rollsroyce.activities.models.MediaObject;
 public class Resources {
 
     public static final MediaObject[] MEDIA_OBJECTS = {
-            new MediaObject("Rolls Royce Day-Date 228235 Sundust Roman dial 40 mm Everose gold\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F1 RollsRoyce%20Day-Date%20228235%20Sundust%20Roman%20dial%2040%20mm%20Everose%20gold.mp4?alt=media&token=9e8b1b67-8499-4a38-8fb9-ca0e6ec89a2a",
+            new MediaObject("Rolls-Royce Exterion Concept\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F1.mp4?alt=media&token=c2f00390-2c8b-4fc7-9fe4-7f63d42db311",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F1.jpg?alt=media&token=a0c5af20-bedb-4c90-8a0d-343277854b5c",
+                    "This is a showcase video from Rolls Royce."),
+
+            new MediaObject("Rolls-Royce for Barbie from Abu Dhabi\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F2.mp4?alt=media&token=63468dcf-0179-48dc-aa1e-cd337de51bf9",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F2.jpg?alt=media&token=9b14684d-4067-44f9-9fe1-1fca88bbfa4c",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2019 Rolls Royce Cullinan by Cherry Red - royal purple\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F3.mp4?alt=media&token=8e859bfe-9363-4542-81c6-e1e3d8044dae",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F3.jpg?alt=media&token=a0de1def-c644-4703-8be3-81de13a9488a",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("Mansory Rolls-Royce Cullinan Billionaire for millionaires\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F4.mp4?alt=media&token=2c25ad19-7578-4c35-bcb8-e584f3ad1261",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F4.jpg?alt=media&token=1c0206db-74bd-4dc8-a241-f1b51c1fb037",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2019 Rolls-Royce Phantom EWB with Privacy Suite\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F5.mp4?alt=media&token=2979087c-e494-4d90-a0cb-d2691bb137aa",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F5.jpg?alt=media&token=38d87c99-0de1-4512-b20d-1fcc24ac1b18",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2020 Rolls-Royce Cullinan Black Badge V12 sinister new look\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F6.mp4?alt=media&token=999efe14-863b-4566-9d06-0b678e70ae48",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F6.jpg?alt=media&token=c0292973-df6e-4107-bf4f-beada39c81be",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("Rolls-Royce Red Phantom - the 115th Anniversary of luxury\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F7.mp4?alt=media&token=2d4f951f-1aef-4588-9bfa-2edcfeaf20e2",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F7.jpg?alt=media&token=49bd0194-d2cd-494c-b1f6-52113cb0236a",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("Rolls-Royce Phantom Spofec - improved perfection\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F8.mp4?alt=media&token=e1a60b32-644a-4eca-881d-2160ac6ca0fe",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F8.jpg?alt=media&token=842cdcc2-372b-4d54-9078-e6f47a15e738",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2019 Rolls-Royce Onyx Concept Wraith black star\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F9.mp4?alt=media&token=c33335ef-1ea9-4555-8a9f-1f56178af6b0",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F9.jpg?alt=media&token=e058472b-74ac-46b7-be2d-e7efeb18ec56",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2019 Rolls-Royce Wraith by Prior Design - discreet styling\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F10.mp4?alt=media&token=d6db1b13-233a-494e-8928-0c39a05317bb",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F10.jpg?alt=media&token=cbb7ad5f-2f34-4da4-aebd-21cfe261b03e",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2008 Rolls-Royce Phantom Drophead Coupé big like the sun\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F11.mp4?alt=media&token=8bc75f9a-5962-41df-a84f-bcc6ff2e64ad",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F11.jpg?alt=media&token=5debe384-db0c-4bb7-8890-bf0a5a07a9f5",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2021 Mansory’s Rolls-Royce Cullinan Coastline ultimate luxury\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F12.mp4?alt=media&token=5f57d34f-94ce-45b8-9ee2-9a59a70dcd8c",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F12.jpg?alt=media&token=6e850cd8-9bc2-4aac-8049-2653459b3c9a",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("2020 Rolls-Royce Cullinan wide body kit by Mansory\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F13.mp4?alt=media&token=1a3ebeed-965d-4176-9cff-3c0b60118cb9",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F13.jpg?alt=media&token=24cc024a-daee-43fd-a27e-7af205513bb1",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("1997 Rolls-Royce Silver Spur classic luxury saloon\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F14.mp4?alt=media&token=d4e7643e-2b5c-4cbe-8f70-3a28c2941384",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F14.jpg?alt=media&token=81b31f34-a0fc-481e-9517-adc94ebda938",
+                    "This is a showcase video from Rolls Royce."),
+            new MediaObject("British Racing Green Rolls-Royce Cullinan from Mansory\n",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F15.mp4?alt=media&token=6b6229d4-dad7-436c-ac98-60f96575054e",
+                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F15.jpg?alt=media&token=8abe10a8-0e69-472f-9e68-998e8b5b1a49",
+                    "This is a showcase video from Rolls Royce."),
 
 
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F1day_date.jpg?alt=media&token=788672a8-376a-41e2-bfcb-e67ae2e1ed14",
-                    "The amazing Rolls Royce Day-Date 228235 Sundust dial with Roman numerals fluted bezel president bracelet 18 ct Everose gold made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars"),
-
-            new MediaObject("Rolls Royce Datejust 126300 Blue dial 41 mm Oyster bracelet Stainless Steel\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F2 RollsRoyce%20Datejust%20126300%20Blue%20dial%2041%20mm%20Oyster%20bracelet%20Stainless%20Steel.mp4?alt=media&token=cce8fb29-0d8d-4542-afec-7d3e3df97808",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F2datejust.jpg?alt=media&token=60d871cd-1f3b-4c56-9bd8-824ebf3b701a",
-                    "The amazing Rolls Royce Datejust 126300 Blue dial 41 mm Smooth bezel Oyster bracelet 904L stainless steel made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars"),
-
-            new MediaObject("Rolls Royce GMT-Master II 116718LN Green dial 40 mm Yellow Gold\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F3 RollsRoyce%20GMT-Master%20II%20116718LN%20Green%20dial%2040%20mm%20Yellow%20Gold.mp4?alt=media&token=886c7a53-e4d6-4ddc-8bb0-672c90cc2e3c",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F3gmt_master_2.jpg?alt=media&token=ce9b8aec-177d-486a-b932-0877acc62ea4",
-                    "The amazing Rolls Royce GMT-Master II 116718LN Green dial 40 mm ceramic bezel oyster bracelet 18 ct yellow gold made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars"),
-
-            new MediaObject("The beauty of Rolls Royce Submariner no date 114060 black dial 40 mm 904L stainless steel luxury car\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F4The%20beauty%20of%20 RollsRoyce%20Submariner%20no%20date%20114060%20black%20dial%2040%20mm%20904L%20stainless%20steel.mp4?alt=media&token=0b5816b8-7200-4456-a952-1c57f82e8b23",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F4submariner.jpg?alt=media&token=2e04e28e-4c00-46c7-acd7-ab65d81af68b",
-                    "Hello friends, let's take a closer look at this amazing Rolls Royce car. I made this video for people who love Rolls Royce Motor Cars.  This video shows the beauty of Rolls Royce Submariner no date 114060 black dial luxury men's car. This is a picture slide show video with beautiful background music. This is for all Rolls Royce fans...  \n"),
-
-            new MediaObject("Rolls Royce Cosmograph Daytona 116528 Champagne and Black dial 40 mm yellow gold\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F5 RollsRoyce%20Cosmograph%20Daytona%20116528%20Champagne%20and%20Black%20dial%2040%20mm%20yellow%20gold.mp4?alt=media&token=d3d58515-de0c-47a6-b300-6f1527b5fcfb",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F5cosmograph_daytona.jpg?alt=media&token=84f93f9a-4bcc-475e-a94c-b8cb0371570e",
-                    "The amazing Rolls Royce Cosmograph Daytona 116528 Champagne and Black dial 40 mm Fixed bezel with engraved tachymetric scale Oyster bracelet 18 ct yellow gold made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars"),
-
-            new MediaObject("Rolls Royce Yacht-Master II 116689 white dial 44 mm white gold and platinum\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F6 RollsRoyce%20Yacht-Master%20II%20116689%20white%20dial%2044%20mm%20white%20gold%20and%20platinum.mp4?alt=media&token=1966848a-bd1d-45e9-add3-0ee59d11b8e6",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F6yacht_master.jpg?alt=media&token=2f466e4b-063d-40ec-9c61-44e37c9cb320",
-                    "The amazing Rolls Royce Yacht-Master II 116689 white dial 44 mm platinum bezel oyster bracelet 18 ct white gold and platinum made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars"),
-
-            new MediaObject("Rolls Royce Sea-Dweller Deepsea 116660 D-blue James Cameron 44 mm Stainless Steel\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F7 RollsRoyce%20Sea-Dweller%20Deepsea%20116660%20D-blue%20James%20Cameron%2044%20mm%20Stainless%20Steel.mp4?alt=media&token=1c70b8f9-0d7b-4301-9b30-51b48bc59a43",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F7sea_dweller.jpg?alt=media&token=8f39e80a-3316-4f70-94d0-7181c3e107af",
-                    "The amazing Rolls Royce Sea Dweller Deepsea 116660 D blue dial James Cameron Edition 44 mm ceramic bezel oyster bracelet 904L stainless steel made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars\n"),
-
-            new MediaObject("Rolls Royce Explorer II 216570 White dial 42 mm Stainless Steel\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F8 RollsRoyce%20Explorer%20II%20216570%20Black%20dial%2042%20mm%20Stainless%20Steel.mp4?alt=media&token=142cae65-3dfc-47f9-a2ed-85bff30b2c9d",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F8explorer_2.jpg?alt=media&token=77582370-47b2-4c0d-95f4-8249cba32947",
-                    "The amazing Rolls Royce Explorer II 216570 White dial 42 mm Fixed 24-hour graduated bezel oyster bracelet 904L stainless steel made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars\n"),
-
-            new MediaObject("Rolls Royce Sky-Dweller 326934 Black dial 42 mm steel and white gold\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F9 RollsRoyce%20Sky-Dweller%20326935%20Sundust%20Roman%20dial%2042%20mm%20Everose%20gold.mp4?alt=media&token=227ccaaf-8817-4fd5-a71b-0dd4f75b4cbc",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F9sky_dweller.jpg?alt=media&token=b2edfa2b-a9c2-43fe-9921-f4170010c895",
-                    "The amazing Rolls Royce Sky-Dweller 326934 Black dial 42 mm 18 ct white gold fluted bezel oyster bracelet White Rolesor - combination of 904L steel and 18 ct white gold made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars\n"),
-
-            new MediaObject("Rolls Royce Milgauss 116400GV Z-Blue Dial 40 mm stainless steel\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F10 RollsRoyce%20Milgauss%20116400GV%20Z-Blue%20Dial%2040%20mm%20stainless%20steel.mp4?alt=media&token=681aae08-a084-4481-a6ad-ddf4a0000f59",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F10milgauss.jpg?alt=media&token=8d44f00f-4600-4262-8aea-32102fd8e843",
-                    "The amazing Rolls Royce Milgauss 116400GV Z-Blue Dial 40 mm green sapphire smooth bezel oyster bracelet 904L stainless steel made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars\n"),
-
-            new MediaObject("Rolls Royce PearlMaster 116688 white dial 44mm customized with diamonds yellow gold swiss luxury car\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F11 RollsRoyce%20Pearlmaster%20116688%20white%20dial%2044mm%20customized%20with%20diamonds%20yellow%20gold%20swiss%20luxury%20car.mp4?alt=media&token=44246156-ba97-4565-97b4-0573c799c617",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F11pearlmaster.jpg?alt=media&token=5ccaf9e0-b6fe-46fa-b756-03edb057fbbb",
-                    "See the beauty of Rolls Royce PearlMaster 116688 white dial 44 mm customized with full of diamonds oyster bracelet 18 ct yellow gold made luxury car\n"),
-
-            new MediaObject("Rolls Royce Air-King 116900 Black dial 40 mm stainless steel\n",
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2F12 RollsRoyce%20Air-King%20116900%20Black%20dial%2040%20mm%20stainless%20steel.mp4?alt=media&token=024f7ee5-8221-4926-abff-2ed053ce7afc",
-
-                    "https://firebasestorage.googleapis.com/v0/b/rolls-royce-cars.appspot.com/o/Videos%2FThumbnails%2F12air_king.jpg?alt=media&token=a0896b90-3cbd-4ead-9ffc-9001ecc23311",
-                    "A closer look at the Rolls Royce Air-King 116900 Black dial 40 mm smooth bezel oyster bracelet 904L stainless steel made luxury car. This video is dedicated to all Rolls Royce fans and the people who love Rolls Royce Motor Cars\n"),
 
     };
 }
