@@ -129,8 +129,6 @@ Clicca per riprovare."</string>
     <string name="unfollowed">"Smesso di seguire"</string>
     <string name="unfollow_failed">"Disiscrizione Fallita"</string>
     <string name="content_description_banner_imageview">"Immagine banner subreddit"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Cerca qualcosa"</string>
     <string name="no_posts_no_lazy_mode">"Nessun post disponibile"</string>
     <string name="lazy_mode_start">"Modalità Pigra parte in %1$.1fs"</string>
     <string name="lazy_mode_stop">"Modalità Pigra fermata"</string>
@@ -867,7 +865,6 @@ La riproduzione automatica video è disabilitata"</string>
     <string name="give_award_failed">"Fallito"</string>
     <string name="warning">"Avvertimento"</string>
     <string name="this_is_a_nsfw_subreddit">"Questo è un subreddit marcato NSFW"</string>
-    <string name="this_user_has_nsfw_content">"Questo utente è marcato NSFW"</string>
     <string name="dismiss">"Ignora"</string>
     <string name="leave">"Lascia"</string>
     <string name="go_to_subreddit">"Vai al subreddit"</string>
@@ -880,12 +877,9 @@ La riproduzione automatica video è disabilitata"</string>
     <string name="random_nsfw_post">"Post NSFW casuale"</string>
     <string name="fetch_random_thing_failed">"Riprova più tardi"</string>
     <string name="downloading">"Download in corso"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all e r/popular"</string>
     <string name="settings_miscellaneous_title">"Varie"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Rispetta ordinamento dei commenti consigliato dal sub"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Il tipo di ordinamento dei commenti non verrà salvato"</string>
-    <string name="settings_subreddit_filter_category">"Nascondi i Subreddit"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"In r/popular e r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"Animazione di cattura dell'UFO"</string>
     <string name="select_video_quality">"Scegli qualità video"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Feedback aptico"</string>

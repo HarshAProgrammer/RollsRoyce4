@@ -134,8 +134,6 @@ Toque para tentar novamente."</string>
     <string name="unfollowed">"Parou de Seguir"</string>
     <string name="unfollow_failed">"Falha ao Parar de Seguir"</string>
     <string name="content_description_banner_imageview">"Imagem do Banner do Subreddit"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Busque qualquer coisa"</string>
     <string name="no_posts_no_lazy_mode">"Nenhum post disponível"</string>
     <string name="lazy_mode_start">"Modo Preguiçoso inicia em %1$.1fs"</string>
     <string name="lazy_mode_stop">"Modo Preguiçoso parou"</string>
@@ -843,7 +841,6 @@ Mensagem: %2$s"</string>
     <string name="give_award_failed">"Falhou"</string>
     <string name="warning">"Aviso"</string>
     <string name="this_is_a_nsfw_subreddit">"Este é um subreddit NSFW."</string>
-    <string name="this_user_has_nsfw_content">"Este usuário tem conteúdo NSFW."</string>
     <string name="dismiss">"Dispensar"</string>
     <string name="leave">"Sair"</string>
 
@@ -860,12 +857,9 @@ Mensagem: %2$s"</string>
     <string name="random_nsfw_post">"Post NSFW aleatório"</string>
     <string name="fetch_random_thing_failed">"Tente novamente mais tarde"</string>
     <string name="downloading">"Baixando"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all e r/popular"</string>
     <string name="settings_miscellaneous_title">"Miscelânea"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Respeitar modo de classificação de comentário recomendado pelo subreddit"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Modo de classificação de comentário não será salvo"</string>
-    <string name="settings_subreddit_filter_category">"Ocultar subreddits"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"Em r/popular e r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"Animação de captura de OVNIs"</string>
     <string name="select_video_quality">"Selecionar qualidade do vídeo"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Resposta tátil"</string>

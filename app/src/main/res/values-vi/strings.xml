@@ -126,8 +126,6 @@
     <string name="unfollowed">"Đã ngừng theo dõi"</string>
     <string name="unfollow_failed">"Ngừng theo dõi thất bại"</string>
     <string name="content_description_banner_imageview">"Ảnh bìa của Subreddit"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Tìm bất cứ thứ gì"</string>
     <string name="no_posts_no_lazy_mode">"Không bài đăng nào có sẵn"</string>
     <string name="lazy_mode_start">"Chế độ lười biếng bắt đầu trong %1$.1fs"</string>
     <string name="lazy_mode_stop">"Chế độ lười biếng đã dừng"</string>
@@ -834,7 +832,6 @@ Thông báo: %2$s"</string>
     <string name="give_award_failed">"Thất bại"</string>
     <string name="warning">"Cảnh báo"</string>
     <string name="this_is_a_nsfw_subreddit">"Đây là một subreddit NSFW."</string>
-    <string name="this_user_has_nsfw_content">"Người dùng này có nội dung NSFW"</string>
     <string name="dismiss">"Bỏ qua"</string>
     <string name="leave">"Rời khỏi"</string>
     <string name="go_to_subreddit">"Đi đến subreddit"</string>
@@ -847,12 +844,9 @@ Thông báo: %2$s"</string>
     <string name="random_nsfw_post">"Bài đăng NSFW ngẫu nhiên"</string>
     <string name="fetch_random_thing_failed">"Hãy thử lại sau"</string>
     <string name="downloading">"Đang tải xuống"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all và r/popular"</string>
     <string name="settings_miscellaneous_title">"Khác"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Tôn trọng loại sắp xếp bình luận được subreddit khuyên dùng"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Loại sắp xếp bình luận sẽ không được lưu"</string>
-    <string name="settings_subreddit_filter_category">"Ẩn subreddit"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"Trong r/popular và r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"Hoạt ảnh UFO đang bắt lấy"</string>
     <string name="select_video_quality">"Chọn chất lượng video"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Phản hồi xúc giác"</string>

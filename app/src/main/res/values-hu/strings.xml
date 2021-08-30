@@ -124,8 +124,6 @@
     <string name="unfollowed">"Követés megszüntetve"</string>
     <string name="unfollow_failed">"Követés megszüntetése sikertelen"</string>
     <string name="content_description_banner_imageview">"Subreddit banner kép"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Keress rá bármire"</string>
     <string name="no_posts_no_lazy_mode">"Nincs rendelkezésre álló poszt"</string>
     <string name="lazy_mode_start">"Lusta mód kezdődik: %1$.1fs"</string>
     <string name="lazy_mode_stop">"Lusta mód megállt"</string>
@@ -837,7 +835,6 @@ Videó autómatikus lejátszása le van tiltva."</string>
     <string name="give_award_failed">"Nem sikerült"</string>
     <string name="warning">"Figyelem"</string>
     <string name="this_is_a_nsfw_subreddit">"Ez egy NSFW subreddit."</string>
-    <string name="this_user_has_nsfw_content">"Ennek a felhasználónak van NSFW tartlama"</string>
     <string name="dismiss">"Elutasít"</string>
     <string name="leave">"Elhagy"</string>
     <string name="go_to_subreddit">"Subreddithez"</string>
@@ -850,12 +847,9 @@ Videó autómatikus lejátszása le van tiltva."</string>
     <string name="random_nsfw_post">"Random NSFW poszt"</string>
     <string name="fetch_random_thing_failed">"Próbáld újra később"</string>
     <string name="downloading">"Letöltés"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all és r/popular"</string>
     <string name="settings_miscellaneous_title">"Egyéb"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Hagyja meg az ajánlott subreddit rendezés típust"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Komment rendezés típus nem lesz mentve"</string>
-    <string name="settings_subreddit_filter_category">"Subredditek elrejtése"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"r/popular-ban és r/all-ban"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"UFO elfogás animáció"</string>
     <string name="select_video_quality">"Videó minőség kiválasztása"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Haptikus visszajelzés"</string>

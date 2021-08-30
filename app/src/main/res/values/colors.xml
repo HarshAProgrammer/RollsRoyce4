@@ -5,7 +5,6 @@
 
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorBlue">#0D66BD</color>
     <color name="colorRed">#F32003</color>
     <color name="colorGreen">#12784A</color>
     <color name="colorGrey">#999999</color>
@@ -19,8 +18,6 @@
     <color name="semi_transparent_black">#90000000</color>
 
     <color name="tab_indicator_gray">#c0c0c0</color>
-    <color name="intro_description_color">#656565</color>
-    <color name="premium">#00FFD9</color>
     <color name="transparent">#00000000</color>
 
     <color name="colorFirstSplashText">#2E7D32</color>
@@ -36,12 +33,6 @@
 
 
     <color name="colorTextRippleMain">#858484</color>
-
-    <color name="common_gray_txt">#514e4e</color>
-    <color name="common_black_50">#80000000</color>
-    <color name="common_blue_bg">#0055bd</color>
-
-    <color name="text_dark">#9FA0A0</color>
 
 
     <color name="colorDescription">#212121</color>
@@ -75,8 +66,6 @@
     <color name="transparentActionBarAndExoPlayerControllerColor">#88000000</color>
     <color name="backgroundColor">#FFFFFF</color>
     <color name="playButtonBackgroundColor">#000000</color>
-    <color name="roundedBottomSheetPrimaryBackground">#FFFFFF</color>
-    <color name="roundedBottomSheetPrimaryNavigationBarColor">#000000</color>
     <color name="primaryTextColor">#000000</color>
     <color name="settingsSubtitleColor">#42000000</color>
     <color name="dividerColor">#E0E0E0</color>

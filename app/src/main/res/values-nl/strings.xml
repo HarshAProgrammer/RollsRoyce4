@@ -131,8 +131,6 @@ Tik om opnieuw te proberen."</string>
     <string name="unfollowed">"Ontvolgd"</string>
     <string name="unfollow_failed">"Ontvolgen Mislukt"</string>
     <string name="content_description_banner_imageview">"Subreddit Banner Afbeelding"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Zoek iets"</string>
     <string name="no_posts_no_lazy_mode">"Geen posts beschikbaar"</string>
     <string name="lazy_mode_start">"Luie Modus begint in %1$.1fs"</string>
     <string name="lazy_mode_stop">"Luie Modus Gestopt"</string>
@@ -840,7 +838,6 @@ Bericht: %2$s"</string>
     <string name="give_award_failed">"Mislukt"</string>
     <string name="warning">"Waarschuwing"</string>
     <string name="this_is_a_nsfw_subreddit">"Dit is een NSFW subreddit."</string>
-    <string name="this_user_has_nsfw_content">"Deze gebruiker heeft NSFW inhoud"</string>
     <string name="dismiss">"Afwijzgen"</string>
     <string name="leave">"Verlaten"</string>
 
@@ -857,12 +854,9 @@ Bericht: %2$s"</string>
     <string name="random_nsfw_post">"Willekeurige NSFW Post"</string>
     <string name="fetch_random_thing_failed">"Probeer later opnieuw"</string>
     <string name="downloading">"Downloaden"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all en r/popular"</string>
     <string name="settings_miscellaneous_title">"Diversen"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Respecteer Subreddit Aanbevolen Sorteertype voor Reacties"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Het Sorteertype voor reacties wordt niet opgeslagen"</string>
-    <string name="settings_subreddit_filter_category">"Verberg Subreddits"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"In r/popular en r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"UFO ontvoering animatie"</string>
     <string name="select_video_quality">"Selecteer Videokwaliteit"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Haptische Feedback"</string>

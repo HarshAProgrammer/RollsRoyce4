@@ -134,8 +134,6 @@
     <string name="unfollowed">"Вы не следите"</string>
     <string name="unfollow_failed">"Не удалось перестать следить"</string>
     <string name="content_description_banner_imageview">"Изображение баннера сабреддита"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Ищите что угодно"</string>
     <string name="no_posts_no_lazy_mode">"Нет доступных постов"</string>
     <string name="lazy_mode_start">"Ленивый режим начнётся через %1$.1fs"</string>
     <string name="lazy_mode_stop">"Ленивый режим остановлен"</string>
@@ -835,7 +833,6 @@ Reddit видео - уменьшенное разрешение.
     <string name="give_award_failed">"Ошибка"</string>
     <string name="warning">"Предупреждение"</string>
     <string name="this_is_a_nsfw_subreddit">"Это NSFW сабреддит"</string>
-    <string name="this_user_has_nsfw_content">"У пользователь есть NSFW контент"</string>
     <string name="dismiss">"Отклонить"</string>
     <string name="leave">"Покинуть"</string>
     <string name="go_to_subreddit">"Перейти к сабреддиту"</string>
@@ -848,12 +845,9 @@ Reddit видео - уменьшенное разрешение.
     <string name="random_nsfw_post">"Случайный NSFW пост"</string>
     <string name="fetch_random_thing_failed">"Попробуйте позже"</string>
     <string name="downloading">"Скачивание"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all и r/popular"</string>
     <string name="settings_miscellaneous_title">"Прочее"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Учитывать рекомендуемый тип сортировки сабреддита"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Тип сортировки комментариев не будет сохранен"</string>
-    <string name="settings_subreddit_filter_category">"Спрятать сабреддиты"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"В r/popular и r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"Анимация захвата НЛО"</string>
     <string name="select_video_quality">"Выбрать качество видео"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Тактильная отдача"</string>

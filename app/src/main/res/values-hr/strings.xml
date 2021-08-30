@@ -128,8 +128,6 @@
     <string name="unfollowed">"Odpraćeno"</string>
     <string name="unfollow_failed">"Odpraćenje nije uspjelo"</string>
     <string name="content_description_banner_imageview">"Slika podreddita"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Pretražite nešto"</string>
     <string name="no_posts_no_lazy_mode">"Nema dostupnih objava"</string>
     <string name="lazy_mode_start">"Mod za lijenčine počinje za %1$.1fs"</string>
     <string name="lazy_mode_stop">"Mod za lijenčine zaustavljen"</string>
@@ -866,7 +864,6 @@ Poruka: %2$s"</string>
     <string name="give_award_failed">"Nagrađivanje nije uspjelo"</string>
     <string name="warning">"Upozorenje"</string>
     <string name="this_is_a_nsfw_subreddit">"Ovo je NSFW podreddit."</string>
-    <string name="this_user_has_nsfw_content">"Ovaj korisnik ima NSFW sadržaj"</string>
     <string name="dismiss">"Odbaci"</string>
     <string name="leave">"Napusti"</string>
 
@@ -883,12 +880,9 @@ Poruka: %2$s"</string>
     <string name="random_nsfw_post">"Nasumična NSFW objava"</string>
     <string name="fetch_random_thing_failed">"Pokušajte ponovno kasnije"</string>
     <string name="downloading">"Preuzimanje"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all i r/popular"</string>
     <string name="settings_miscellaneous_title">"Razno"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Poštuj tip sortiranja komentara preporučen na podredditu"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Tip sortiranja komentara neće biti spremljen"</string>
-    <string name="settings_subreddit_filter_category">"Sakrij podreddite"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"U r/popular i r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"UFO Capturing Animation"</string>
     <string name="select_video_quality">"Odaberi kvalitetu videa"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Haptična povratna informacija"</string>

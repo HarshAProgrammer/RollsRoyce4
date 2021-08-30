@@ -124,8 +124,6 @@
     <string name="unfollowed">"Przestano obserwować"</string>
     <string name="unfollow_failed">"Nie udało się przestać obserwować"</string>
     <string name="content_description_banner_imageview">"Banner subreddita"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Wyszukaj"</string>
     <string name="no_posts_no_lazy_mode">"Nie znaleziono postów"</string>
     <string name="lazy_mode_start">"Tryb Lenia zaczyna się za %1$.1fs"</string>
     <string name="lazy_mode_stop">"Zatrzymano Tryb Lenia"</string>
@@ -842,7 +840,6 @@ Wiadomość: %2$s"</string>
     <string name="give_award_failed">"Niepowodzenie"</string>
     <string name="warning">"Ostrzeżenie "</string>
     <string name="this_is_a_nsfw_subreddit">"To jest subreddit NSFW"</string>
-    <string name="this_user_has_nsfw_content">"Ten użytkownik posiada treści NSFW"</string>
     <string name="dismiss">"Odrzuć"</string>
     <string name="leave">"Opuść"</string>
 
@@ -857,12 +854,9 @@ Wiadomość: %2$s"</string>
     <string name="random_nsfw_post">"Losowy post NSFW"</string>
     <string name="fetch_random_thing_failed">"Spróbuj ponownie później"</string>
     <string name="downloading">"Pobieranie"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all i r/popular"</string>
     <string name="settings_miscellaneous_title">"Róźne"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"Szanuj Zalecany typ sortowania komentarzy subreddita"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Typ sortowania komentarzy nie zostanie zapisany"</string>
-    <string name="settings_subreddit_filter_category">"Ukryj Subreddity"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"W r/popular i r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"Animacja przechwytywania UFO"</string>
     <string name="select_video_quality">"Wybierz jakość wideo"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Reakcja na dotyk"</string>

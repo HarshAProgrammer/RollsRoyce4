@@ -135,8 +135,6 @@ This translation does it work well in this kinda format. People use "since" in s
     <string name="unfollowed">"Takip bırakıldı"</string>
     <string name="unfollow_failed">"Takip bırakılamadı"</string>
     <string name="content_description_banner_imageview">"Subreddit Banner Resmi"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Bir şey arayın"</string>
     <string name="no_posts_no_lazy_mode">"Hiç gönderi yok"</string>
     <string name="lazy_mode_start">"Uyuşuk Modu %1$.1fs'da başlıyor"</string>
     <string name="lazy_mode_stop">"Uyuşuk Modu durdu"</string>
@@ -849,7 +847,6 @@ Sekmeler, diğerlerine geçtikten sonra tüm içeriği kaybedebilir. Bu, sayfay�
     <string name="give_award_failed">"İşlem Başarısız Oldu"</string>
     <string name="warning">"Uyarı"</string>
     <string name="this_is_a_nsfw_subreddit">"Bu bir NSFW subredditidir."</string>
-    <string name="this_user_has_nsfw_content">"Bu kullanıcının NSFW içeriği var"</string>
     <string name="dismiss">"Reddet"</string>
     <string name="leave">"Ayrıl"</string>
 
@@ -866,12 +863,9 @@ Sekmeler, diğerlerine geçtikten sonra tüm içeriği kaybedebilir. Bu, sayfay�
     <string name="random_nsfw_post">"Rastgele NSFW gönderisi"</string>
     <string name="fetch_random_thing_failed">"Daha sonra tekrar deneyin"</string>
     <string name="downloading">"İndiriliyor"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all ve r/popular"</string>
     <string name="settings_miscellaneous_title">"Diğer"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_title">"İlgili Subreddit Önerilen Yorum Sıralaması Türü"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"Yorum sıralaması türü kaydedilmez"</string>
-    <string name="settings_subreddit_filter_category">"Subredditleri Gizle"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"r/popular ve r/all"</string>
     <string name="settings_credits_ufo_capturing_animation_title">"UFO Yakalama Animasyonu"</string>
     <string name="select_video_quality">"Video Kalitesini Seç"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Dokunsal Geribildirim"</string>

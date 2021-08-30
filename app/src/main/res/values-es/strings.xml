@@ -131,8 +131,6 @@ Toca para reintentar."</string>
     <string name="unfollowed">"Dejó de Seguir"</string>
     <string name="unfollow_failed">"Error al dejar de seguir"</string>
     <string name="content_description_banner_imageview">"Imagen de Portada del Subreddit"</string>
-    <string name="app_label">"Cars from RollsRoyce"</string>
-    <string name="search_hint">"Busca cualquier cosa"</string>
     <string name="no_posts_no_lazy_mode">"No hay publicaciones disponibles"</string>
     <string name="lazy_mode_start">"El modo automático empieza en %1$.1fs"</string>
     <string name="lazy_mode_stop">"Se ha detenido el modo automático"</string>
@@ -865,7 +863,6 @@ Videos de Reddit están en menor resolución"</string>
     <string name="give_award_failed">"Falló"</string>
     <string name="warning">"Precaución"</string>
     <string name="this_is_a_nsfw_subreddit">"Este es un Subreddit NSFW"</string>
-    <string name="this_user_has_nsfw_content">"Este usuario tiene contenido NSFW"</string>
     <string name="dismiss">"Descartar"</string>
     <string name="leave">"Salir"</string>
 
@@ -882,13 +879,10 @@ Videos de Reddit están en menor resolución"</string>
     <string name="random_nsfw_post">"Publicación NSFW aleatoria"</string>
     <string name="fetch_random_thing_failed">"Intente de nuevo luego"</string>
     <string name="downloading">"Descargando"</string>
-    <string name="subreddit_filter_popular_and_all_activity_label">"r/all y r/popular"</string>
     <string name="settings_miscellaneous_title">"Misceláneo"</string>
     <string name="settings_respect_subreddit_recommended_comment_sort_type_summary">"La ordenación de los comentarios no se guardará"</string>
 
     <!-- Ocultar Subreddits -->
-    <string name="settings_subreddit_filter_category">"Ocultar Subreddits"</string>
-    <string name="settings_subreddit_filter_popular_and_all">"En r/popular y r/all"</string>
     <string name="select_video_quality">"Seleccione calidad del video"</string>
     <string name="settings_swipe_action_haptic_feedback_title">"Retroalimentación háptica"</string>
     <string name="settings_hide_subreddit_description_title">"Ocultar Descripción del Subreddit"</string>

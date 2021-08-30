@@ -302,10 +302,6 @@
 
     <style name="FontFamily" />
 
-    <style name="FontFamily.Default">
-        <item name="font_family">@null</item>
-    </style>
-
     <style name="FontFamily.BalsamiqSans">
         <item name="font_family">@font/balsamiq_sans</item>
     </style>
@@ -360,10 +356,6 @@
 
     <style name="TitleFontFamily" />
 
-    <style name="TitleFontFamily.Default">
-        <item name="title_font_family">@null</item>
-    </style>
-
     <style name="TitleFontFamily.BalsamiqSans">
         <item name="title_font_family">@font/balsamiq_sans</item>
     </style>
@@ -417,10 +409,6 @@
     </style>
 
     <style name="ContentFontFamily" />
-
-    <style name="ContentFontFamily.Default">
-        <item name="content_font_family">@null</item>
-    </style>
 
     <style name="ContentFontFamily.BalsamiqSans">
         <item name="content_font_family">@font/balsamiq_sans</item>
