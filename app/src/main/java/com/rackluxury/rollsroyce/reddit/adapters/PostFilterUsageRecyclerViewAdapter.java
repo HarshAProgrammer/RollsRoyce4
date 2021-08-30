@@ -16,8 +16,8 @@ import com.rackluxury.rollsroyce.reddit.postfilter.PostFilterUsage;
 
 public class PostFilterUsageRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<PostFilterUsage> postFilterUsages;
-    private OnItemClickListener onItemClickListener;
-    private Context context;
+    private final OnItemClickListener onItemClickListener;
+    private final Context context;
 
     public interface OnItemClickListener {
         void onClick(PostFilterUsage postFilterUsage);

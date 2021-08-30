@@ -210,7 +210,7 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
     private String mSingleCommentId;
     private String mContextNumber;
     private boolean showToast = false;
-    private boolean isSortingComments = false;
+    private final boolean isSortingComments = false;
     private boolean mIsSmoothScrolling = false;
     private boolean mLockFab;
     private boolean mSwipeUpToHideFab;

@@ -154,10 +154,7 @@ public class PlaylistCardAdapter extends RecyclerView.Adapter<PlaylistCardAdapte
     }
 
     private boolean isEmpty(String s) {
-        if (s == null || s.length() == 0) {
-            return true;
-        }
-        return false;
+        return s == null || s.length() == 0;
     }
 
     private String parseDuration(String in) {
@@ -168,7 +165,7 @@ public class PlaylistCardAdapter extends RecyclerView.Adapter<PlaylistCardAdapte
         if (hasSeconds) {
             s = in.substring(2, in.length() - 1);
         } else {
-            s = in.substring(2, in.length());
+            s = in.substring(2);
         }
 
         String minutes = "0";

@@ -13,9 +13,9 @@ import java.util.List;
 import com.rackluxury.rollsroyce.reddit.RedditDataRoomDatabase;
 
 public class SubscribedSubredditViewModel extends AndroidViewModel {
-    private SubscribedSubredditRepository mSubscribedSubredditRepository;
-    private LiveData<List<SubscribedSubredditData>> mAllSubscribedSubreddits;
-    private LiveData<List<SubscribedSubredditData>> mAllFavoriteSubscribedSubreddits;
+    private final SubscribedSubredditRepository mSubscribedSubredditRepository;
+    private final LiveData<List<SubscribedSubredditData>> mAllSubscribedSubreddits;
+    private final LiveData<List<SubscribedSubredditData>> mAllFavoriteSubscribedSubreddits;
 
     public SubscribedSubredditViewModel(Application application, RedditDataRoomDatabase redditDataRoomDatabase, String accountName) {
         super(application);
@@ -37,9 +37,9 @@ public class SubscribedSubredditViewModel extends AndroidViewModel {
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory {
-        private Application mApplication;
-        private RedditDataRoomDatabase mRedditDataRoomDatabase;
-        private String mAccountName;
+        private final Application mApplication;
+        private final RedditDataRoomDatabase mRedditDataRoomDatabase;
+        private final String mAccountName;
 
         public Factory(Application application, RedditDataRoomDatabase redditDataRoomDatabase, String accountName) {
             this.mApplication = application;

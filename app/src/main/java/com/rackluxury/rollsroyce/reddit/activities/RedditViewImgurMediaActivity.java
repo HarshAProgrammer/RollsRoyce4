@@ -398,10 +398,10 @@ public class RedditViewImgurMediaActivity extends AppCompatActivity implements S
 
     private static class ParseImgurImagesAsyncTask extends AsyncTask<Void, Void, Void> {
 
-        private String response;
+        private final String response;
         private ArrayList<ImgurMedia> images;
         private boolean parseFailed = false;
-        private ParseImgurImagesAsyncTaskListener parseImgurImagesAsyncTaskListener;
+        private final ParseImgurImagesAsyncTaskListener parseImgurImagesAsyncTaskListener;
 
         interface ParseImgurImagesAsyncTaskListener {
             void success(ArrayList<ImgurMedia> images);
@@ -453,10 +453,10 @@ public class RedditViewImgurMediaActivity extends AppCompatActivity implements S
 
     private static class ParseImgurImageAsyncTask extends AsyncTask<Void, Void, Void> {
 
-        private String response;
+        private final String response;
         private ImgurMedia image;
         private boolean parseFailed = false;
-        private ParseImgurImageAsyncTaskListener parseImgurImageAsyncTaskListener;
+        private final ParseImgurImageAsyncTaskListener parseImgurImageAsyncTaskListener;
 
         interface ParseImgurImageAsyncTaskListener {
             void success(ImgurMedia image);

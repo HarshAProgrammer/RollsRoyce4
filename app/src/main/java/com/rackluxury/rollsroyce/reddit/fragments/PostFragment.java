@@ -2008,8 +2008,8 @@ public class PostFragment extends Fragment implements FragmentCommunicator {
 
     private static class StaggeredGridLayoutManagerItemOffsetDecoration extends RecyclerView.ItemDecoration {
 
-        private int mItemOffset;
-        private int mNColumns;
+        private final int mItemOffset;
+        private final int mNColumns;
 
         StaggeredGridLayoutManagerItemOffsetDecoration(int itemOffset, int nColumns) {
             mItemOffset = itemOffset;

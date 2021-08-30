@@ -23,7 +23,7 @@ public class FavouriteCategoriesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private FavDBCategories favDB;
-    private List<FavItemCategories> favItemListCategories = new ArrayList<>();
+    private final List<FavItemCategories> favItemListCategories = new ArrayList<>();
     private Toolbar toolbar;
     private ImageView backIcon;
     private LottieAnimationView lottieAnimationView;

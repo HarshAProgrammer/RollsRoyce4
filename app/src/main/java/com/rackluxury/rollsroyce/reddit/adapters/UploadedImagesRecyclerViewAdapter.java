@@ -14,8 +14,8 @@ import com.rackluxury.rollsroyce.R;
 import com.rackluxury.rollsroyce.reddit.UploadedImage;
 
 public class UploadedImagesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private ArrayList<UploadedImage> uploadedImages;
-    private ItemClickListener itemClickListener;
+    private final ArrayList<UploadedImage> uploadedImages;
+    private final ItemClickListener itemClickListener;
 
     public UploadedImagesRecyclerViewAdapter(ArrayList<UploadedImage> uploadedImages, ItemClickListener itemClickListener) {
         this.uploadedImages = uploadedImages;

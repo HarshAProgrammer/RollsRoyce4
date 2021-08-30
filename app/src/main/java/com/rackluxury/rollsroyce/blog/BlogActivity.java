@@ -39,7 +39,7 @@ public class BlogActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private LinearLayoutManager manager;
     private BlogPostAdapter adapter;
-    private List<BlogItem> blogItems = new ArrayList<>();
+    private final List<BlogItem> blogItems = new ArrayList<>();
     private Boolean isScrolling = false;
     private int currentItems, totalItems, scrollOutItems;
     private String token = "";

@@ -122,7 +122,7 @@ public class ForgotPassword extends AppCompatActivity implements
         passwordEmail.addTextChangedListener(forgotPasswordTextWatcher);
 
     }
-    private TextWatcher forgotPasswordTextWatcher = new TextWatcher() {
+    private final TextWatcher forgotPasswordTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }

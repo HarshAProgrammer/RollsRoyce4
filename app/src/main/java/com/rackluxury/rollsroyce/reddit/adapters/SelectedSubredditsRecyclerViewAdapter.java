@@ -17,8 +17,8 @@ import com.rackluxury.rollsroyce.reddit.customtheme.CustomThemeWrapper;
 import com.rackluxury.rollsroyce.R;
 
 public class SelectedSubredditsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private CustomThemeWrapper customThemeWrapper;
-    private ArrayList<String> subreddits;
+    private final CustomThemeWrapper customThemeWrapper;
+    private final ArrayList<String> subreddits;
 
     public SelectedSubredditsRecyclerViewAdapter(CustomThemeWrapper customThemeWrapper, ArrayList<String> subreddits) {
         this.customThemeWrapper = customThemeWrapper;

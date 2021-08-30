@@ -13,9 +13,9 @@ import com.rackluxury.rollsroyce.reddit.account.Account;
 public class SubscribedUserData {
     @NonNull
     @ColumnInfo(name = "name")
-    private String name;
+    private final String name;
     @ColumnInfo(name = "icon")
-    private String iconUrl;
+    private final String iconUrl;
     @NonNull
     @ColumnInfo(name = "username")
     private String username;

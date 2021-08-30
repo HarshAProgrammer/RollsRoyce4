@@ -30,9 +30,9 @@ import pl.droidsonroids.gif.GifImageView;
 public class SubredditMultiselectionRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private ArrayList<SubredditWithSelection> subscribedSubreddits;
-    private RequestManager glide;
-    private int primaryTextColor;
-    private int colorAccent;
+    private final RequestManager glide;
+    private final int primaryTextColor;
+    private final int colorAccent;
 
     public SubredditMultiselectionRecyclerViewAdapter(Context context, CustomThemeWrapper customThemeWrapper) {
         glide = Glide.with(context);
@@ -56,11 +56,7 @@ public class SubredditMultiselectionRecyclerViewAdapter extends RecyclerView.Ada
                     .error(glide.load(R.drawable.subreddit_default_icon)
                             .apply(RequestOptions.bitmapTransform(new RoundedCornersTransformation(72, 0))))
                     .into(((SubscribedSubredditViewHolder) holder).iconImageView);
-            if (subscribedSubreddits.get(position).isSelected()) {
-                ((SubscribedSubredditViewHolder) holder).checkBox.setChecked(true);
-            } else {
-                ((SubscribedSubredditViewHolder) holder).checkBox.setChecked(false);
-            }
+            ((SubscribedSubredditViewHolder) holder).checkBox.setChecked(subscribedSubreddits.get(position).isSelected());
             ((SubscribedSubredditViewHolder) holder).checkBox.setOnClickListener(view -> {
                 if (subscribedSubreddits.get(position).isSelected()) {
                     ((SubscribedSubredditViewHolder) holder).checkBox.setChecked(false);

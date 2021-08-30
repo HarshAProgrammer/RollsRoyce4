@@ -23,7 +23,7 @@ public class FavouriteExpensiveActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private FavDBExpensive favDB;
-    private List<FavItemExpensive> favItemListExpensive = new ArrayList<>();
+    private final List<FavItemExpensive> favItemListExpensive = new ArrayList<>();
     private Toolbar toolbar;
     private ImageView backIcon;
     private LottieAnimationView lottieAnimationView;

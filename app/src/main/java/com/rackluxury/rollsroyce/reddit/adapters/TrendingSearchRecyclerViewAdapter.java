@@ -35,13 +35,13 @@ import com.rackluxury.rollsroyce.reddit.post.Post;
 
 public class TrendingSearchRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ArrayList<TrendingSearch> trendingSearches;
-    private CustomThemeWrapper customThemeWrapper;
-    private RequestManager glide;
-    private int imageViewWidth;
-    private boolean dataSavingMode;
-    private boolean disableImagePreview;
-    private float mScale;
-    private ItemClickListener itemClickListener;
+    private final CustomThemeWrapper customThemeWrapper;
+    private final RequestManager glide;
+    private final int imageViewWidth;
+    private final boolean dataSavingMode;
+    private final boolean disableImagePreview;
+    private final float mScale;
+    private final ItemClickListener itemClickListener;
 
     public TrendingSearchRecyclerViewAdapter(Context context, CustomThemeWrapper customThemeWrapper,
                                              int imageViewWidth, boolean dataSavingMode, boolean disableImagePreview,

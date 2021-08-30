@@ -43,18 +43,18 @@ public class PrivateMessagesDetailRecyclerViewAdapter extends RecyclerView.Adapt
     private static final int VIEW_TYPE_MESSAGE_SENT = 0;
     private static final int VIEW_TYPE_MESSAGE_RECEIVED = 1;
     private Message mMessage;
-    private RedditViewPrivateMessagesActivity mRedditViewPrivateMessagesActivity;
-    private RequestManager mGlide;
-    private Locale mLocale;
-    private String mAccountName;
-    private Markwon mMarkwon;
-    private boolean mShowElapsedTime;
-    private String mTimeFormatPattern;
-    private int mSecondaryTextColor;
-    private int mReceivedMessageTextColor;
-    private int mSentMessageTextColor;
-    private int mReceivedMessageBackgroundColor;
-    private int mSentMessageBackgroundColor;
+    private final RedditViewPrivateMessagesActivity mRedditViewPrivateMessagesActivity;
+    private final RequestManager mGlide;
+    private final Locale mLocale;
+    private final String mAccountName;
+    private final Markwon mMarkwon;
+    private final boolean mShowElapsedTime;
+    private final String mTimeFormatPattern;
+    private final int mSecondaryTextColor;
+    private final int mReceivedMessageTextColor;
+    private final int mSentMessageTextColor;
+    private final int mReceivedMessageBackgroundColor;
+    private final int mSentMessageBackgroundColor;
 
     public PrivateMessagesDetailRecyclerViewAdapter(RedditViewPrivateMessagesActivity redditViewPrivateMessagesActivity,
                                                     SharedPreferences sharedPreferences, Locale locale,

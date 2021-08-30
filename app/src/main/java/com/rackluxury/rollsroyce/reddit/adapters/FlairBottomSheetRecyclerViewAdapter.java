@@ -24,10 +24,10 @@ import com.rackluxury.rollsroyce.reddit.Flair;
 import com.rackluxury.rollsroyce.R;
 
 public class FlairBottomSheetRecyclerViewAdapter extends RecyclerView.Adapter<FlairBottomSheetRecyclerViewAdapter.FlairViewHolder> {
-    private Context context;
+    private final Context context;
     private ArrayList<Flair> flairs;
-    private int flairTextColor;
-    private ItemClickListener itemClickListener;
+    private final int flairTextColor;
+    private final ItemClickListener itemClickListener;
 
     public FlairBottomSheetRecyclerViewAdapter(Context context, CustomThemeWrapper customThemeWrapper,
                                                ItemClickListener itemClickListener) {

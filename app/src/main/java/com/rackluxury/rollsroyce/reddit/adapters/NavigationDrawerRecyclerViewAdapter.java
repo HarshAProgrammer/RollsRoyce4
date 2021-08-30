@@ -62,10 +62,10 @@ public class NavigationDrawerRecyclerViewAdapter extends RecyclerView.Adapter<Re
     private static final int POST_SECTION_ITEMS = 5;
     private static final int PREFERENCES_SECTION_ITEMS = 3;
 
-    private AppCompatActivity appCompatActivity;
-    private Resources resources;
-    private RequestManager glide;
-    private String accountName;
+    private final AppCompatActivity appCompatActivity;
+    private final Resources resources;
+    private final RequestManager glide;
+    private final String accountName;
     private String profileImageUrl;
     private String bannerImageUrl;
     private int karma;
@@ -73,8 +73,8 @@ public class NavigationDrawerRecyclerViewAdapter extends RecyclerView.Adapter<Re
     private boolean isNSFWEnabled;
     private boolean requireAuthToAccountSection;
     private boolean showAvatarOnTheRightInTheNavigationDrawer;
-    private ItemClickListener itemClickListener;
-    private boolean isLoggedIn;
+    private final ItemClickListener itemClickListener;
+    private final boolean isLoggedIn;
     private boolean isInMainPage = true;
     private boolean collapseAccountSection;
     private boolean collapseRedditSection;
@@ -82,15 +82,15 @@ public class NavigationDrawerRecyclerViewAdapter extends RecyclerView.Adapter<Re
     private boolean collapsePreferencesSection;
     private boolean collapseFavoriteSubredditsSection;
     private boolean collapseSubscribedSubredditsSection;
-    private boolean hideFavoriteSubredditsSection;
-    private boolean hideSubscribedSubredditsSection;
+    private final boolean hideFavoriteSubredditsSection;
+    private final boolean hideSubscribedSubredditsSection;
     private ArrayList<SubscribedSubredditData> favoriteSubscribedSubreddits;
     private ArrayList<SubscribedSubredditData> subscribedSubreddits;
     private ArrayList<Account> accounts;
-    private int primaryTextColor;
-    private int secondaryTextColor;
-    private int dividerColor;
-    private int primaryIconColor;
+    private final int primaryTextColor;
+    private final int secondaryTextColor;
+    private final int dividerColor;
+    private final int primaryIconColor;
 
     public NavigationDrawerRecyclerViewAdapter(AppCompatActivity appCompatActivity, SharedPreferences sharedPreferences,
                                                SharedPreferences nsfwAndSpoilerSharedPreferences,

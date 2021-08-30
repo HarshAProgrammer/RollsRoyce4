@@ -20,10 +20,10 @@ import com.rackluxury.rollsroyce.reddit.ReportReason;
 
 public class ReportReasonRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private ArrayList<ReportReason> generalReasons;
+    private final ArrayList<ReportReason> generalReasons;
     private ArrayList<ReportReason> rules;
-    private int primaryTextColor;
-    private int colorAccent;
+    private final int primaryTextColor;
+    private final int colorAccent;
 
     public ReportReasonRecyclerViewAdapter(CustomThemeWrapper customThemeWrapper, ArrayList<ReportReason> generalReasons) {
         this.generalReasons = generalReasons;

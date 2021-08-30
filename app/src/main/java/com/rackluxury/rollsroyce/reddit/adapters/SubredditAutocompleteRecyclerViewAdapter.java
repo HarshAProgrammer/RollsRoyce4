@@ -25,9 +25,9 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class SubredditAutocompleteRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<SubredditData> subreddits;
-    private RequestManager glide;
-    private CustomThemeWrapper customThemeWrapper;
-    private ItemOnClickListener itemOnClickListener;
+    private final RequestManager glide;
+    private final CustomThemeWrapper customThemeWrapper;
+    private final ItemOnClickListener itemOnClickListener;
 
     public SubredditAutocompleteRecyclerViewAdapter(Context context, CustomThemeWrapper customThemeWrapper,
                                                     ItemOnClickListener itemOnClickListener) {

@@ -9,8 +9,8 @@ public enum ContentFontStyle {
     XLarge(R.style.ContentFontStyle_XLarge, "XLarge"),
     XXLarge(R.style.ContentFontStyle_XXLarge, "XXLarge");
 
-    private int resId;
-    private String title;
+    private final int resId;
+    private final String title;
 
     ContentFontStyle(int resId, String title) {
         this.resId = resId;

@@ -18,10 +18,10 @@ public class InsertRecentSearchQuery {
 
     private static class InsertRecentSearchQueryAsyncTask extends AsyncTask<Void, Void, Void> {
 
-        private RecentSearchQueryDao recentSearchQueryDao;
-        private String username;
-        private String recentSearchQuery;
-        private InsertRecentSearchQueryListener insertRecentSearchQueryListener;
+        private final RecentSearchQueryDao recentSearchQueryDao;
+        private final String username;
+        private final String recentSearchQuery;
+        private final InsertRecentSearchQueryListener insertRecentSearchQueryListener;
 
         public InsertRecentSearchQueryAsyncTask(RedditDataRoomDatabase redditDataRoomDatabase, String username,
                                                 String recentSearchQuery, InsertRecentSearchQueryListener insertRecentSearchQueryListener) {

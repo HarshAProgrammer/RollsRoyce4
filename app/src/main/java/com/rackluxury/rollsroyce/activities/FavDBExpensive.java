@@ -9,15 +9,15 @@ import android.util.Log;
 
 public class FavDBExpensive extends SQLiteOpenHelper {
 
-    private static int DB_VERSION = 1;
-    private static String DATABASE_NAME = "ExpensiveDB";
-    private static String TABLE_NAME = "favoriteTable";
+    private static final int DB_VERSION = 1;
+    private static final String DATABASE_NAME = "ExpensiveDB";
+    private static final String TABLE_NAME = "favoriteTable";
     public static String KEY_ID = "id";
     public static String ITEM_TITLE = "itemTitle";
     public static String ITEM_IMAGE = "itemImage";
     public static String FAVORITE_STATUS = "fStatus";
     // dont forget write this spaces
-    private static String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
+    private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
             + KEY_ID + " TEXT," + ITEM_TITLE+ " TEXT,"
             + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS+" TEXT)";
 

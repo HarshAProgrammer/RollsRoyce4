@@ -19,8 +19,8 @@ import com.rackluxury.rollsroyce.R;
 import com.rackluxury.rollsroyce.reddit.settings.Acknowledgement;
 
 public class AcknowledgementRecyclerViewAdapter extends RecyclerView.Adapter<AcknowledgementRecyclerViewAdapter.AcknowledgementViewHolder> {
-    private ArrayList<Acknowledgement> acknowledgements;
-    private Context context;
+    private final ArrayList<Acknowledgement> acknowledgements;
+    private final Context context;
 
     public AcknowledgementRecyclerViewAdapter(Context context, ArrayList<Acknowledgement> acknowledgements) {
         this.context = context;

@@ -21,8 +21,8 @@ import java.util.List;
 
 public class FavAdapterCategories extends RecyclerView.Adapter<FavAdapterCategories.ViewHolder> {
 
-    private Context context;
-    private List<FavItemCategories> favItemListCategories;
+    private final Context context;
+    private final List<FavItemCategories> favItemListCategories;
     private FavDBCategories favDB;
 
 

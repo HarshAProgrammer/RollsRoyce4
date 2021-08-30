@@ -22,10 +22,10 @@ import com.rackluxury.rollsroyce.R;
 import com.rackluxury.rollsroyce.reddit.settings.Translation;
 
 public class TranslationFragmentRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private Activity activity;
-    private int primaryTextColor;
-    private int secondaryTextColor;
-    private ArrayList<Translation> translationContributors;
+    private final Activity activity;
+    private final int primaryTextColor;
+    private final int secondaryTextColor;
+    private final ArrayList<Translation> translationContributors;
 
     public TranslationFragmentRecyclerViewAdapter(Activity activity, CustomThemeWrapper customThemeWrapper) {
         this.activity = activity;

@@ -54,7 +54,7 @@ public class ImagesActivity extends AppCompatActivity implements ImagesAdapter.O
     public static final String EXTRA_DOWNLOADS = "downloadCount";
     private RecyclerView mRecyclerView;
     private ImagesAdapter mImagesAdapter;
-    private List<ImageItem> mImagesList  = new ArrayList<>();
+    private final List<ImageItem> mImagesList  = new ArrayList<>();
     private RequestQueue mRequestQueue;
     private int lastPosition;
     private SpinKitView spinKitView;

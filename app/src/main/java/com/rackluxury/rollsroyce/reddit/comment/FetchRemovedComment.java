@@ -63,8 +63,8 @@ public class FetchRemovedComment {
 
     private static class ParseCommentAsyncTask extends AsyncTask<Void, Void, Void> {
 
-        private String responseBody;
-        private FetchRemovedCommentListener listener;
+        private final String responseBody;
+        private final FetchRemovedCommentListener listener;
         Comment comment;
 
         public ParseCommentAsyncTask(String responseBody, Comment comment, FetchRemovedCommentListener listener) {

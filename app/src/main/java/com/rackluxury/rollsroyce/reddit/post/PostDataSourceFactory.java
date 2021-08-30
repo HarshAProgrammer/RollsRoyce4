@@ -17,24 +17,24 @@ import com.rackluxury.rollsroyce.reddit.readpost.ReadPost;
 import retrofit2.Retrofit;
 
 class PostDataSourceFactory extends DataSource.Factory {
-    private Executor executor;
-    private Handler handler;
-    private Retrofit retrofit;
-    private String accessToken;
-    private String accountName;
-    private SharedPreferences sharedPreferences;
-    private SharedPreferences postFeedScrolledPositionSharedPreferences;
+    private final Executor executor;
+    private final Handler handler;
+    private final Retrofit retrofit;
+    private final String accessToken;
+    private final String accountName;
+    private final SharedPreferences sharedPreferences;
+    private final SharedPreferences postFeedScrolledPositionSharedPreferences;
     private String name;
     private String query;
     private String trendingSource;
-    private int postType;
+    private final int postType;
     private SortType sortType;
     private PostFilter postFilter;
     private String userWhere;
-    private List<ReadPost> readPostList;
+    private final List<ReadPost> readPostList;
 
     private PostDataSource postDataSource;
-    private MutableLiveData<PostDataSource> postDataSourceLiveData;
+    private final MutableLiveData<PostDataSource> postDataSourceLiveData;
 
     PostDataSourceFactory(Executor executor, Handler handler, Retrofit retrofit, String accessToken, String accountName,
                           SharedPreferences sharedPreferences,

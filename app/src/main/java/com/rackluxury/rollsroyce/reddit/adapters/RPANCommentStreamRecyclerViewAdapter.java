@@ -21,8 +21,8 @@ import com.rackluxury.rollsroyce.R;
 import com.rackluxury.rollsroyce.reddit.RPANComment;
 
 public class RPANCommentStreamRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private RequestManager glide;
-    private ArrayList<RPANComment> rpanComments;
+    private final RequestManager glide;
+    private final ArrayList<RPANComment> rpanComments;
 
     public RPANCommentStreamRecyclerViewAdapter(Context context) {
         glide = Glide.with(context);

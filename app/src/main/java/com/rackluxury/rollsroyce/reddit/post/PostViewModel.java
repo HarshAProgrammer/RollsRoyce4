@@ -24,14 +24,14 @@ import com.rackluxury.rollsroyce.reddit.readpost.ReadPost;
 import retrofit2.Retrofit;
 
 public class PostViewModel extends ViewModel {
-    private PostDataSourceFactory postDataSourceFactory;
-    private LiveData<NetworkState> paginationNetworkState;
-    private LiveData<NetworkState> initialLoadingState;
-    private LiveData<Boolean> hasPostLiveData;
-    private LiveData<PagedList<Post>> posts;
-    private MutableLiveData<SortType> sortTypeLiveData;
-    private MutableLiveData<PostFilter> postFilterLiveData;
-    private SortTypeAndPostFilterLiveData sortTypeAndPostFilterLiveData;
+    private final PostDataSourceFactory postDataSourceFactory;
+    private final LiveData<NetworkState> paginationNetworkState;
+    private final LiveData<NetworkState> initialLoadingState;
+    private final LiveData<Boolean> hasPostLiveData;
+    private final LiveData<PagedList<Post>> posts;
+    private final MutableLiveData<SortType> sortTypeLiveData;
+    private final MutableLiveData<PostFilter> postFilterLiveData;
+    private final SortTypeAndPostFilterLiveData sortTypeAndPostFilterLiveData;
 
     public PostViewModel(Executor executor, Handler handler, Retrofit retrofit, String accessToken, String accountName,
                          SharedPreferences sharedPreferences, SharedPreferences cache, int postType,
@@ -203,19 +203,19 @@ public class PostViewModel extends ViewModel {
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory {
-        private Executor executor;
-        private Handler handler;
-        private Retrofit retrofit;
+        private final Executor executor;
+        private final Handler handler;
+        private final Retrofit retrofit;
         private String accessToken;
         private String accountName;
-        private SharedPreferences sharedPreferences;
+        private final SharedPreferences sharedPreferences;
         private SharedPreferences postFeedScrolledPositionSharedPreferences;
         private String name;
         private String query;
         private String trendingSource;
-        private int postType;
-        private SortType sortType;
-        private PostFilter postFilter;
+        private final int postType;
+        private final SortType sortType;
+        private final PostFilter postFilter;
         private String userWhere;
         private List<ReadPost> readPostList;
 

@@ -22,10 +22,10 @@ import com.rackluxury.rollsroyce.reddit.utils.Utils;
 
 public class SearchActivityRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<RecentSearchQuery> recentSearchQueries;
-    private int primaryTextColor;
-    private Drawable historyIcon;
-    private Drawable deleteIcon;
-    private ItemOnClickListener itemOnClickListener;
+    private final int primaryTextColor;
+    private final Drawable historyIcon;
+    private final Drawable deleteIcon;
+    private final ItemOnClickListener itemOnClickListener;
 
     public interface ItemOnClickListener {
         void onClick(String query);

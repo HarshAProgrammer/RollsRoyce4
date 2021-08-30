@@ -116,7 +116,7 @@ public class ViewRPANBroadcastFragment extends Fragment {
 
     private boolean wasPlaying;
     private boolean isMute = false;
-    private long resumePosition = -1;
+    private final long resumePosition = -1;
     private boolean isDataSavingMode;
 
     public ViewRPANBroadcastFragment() {

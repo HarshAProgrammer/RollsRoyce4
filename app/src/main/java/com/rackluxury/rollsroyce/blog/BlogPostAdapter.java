@@ -23,8 +23,8 @@ import java.util.List;
 
 public class BlogPostAdapter extends RecyclerView.Adapter<BlogPostAdapter.PostViewHolder> {
 
-    private Context context;
-    private List<BlogItem> blogItems;
+    private final Context context;
+    private final List<BlogItem> blogItems;
     boolean isShimmer = true;
 
 

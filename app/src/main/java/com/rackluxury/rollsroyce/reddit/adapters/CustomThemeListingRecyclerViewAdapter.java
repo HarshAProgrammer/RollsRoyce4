@@ -30,8 +30,8 @@ public class CustomThemeListingRecyclerViewAdapter extends RecyclerView.Adapter<
     private static final int VIEW_TYPE_PREDEFINED_THEME_DIVIDER = 2;
     private static final int VIEW_TYPE_USER_THEME_DIVIDER = 3;
 
-    private AppCompatActivity activity;
-    private ArrayList<CustomTheme> predefinedCustomThemes;
+    private final AppCompatActivity activity;
+    private final ArrayList<CustomTheme> predefinedCustomThemes;
     private ArrayList<CustomTheme> userCustomThemes;
 
     public CustomThemeListingRecyclerViewAdapter(AppCompatActivity activity, ArrayList<CustomTheme> predefinedCustomThemes) {

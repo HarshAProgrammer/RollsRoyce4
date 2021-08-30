@@ -9,9 +9,9 @@ import java.util.List;
 import com.rackluxury.rollsroyce.reddit.RedditDataRoomDatabase;
 
 public class SubscribedSubredditRepository {
-    private SubscribedSubredditDao mSubscribedSubredditDao;
-    private LiveData<List<SubscribedSubredditData>> mAllSubscribedSubreddits;
-    private LiveData<List<SubscribedSubredditData>> mAllFavoriteSubscribedSubreddits;
+    private final SubscribedSubredditDao mSubscribedSubredditDao;
+    private final LiveData<List<SubscribedSubredditData>> mAllSubscribedSubreddits;
+    private final LiveData<List<SubscribedSubredditData>> mAllFavoriteSubscribedSubreddits;
 
     SubscribedSubredditRepository(RedditDataRoomDatabase redditDataRoomDatabase, String accountName) {
         mSubscribedSubredditDao = redditDataRoomDatabase.subscribedSubredditDao();
@@ -33,7 +33,7 @@ public class SubscribedSubredditRepository {
 
     private static class insertAsyncTask extends AsyncTask<SubscribedSubredditData, Void, Void> {
 
-        private SubscribedSubredditDao mAsyncTaskDao;
+        private final SubscribedSubredditDao mAsyncTaskDao;
 
         insertAsyncTask(SubscribedSubredditDao dao) {
             mAsyncTaskDao = dao;

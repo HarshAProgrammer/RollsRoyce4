@@ -1178,7 +1178,7 @@ public class RedditMainActivity extends BaseActivity implements SortTypeSelectio
     }
 
     @Override
-    public void onBackPressed() {;
+    public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

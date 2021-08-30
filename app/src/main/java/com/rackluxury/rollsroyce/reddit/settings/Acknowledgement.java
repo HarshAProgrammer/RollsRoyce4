@@ -3,9 +3,9 @@ package com.rackluxury.rollsroyce.reddit.settings;
 import android.net.Uri;
 
 public class Acknowledgement {
-    private String name;
-    private String introduction;
-    private Uri link;
+    private final String name;
+    private final String introduction;
+    private final Uri link;
 
     Acknowledgement(String name, String introduction, Uri link) {
         this.name = name;

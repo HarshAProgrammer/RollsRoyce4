@@ -17,7 +17,7 @@ public class GetPlaylistTitlesAsyncTask  extends AsyncTask<String[], Void, Playl
     private static final String YOUTUBE_PLAYLIST_PART = "snippet";
     private static final String YOUTUBE_PLAYLIST_FIELDS = "items(id,snippet(title))";
 
-    private YouTube mYouTubeDataApi;
+    private final YouTube mYouTubeDataApi;
 
     public GetPlaylistTitlesAsyncTask(YouTube api) {
         mYouTubeDataApi = api;

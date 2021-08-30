@@ -39,7 +39,7 @@ public abstract class GetPlaylistAsyncTask extends AsyncTask<String, Void, Pair<
     private static final String YOUTUBE_VIDEOS_PART = "snippet,contentDetails,statistics"; // video resource properties that the response will include.
     private static final String YOUTUBE_VIDEOS_FIELDS = "items(id,snippet(title,description,thumbnails/high),contentDetails/duration,statistics)"; // selector specifying which fields to include in a partial response.
 
-    private YouTube mYouTubeDataApi;
+    private final YouTube mYouTubeDataApi;
 
     public GetPlaylistAsyncTask(YouTube api) {
         mYouTubeDataApi = api;

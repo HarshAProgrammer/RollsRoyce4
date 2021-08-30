@@ -18,8 +18,8 @@ public enum TitleFontFamily {
     ManropeBold(R.style.TitleFontFamily_ManropeBold, "ManropeBold"),
     Sriracha(R.style.TitleFontFamily_Sriracha, "Sriracha");
 
-    private int resId;
-    private String title;
+    private final int resId;
+    private final String title;
 
     TitleFontFamily(int resId, String title) {
         this.resId = resId;

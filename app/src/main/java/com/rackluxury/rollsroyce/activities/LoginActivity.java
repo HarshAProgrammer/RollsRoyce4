@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity implements
 
 
     }
-    private TextWatcher loginTextWatcher = new TextWatcher() {
+    private final TextWatcher loginTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }

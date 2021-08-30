@@ -21,11 +21,11 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class AwardRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private ArrayList<Award> awards;
-    private RequestManager glide;
-    private ItemOnClickListener itemOnClickListener;
-    private int primaryTextColor;
-    private int secondaryTextColor;
+    private final ArrayList<Award> awards;
+    private final RequestManager glide;
+    private final ItemOnClickListener itemOnClickListener;
+    private final int primaryTextColor;
+    private final int secondaryTextColor;
 
     public interface ItemOnClickListener {
         void onClick(Award award);

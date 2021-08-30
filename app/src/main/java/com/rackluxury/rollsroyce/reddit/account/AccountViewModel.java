@@ -13,9 +13,9 @@ import java.util.List;
 import com.rackluxury.rollsroyce.reddit.RedditDataRoomDatabase;
 
 public class AccountViewModel extends AndroidViewModel {
-    private AccountRepository mAccountRepository;
-    private LiveData<List<Account>> mAccountsExceptCurrentAccountLiveData;
-    private LiveData<Account> mCurrentAccountLiveData;
+    private final AccountRepository mAccountRepository;
+    private final LiveData<List<Account>> mAccountsExceptCurrentAccountLiveData;
+    private final LiveData<Account> mCurrentAccountLiveData;
 
     public AccountViewModel(Application application, RedditDataRoomDatabase redditDataRoomDatabase, String id) {
         super(application);

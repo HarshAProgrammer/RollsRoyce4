@@ -17,7 +17,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class FetchGfycatOrRedgifsVideoLinks {
-    private FetchGfycatOrRedgifsVideoLinksListener fetchGfycatOrRedgifsVideoLinksListener;
+    private final FetchGfycatOrRedgifsVideoLinksListener fetchGfycatOrRedgifsVideoLinksListener;
     Call<String> gfycatCall;
 
     public interface FetchGfycatOrRedgifsVideoLinksListener {

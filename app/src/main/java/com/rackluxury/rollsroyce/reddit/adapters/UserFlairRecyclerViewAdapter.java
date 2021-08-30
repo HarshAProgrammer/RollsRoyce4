@@ -19,9 +19,9 @@ import com.rackluxury.rollsroyce.reddit.UserFlair;
 import com.rackluxury.rollsroyce.reddit.utils.Utils;
 
 public class UserFlairRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private CustomThemeWrapper customThemeWrapper;
-    private ArrayList<UserFlair> userFlairs;
-    private ItemClickListener itemClickListener;
+    private final CustomThemeWrapper customThemeWrapper;
+    private final ArrayList<UserFlair> userFlairs;
+    private final ItemClickListener itemClickListener;
 
     public UserFlairRecyclerViewAdapter(CustomThemeWrapper customThemeWrapper, ArrayList<UserFlair> userFlairs,
                                         ItemClickListener itemClickListener) {

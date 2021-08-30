@@ -11,8 +11,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.rackluxury.rollsroyce.reddit.RedditDataRoomDatabase;
 
 public class SubredditViewModel extends AndroidViewModel {
-    private SubredditRepository mSubredditRepository;
-    private LiveData<SubredditData> mSubredditLiveData;
+    private final SubredditRepository mSubredditRepository;
+    private final LiveData<SubredditData> mSubredditLiveData;
 
     public SubredditViewModel(Application application, RedditDataRoomDatabase redditDataRoomDatabase, String id) {
         super(application);

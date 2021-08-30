@@ -22,8 +22,8 @@ import java.util.List;
 
 public class FavAdapterExpensive extends RecyclerView.Adapter<FavAdapterExpensive.ViewHolder> {
 
-    private Context context;
-    private List<FavItemExpensive> favItemListExpensive;
+    private final Context context;
+    private final List<FavItemExpensive> favItemListExpensive;
     private FavDBExpensive favDB;
 
 

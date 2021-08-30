@@ -13,7 +13,7 @@ import java.util.List;
 import com.rackluxury.rollsroyce.R;
 
 public class CrashReportsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private List<String> crashReports;
+    private final List<String> crashReports;
 
     public CrashReportsRecyclerViewAdapter(List<String> crashReports) {
         this.crashReports = crashReports;

@@ -7,8 +7,8 @@ import java.util.List;
 import com.rackluxury.rollsroyce.reddit.RedditDataRoomDatabase;
 
 public class MultiRedditRepository {
-    private LiveData<List<MultiReddit>> mAllMultiReddits;
-    private LiveData<List<MultiReddit>> mAllFavoriteMultiReddits;
+    private final LiveData<List<MultiReddit>> mAllMultiReddits;
+    private final LiveData<List<MultiReddit>> mAllFavoriteMultiReddits;
 
     MultiRedditRepository(RedditDataRoomDatabase redditDataRoomDatabase, String accountName) {
         MultiRedditDao multiRedditDao = redditDataRoomDatabase.multiRedditDao();

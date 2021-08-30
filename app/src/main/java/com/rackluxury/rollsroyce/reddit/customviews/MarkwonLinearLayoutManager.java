@@ -13,7 +13,7 @@ public class MarkwonLinearLayoutManager extends LinearLayoutManager {
         void onScrolledRight();
     }
 
-    private HorizontalScrollViewScrolledListener horizontalScrollViewScrolledListener;
+    private final HorizontalScrollViewScrolledListener horizontalScrollViewScrolledListener;
 
     public MarkwonLinearLayoutManager(Context context, HorizontalScrollViewScrolledListener horizontalScrollViewScrolledListener) {
         super(context);

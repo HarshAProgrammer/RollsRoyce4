@@ -17,9 +17,9 @@ public class DeleteRecentSearchQuery {
 
     private static class DeleteRecentSearchQueryAsyncTask extends AsyncTask<Void, Void, Void> {
 
-        private RecentSearchQueryDao recentSearchQueryDao;
-        private RecentSearchQuery recentSearchQuery;
-        private DeleteRecentSearchQueryListener deleteRecentSearchQueryListener;
+        private final RecentSearchQueryDao recentSearchQueryDao;
+        private final RecentSearchQuery recentSearchQuery;
+        private final DeleteRecentSearchQueryListener deleteRecentSearchQueryListener;
 
         public DeleteRecentSearchQueryAsyncTask(RedditDataRoomDatabase redditDataRoomDatabase,
                                                 RecentSearchQuery recentSearchQuery,

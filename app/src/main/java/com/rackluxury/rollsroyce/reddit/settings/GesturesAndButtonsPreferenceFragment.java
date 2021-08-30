@@ -48,11 +48,7 @@ public class GesturesAndButtonsPreferenceFragment extends PreferenceFragmentComp
         if (lockJumpToNextTopLevelCommentButtonSwitch != null && lockBottomAppBarSwitch != null &&
                 swipeUpToHideJumpToNextTopLevelCommentButtonSwitch != null) {
             lockJumpToNextTopLevelCommentButtonSwitch.setOnPreferenceChangeListener((preference, newValue) -> {
-                if ((Boolean) newValue) {
-                    swipeUpToHideJumpToNextTopLevelCommentButtonSwitch.setVisible(false);
-                } else {
-                    swipeUpToHideJumpToNextTopLevelCommentButtonSwitch.setVisible(true);
-                }
+                swipeUpToHideJumpToNextTopLevelCommentButtonSwitch.setVisible(!((Boolean) newValue));
                 return true;
             });
 
