@@ -106,7 +106,6 @@ Privacy Policy\n\nLuxuryRack Inc. built the [Cars from RollsRoyce] app as a Comm
     <string name="profile_nav_home">Profile</string>
 
 
-
     <string name="buy_us_a_car_nav_home">Buy Us A Car</string>
     <string name="facts_about_us_nav_home">Facts About Us</string>
     <string name="sign_out_nav_home">SignOut</string>
@@ -115,7 +114,6 @@ Privacy Policy\n\nLuxuryRack Inc. built the [Cars from RollsRoyce] app as a Comm
     <string name="share_on_twitter_nav_home">Share on Twitter</string>
     <string name="about_us_nav_home">About Us</string>
     <string name="company_nav_home">Company</string>
-
 
 
     <string name="toolbar_expensive">Expensive Motor Cars</string>
@@ -1369,6 +1367,8 @@ Meter to show power being utilized
     <string name="error_parse_trending_search">Parse trending searches failed.\nTap to retry.</string>
     <string name="reddit_signup">SignUp</string>
     <string name="discover_blogs">Read the best Blogs written on RollsRoyce from Top Notch Editors.</string>
+    <string name="youtube_videos_nav_home">Youtube Videos</string>
+    <string name="discover_video">Watch Showcase Videos of Rolls Royce Cars</string>
 
 
 </resources>

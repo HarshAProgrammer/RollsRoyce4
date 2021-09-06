@@ -42,7 +42,7 @@ import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
-public class ExpensiveCheckerActivity extends AppCompatActivity implements PurchasesUpdatedListener {
+public class VideoCheckerActivity extends AppCompatActivity implements PurchasesUpdatedListener {
 
 
     private FirebaseAuth firebaseAuth;
@@ -50,34 +50,34 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
 
     private BillingClient billingClient;
     private final List<String> skulist = new ArrayList<>();
-    private final String categories = "expensive_checker";
+    private final String categories = "video_checker";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expensive_checker);
+        setContentView(R.layout.activity_video_checker);
 
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
 
-        expensiveCheckerFunctionality();
+        videoCheckerFunctionality();
 
 
     }
 
 
-    private void expensiveCheckerFunctionality() {
-        Toolbar toolbar = findViewById(R.id.toolbarExpensiveCheckerActivity);
-        Button buttonExpChecker = findViewById(R.id.btnExpensiveChecker);
+    private void videoCheckerFunctionality() {
+        Toolbar toolbar = findViewById(R.id.toolbarVideoCheckerActivity);
+        Button buttonVidChecker = findViewById(R.id.btnVideoChecker);
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Most Expensive Motor Cars");
+            getSupportActionBar().setTitle("Most Video Cars");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        billingClient = BillingClient.newBuilder(ExpensiveCheckerActivity.this).enablePendingPurchases().setListener(new PurchasesUpdatedListener() {
+        billingClient = BillingClient.newBuilder(VideoCheckerActivity.this).enablePendingPurchases().setListener(new PurchasesUpdatedListener() {
             @Override
             //This method starts when user buys a categories
             public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
@@ -87,15 +87,15 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     }
                 } else {
                     if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
-                        Toasty.error(ExpensiveCheckerActivity.this, "Try Purchasing Again", Toast.LENGTH_LONG).show();
+                        Toasty.error(VideoCheckerActivity.this, "Try Purchasing Again", Toast.LENGTH_LONG).show();
                     } else {
                         if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) {
                             finish();
-                            Intent openExpensiveFromExpensiveChecker = new Intent(ExpensiveCheckerActivity.this, ExpensiveActivity.class);
-                            startActivity(openExpensiveFromExpensiveChecker);
-                            Animatoo.animateSwipeRight(ExpensiveCheckerActivity.this);
+                            Intent openVideoFromVideoChecker = new Intent(VideoCheckerActivity.this, VideoActivity.class);
+                            startActivity(openVideoFromVideoChecker);
+                            Animatoo.animateSwipeRight(VideoCheckerActivity.this);
                         }else {
-                            FirebaseMessaging.getInstance().subscribeToTopic("purchase_expensive");
+                            FirebaseMessaging.getInstance().subscribeToTopic("purchase_video");
                         }
                     }
                 }
@@ -108,21 +108,21 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
 
 
                 } else {
-                    Toasty.error(ExpensiveCheckerActivity.this, "Failed to connect", Toast.LENGTH_LONG).show();
+                    Toasty.error(VideoCheckerActivity.this, "Failed to connect", Toast.LENGTH_LONG).show();
 
                 }
             }
 
             @Override
             public void onBillingServiceDisconnected() {
-                Toasty.error(ExpensiveCheckerActivity.this, "Disconnected from the Billing Client", Toast.LENGTH_LONG).show();
+                Toasty.error(VideoCheckerActivity.this, "Disconnected from the Billing Client", Toast.LENGTH_LONG).show();
 
             }
         });
         skulist.add(categories);
         final SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
         params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);  //Skutype.subs for Subscription
-        buttonExpChecker.setOnClickListener(new View.OnClickListener() {
+        buttonVidChecker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 billingClient.querySkuDetailsAsync(params.build(), new SkuDetailsResponseListener() {
@@ -137,7 +137,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                                 BillingFlowParams flowParams = BillingFlowParams.newBuilder()
                                         .setSkuDetails(skuDetails)
                                         .build();
-                                BillingResult responsecode = billingClient.launchBillingFlow(ExpensiveCheckerActivity.this, flowParams);
+                                BillingResult responsecode = billingClient.launchBillingFlow(VideoCheckerActivity.this, flowParams);
                             }
                         }
                     }
@@ -157,7 +157,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     ConsumeResponseListener consumeResponseListener = new ConsumeResponseListener() {
                         @Override
                         public void onConsumeResponse(@NonNull BillingResult billingResult, @NonNull String s) {
-                            Toasty.success(ExpensiveCheckerActivity.this, "Request Acknowledged", Toast.LENGTH_LONG).show();
+                            Toasty.success(VideoCheckerActivity.this, "Request Acknowledged", Toast.LENGTH_LONG).show();
 
                         }
                     };
@@ -165,11 +165,12 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     //now you can purchase same categories again and again
                     //Here we give coins to user.
 
-                    FirebaseMessaging.getInstance().unsubscribeFromTopic("purchase_expensive");
-                    LayoutInflater inflater = LayoutInflater.from(ExpensiveCheckerActivity.this);
+                    FirebaseMessaging.getInstance().unsubscribeFromTopic("purchase_video");
+
+                    LayoutInflater inflater = LayoutInflater.from(VideoCheckerActivity.this);
                     View view = inflater.inflate(R.layout.alert_dialog_purchased, null);
                     Button acceptButton = view.findViewById(R.id.btnOkAlertPurchased);
-                    final AlertDialog alertDialog = new AlertDialog.Builder(ExpensiveCheckerActivity.this)
+                    final AlertDialog alertDialog = new AlertDialog.Builder(VideoCheckerActivity.this)
                             .setView(view)
                             .show();
 
@@ -178,27 +179,26 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                         public void onClick(View view) {
                             alertDialog.dismiss();
                             finish();
-                            Intent openExpensiveFromExpensiveChecker = new Intent(ExpensiveCheckerActivity.this, ExpensiveActivity.class);
-                            startActivity(openExpensiveFromExpensiveChecker);
-                            Animatoo.animateSwipeRight(ExpensiveCheckerActivity.this);
+                            Intent openVideoFromVideoChecker = new Intent(VideoCheckerActivity.this, VideoActivity.class);
+                            startActivity(openVideoFromVideoChecker);
+                            Animatoo.animateSwipeRight(VideoCheckerActivity.this);
                         }
                     });
 
-
-                    StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Expensive Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/expensive_checker");
+                    StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Video Purchased");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/video_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toasty.error(ExpensiveCheckerActivity.this, "Please Check Your Internet Connectivity", Toast.LENGTH_LONG).show();
+                            Toasty.error(VideoCheckerActivity.this, "Please Check Your Internet Connectivity", Toast.LENGTH_LONG).show();
 
                         }
                     });
                     uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            Toasty.success(ExpensiveCheckerActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
+                            Toasty.success(VideoCheckerActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
 
                         }
                     });
@@ -207,14 +207,14 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                 }
             }
         } catch (Exception e) {
-            Toasty.error(ExpensiveCheckerActivity.this, "Transaction Failed", Toast.LENGTH_LONG).show();
+            Toasty.error(VideoCheckerActivity.this, "Transaction Failed", Toast.LENGTH_LONG).show();
 
         }
     }
 
     @Override
     public void onPurchasesUpdated(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
-        Toasty.info(ExpensiveCheckerActivity.this, "onPurchases Updated", Toast.LENGTH_LONG).show();
+        Toasty.info(VideoCheckerActivity.this, "onPurchases Updated", Toast.LENGTH_LONG).show();
 
     }
 
@@ -222,9 +222,9 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
     @Override
     public void onBackPressed() {
         finish();
-        Intent openHomeFromExpensiveChecker = new Intent(ExpensiveCheckerActivity.this,HomeActivity.class);
-        startActivity(openHomeFromExpensiveChecker);
-        Animatoo.animateSwipeLeft(ExpensiveCheckerActivity.this);
+        Intent openHomeFromVideoChecker = new Intent(VideoCheckerActivity.this,HomeActivity.class);
+        startActivity(openHomeFromVideoChecker);
+        Animatoo.animateSwipeLeft(VideoCheckerActivity.this);
 
     }
 

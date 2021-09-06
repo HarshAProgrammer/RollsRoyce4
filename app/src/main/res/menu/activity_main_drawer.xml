@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_video_library_main"
             android:title="@string/videos_nav_home" />
         <item
+            android:id="@+id/youtubeVideoNavigation"
+            android:icon="@drawable/ic_youtube_video_library_main"
+            android:title="@string/youtube_videos_nav_home" />
+        <item
             android:id="@+id/blogNavigation"
             android:icon="@drawable/ic_blog_main"
             android:title="@string/blog_nav_home" />

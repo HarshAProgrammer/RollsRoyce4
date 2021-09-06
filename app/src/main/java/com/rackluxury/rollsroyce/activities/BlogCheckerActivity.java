@@ -179,7 +179,10 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                         @Override
                         public void onClick(View view) {
                             alertDialog.dismiss();
-
+                            finish();
+                            Intent openBlogFromBlogChecker = new Intent(BlogCheckerActivity.this, BlogActivity.class);
+                            startActivity(openBlogFromBlogChecker);
+                            Animatoo.animateSwipeRight(BlogCheckerActivity.this);
                         }
                     });
 
@@ -197,10 +200,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             Toasty.success(BlogCheckerActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
-                            finish();
-                            Intent openBlogFromBlogChecker = new Intent(BlogCheckerActivity.this, BlogActivity.class);
-                            startActivity(openBlogFromBlogChecker);
-                            Animatoo.animateSwipeRight(BlogCheckerActivity.this);
+
                         }
                     });
 
