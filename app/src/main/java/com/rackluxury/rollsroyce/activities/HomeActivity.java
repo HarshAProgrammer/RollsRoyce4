@@ -353,7 +353,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         storageReference.child(firebaseAuth.getUid()).child("Video Purchased").getDownloadUrl().addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                FirebaseMessaging.getInstance().subscribeToTopic("purchase_expensive");
+                FirebaseMessaging.getInstance().subscribeToTopic("purchase_video");
                 finish();
                 Intent openVideoCheckerFromMain = new Intent(HomeActivity.this, VideoCheckerActivity.class);
                 startActivity(openVideoCheckerFromMain);
