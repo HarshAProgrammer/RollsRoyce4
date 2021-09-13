@@ -14,7 +14,7 @@
             android:title="@string/images_nav_home" />
         <item
             android:id="@+id/videoNavigation"
-            android:icon="@drawable/ic_video_library_main"
+            android:icon="@drawable/ic_video_main"
             android:title="@string/videos_nav_home" />
         <item
             android:id="@+id/youtubeVideoNavigation"
