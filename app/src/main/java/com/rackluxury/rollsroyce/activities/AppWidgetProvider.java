@@ -2,7 +2,6 @@ package com.rackluxury.rollsroyce.activities;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
-import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,13 +10,13 @@ import android.widget.RemoteViews;
 
 import com.rackluxury.rollsroyce.R;
 
-public class  RollsRoyceAppWidgetProvider extends AppWidgetProvider {
+public class AppWidgetProvider extends android.appwidget.AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         for (int appWidgetId : appWidgetIds) {
             Intent intent = new Intent(context, LoginOrRegisterActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.rollsroyce_widget);
+            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
             views.setOnClickPendingIntent(R.id.rollsroyce_widget_button, pendingIntent);
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
@@ -25,7 +24,7 @@ public class  RollsRoyceAppWidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onAppWidgetOptionsChanged(Context context, AppWidgetManager appWidgetManager, int appWidgetId, Bundle newOptions) {
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.rollsroyce_widget);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
         resizeWidget(newOptions, views);
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
