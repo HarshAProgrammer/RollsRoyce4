@@ -14,7 +14,7 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
-        android:contentDescription="@string/rollsroyce_inc" />
+        android:contentDescription="@string/company_name" />
 
     <TextView
         android:id="@+id/text_splash_first"

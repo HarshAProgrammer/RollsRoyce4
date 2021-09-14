@@ -18,6 +18,6 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/m_splash_anim"
-        android:contentDescription="@string/rollsroyce_inc"/>
+        android:contentDescription="@string/company_name"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

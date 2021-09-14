@@ -5,7 +5,7 @@
     <string name="favourite">Favourite</string>
     <string name="footer">Footer</string>
     <string name="red_heart">Favourite</string>
-    <string name="rollsroyce_inc">RollsRoyce Inc.</string>
+    <string name="company_name">RollsRoyce Inc.</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
 
@@ -82,13 +82,13 @@ Privacy Policy\n\nLuxuryRack Inc. built the [Cars from RollsRoyce] app as a Comm
     <string name="image_toolbar_home">Image Toolbar</string>
     <string name="sort">Sort</string>
     <string name="videos_home">Videos</string>
-    <string name="rollsroyce_categories_detail_image">RollsRoyce Detail Image</string>
-    <string name="rollsroyce_main_image">RollsRoyce Image</string>
-    <string name="rollsroyce_name">RollsRoyce Name</string>
-    <string name="rollsroyce_price">RollsRoyce Price</string>
-    <string name="rollsroyce_description">RollsRoyce Description</string>
-    <string name="rollsroyce_car_name_categories_detail">RollsRoyce Car Name</string>
-    <string name="rollsroyce_detail_categories_description">RollsRoyce Detail Description</string>
+    <string name="categories_detail_image">RollsRoyce Detail Image</string>
+    <string name="main_image">RollsRoyce Image</string>
+    <string name="car_name">RollsRoyce Name</string>
+    <string name="car_price">RollsRoyce Price</string>
+    <string name="car_description">RollsRoyce Description</string>
+    <string name="car_name_categories_detail">RollsRoyce Car Name</string>
+    <string name="detail_categories_description">RollsRoyce Detail Description</string>
     <string name="this_is_the_title_layout_video">This is the title</string>
     <string name="volume_on_off_layout_video">VolumeOnOff</string>
     <string name="thumbnail_layout_video">Thumbnail</string>
@@ -119,9 +119,9 @@ Privacy Policy\n\nLuxuryRack Inc. built the [Cars from RollsRoyce] app as a Comm
     <string name="toolbar_expensive">Expensive Motor Cars</string>
     <string name="toolbar_favourite_expensive">Favourites</string>
     <string name="toolbar_favourite_categories">Favourites</string>
-    <string name="rollsroyce_main_image_expensive">RollsRoyce Image</string>
+    <string name="main_image_expensive">RollsRoyce Image</string>
     <string name="name_detail_expensive_detail">RollsRoyce Car Name</string>
-    <string name="rollsroyce_detail_expensive_description">RollsRoyce Detail Description</string>
+    <string name="detail_expensive_description">RollsRoyce Detail Description</string>
 
 
     <string name="discover_expensive"><font fgcolor='#0084ff'>•</font> Discover the Most Expensive Cars from RollsRoyce</string>

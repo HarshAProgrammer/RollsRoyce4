@@ -122,7 +122,7 @@ Blog     <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ivBlogDetailLiker"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="@string/rollsroyce_categories_detail_image"
+                android:contentDescription="@string/categories_detail_image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_heart_white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -144,7 +144,7 @@ Blog     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:alpha="0"
-            android:contentDescription="@string/rollsroyce_categories_detail_image"
+            android:contentDescription="@string/categories_detail_image"
             android:scaleType="centerCrop"
             android:src="@drawable/avd_grey_heart" />
         <ImageView
@@ -154,7 +154,7 @@ Blog     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:alpha="0"
-            android:contentDescription="@string/rollsroyce_categories_detail_image"
+            android:contentDescription="@string/categories_detail_image"
             android:scaleType="centerCrop"
             android:src="@drawable/avd_red_heart" />
 

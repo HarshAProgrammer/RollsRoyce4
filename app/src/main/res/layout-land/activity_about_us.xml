@@ -34,7 +34,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:contentDescription="@string/rollsroyce_inc"
+        android:contentDescription="@string/company_name"
         android:src="@drawable/splashscreen"
         app:layout_constraintBottom_toTopOf="@id/tvVersionAbout"
         app:layout_constraintEnd_toEndOf="parent"
