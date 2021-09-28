@@ -93,7 +93,7 @@
             android:name=".activities.ExpensiveCheckerActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name=".activities.BlogCheckerActivity"
+            android:name=".blog.BlogCheckerActivity"
             android:launchMode="singleTop" />
         <activity
             android:name=".activities.ExpensiveActivity"

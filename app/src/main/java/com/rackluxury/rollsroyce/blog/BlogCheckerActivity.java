@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.blog;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -36,7 +36,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.rackluxury.rollsroyce.R;
-import com.rackluxury.rollsroyce.blog.BlogActivity;
+import com.rackluxury.rollsroyce.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -223,7 +223,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
     @Override
     public void onBackPressed() {
         finish();
-        Intent openHomeFromBlogChecker = new Intent(BlogCheckerActivity.this,HomeActivity.class);
+        Intent openHomeFromBlogChecker = new Intent(BlogCheckerActivity.this, HomeActivity.class);
         startActivity(openHomeFromBlogChecker);
         Animatoo.animateSwipeLeft(BlogCheckerActivity.this);
 
