@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.video;
 
 import android.content.Context;
 import android.graphics.Point;

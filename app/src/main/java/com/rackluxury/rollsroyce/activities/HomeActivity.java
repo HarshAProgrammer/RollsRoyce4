@@ -61,7 +61,11 @@ import com.rackluxury.rollsroyce.adapters.CategoriesData;
 import com.rackluxury.rollsroyce.adapters.MyCategoriesAdapter;
 import com.rackluxury.rollsroyce.adapters.UserProfile;
 import com.rackluxury.rollsroyce.blog.BlogActivity;
+import com.rackluxury.rollsroyce.facts.FactsActivity;
+import com.rackluxury.rollsroyce.images.ImagesActivity;
 import com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity;
+import com.rackluxury.rollsroyce.video.VideoActivity;
+import com.rackluxury.rollsroyce.video.VideoCheckerActivity;
 import com.rackluxury.rollsroyce.youtube.YouTubeActivity;
 import com.squareup.picasso.Picasso;
 

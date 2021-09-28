@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.facts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.rackluxury.rollsroyce.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.rackluxury.rollsroyce.activities.Model;
 
 import java.util.List;
 

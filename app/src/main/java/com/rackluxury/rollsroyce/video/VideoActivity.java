@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.video;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +18,7 @@ import android.widget.ImageView;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.rackluxury.rollsroyce.R;
+import com.rackluxury.rollsroyce.activities.NoInternetDialogue;
 import com.rackluxury.rollsroyce.activities.models.MediaObject;
 import com.rackluxury.rollsroyce.activities.util.Resources;
 import com.rackluxury.rollsroyce.activities.util.VerticalSpacingItemDecorator;

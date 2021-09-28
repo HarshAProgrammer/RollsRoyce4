@@ -40,7 +40,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
         <activity
-            android:name=".activities.VideoCheckerActivity"
+            android:name=".video.VideoCheckerActivity"
             />
 
         <meta-data
@@ -68,8 +68,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.FavouriteExpensiveActivity" />
-        <activity android:name=".activities.FirstSplashScreenActivity" />
-        <activity android:name=".activities.SecondSplashScreenActivity" />
+        <activity android:name=".activities.FirstSplashScreenActivity"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".activities.SecondSplashScreenActivity"
+            android:screenOrientation="fullSensor"/>
+        <service android:name=".blog.BroadcastServiceBlog"/>
+        <service android:name=".activities.BroadcastServiceExpensive"/>
+        <service android:name=".activities.BroadcastServiceVideo"/>
         <activity
             android:name=".activities.LoginOrRegisterActivity"
             android:launchMode="singleTop" />
@@ -80,7 +85,7 @@
             android:name=".activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.VideoActivity" />
+        <activity android:name=".video.VideoActivity" />
         <activity
             android:name=".activities.CategoriesDetailActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
@@ -96,8 +101,8 @@
         <activity
             android:name=".activities.ExpensiveDetailActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity android:name=".activities.ImagesActivity" />
-        <activity android:name=".activities.ImagesDetailActivity" />
+        <activity android:name=".images.ImagesActivity" />
+        <activity android:name=".images.ImagesDetailActivity" />
         <activity
             android:name=".youtube.YouTubeActivity"
             android:label="@string/app_name"
@@ -108,8 +113,8 @@
         <activity android:name=".activities.UpdatePasswordActivity" />
         <activity android:name=".activities.UpdateProfileActivity" />
         <activity android:name=".activities.BillingActivity" />
-        <activity android:name=".activities.FactsActivity" />
-        <activity android:name=".activities.FactsDetailActivity" />
+        <activity android:name=".facts.FactsActivity" />
+        <activity android:name=".facts.FactsDetailActivity" />
         <activity android:name=".activities.CompanyInfo" />
         <activity android:name=".activities.AboutUsActivity" />
         <activity android:name=".blog.BlogActivity" />

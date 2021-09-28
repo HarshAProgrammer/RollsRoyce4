@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.images;
 
 import java.util.Comparator;
 

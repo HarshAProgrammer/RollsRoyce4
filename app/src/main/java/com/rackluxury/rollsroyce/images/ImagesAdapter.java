@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.adapters;
+package com.rackluxury.rollsroyce.images;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rackluxury.rollsroyce.R;
-import com.rackluxury.rollsroyce.activities.ImageItem;
 import com.squareup.picasso.Picasso;
 
 

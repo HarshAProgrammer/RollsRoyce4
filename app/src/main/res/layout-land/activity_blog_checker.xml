@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="activities.BlogCheckerActivity">
 
     <LinearLayout
-        android:id="@+id/froozeblue"
+        android:id="@+id/topLayoutChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -29,14 +32,13 @@
                 android:theme="?attr/actionBarTheme">
 
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="Cars from RollsRoyce"
+                    android:text="Watches from Rolex"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/colorWhite"
                     android:textSize="25sp"
@@ -55,7 +57,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@drawable/blog_checker" />
+                android:src="@drawable/img_blog_checker" />
 
 
         </LinearLayout>
@@ -68,28 +70,66 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/advantages"
+        android:id="@+id/advantagesBlogChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/froozeblue"
-        android:text="Benefits:"
         android:layout_marginStart="20dp"
-        android:textSize="28sp"
+        android:fontFamily="@font/harmonia_sans_bold"
+        android:text="Benefits:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/advantage1BlogChecker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLayoutChecker" />
 
     <TextView
-        android:id="@+id/discover_blogs"
+        android:id="@+id/advantage1BlogChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/advantages"
         android:layout_marginStart="30dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/discover_blogs"
+        android:fontFamily="@font/harmonia_sans_regular"
+        android:text="@string/advantageBlog"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
-        android:textSize="26sp" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advantagesBlogChecker" />
+    <TextView
+        android:id="@+id/tvTimerBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/advantage1BlogChecker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesBlogChecker"
+        android:text="00:00"
+        android:textColor="@color/colorRed"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/peopleNumBlogChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBlogChecker"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/peopleDesBlogChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:text="@string/checker_people_description"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBlogChecker"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -104,20 +144,14 @@
         android:layout_marginBottom="7dp"
         android:background="@drawable/button_bg"
         android:elevation="10dp"
-        android:text="Purchase  $400"
+        android:text="Purchase  $352"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="25sp"
         app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#00FFFFFF" />
-    <TextView
-        android:id="@+id/alreadysubscribed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:visibility="gone"
-        android:text="You're already subscribed\n Thank You"
-        android:textSize="30sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

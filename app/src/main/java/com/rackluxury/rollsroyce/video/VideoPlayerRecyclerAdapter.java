@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.video;
 
 import android.os.Handler;
 import android.view.LayoutInflater;

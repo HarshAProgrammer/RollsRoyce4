@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.images;
 
 import android.content.Context;
 import android.content.Intent;
@@ -31,7 +31,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.github.ybq.android.spinkit.SpinKitView;
 import com.rackluxury.rollsroyce.R;
-import com.rackluxury.rollsroyce.adapters.ImagesAdapter;
+import com.rackluxury.rollsroyce.activities.NoInternetDialogue;
 
 
 import org.json.JSONArray;

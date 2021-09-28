@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBlack"
     android:orientation="vertical"
-    tools:context="activities.ImagesDetailActivity">
+    tools:context=".images.ImagesDetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/ablImageDetail"

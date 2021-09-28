@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="activities.ExpensiveCheckerActivity">
+    tools:context=".video.VideoCheckerActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:background="@color/transparent">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarExpensiveCheckerActivity"
+                android:id="@+id/toolbarVideoCheckerActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/searchappbar"
@@ -53,7 +53,7 @@
             android:orientation="horizontal" >
             <ImageView
                 android:layout_width="200dp"
-                android:src="@drawable/img_expensive_checker"
+                android:src="@drawable/img_video_checker"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content"/>
 
@@ -67,11 +67,11 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/advantagesExpensiveChecker"
+        android:id="@+id/advantagesVideoChecker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topLayoutChecker"
-        app:layout_constraintBottom_toTopOf="@id/advantage1ExpensiveChecker"
+        app:layout_constraintBottom_toTopOf="@id/advantage1VideoChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Benefits:"
@@ -82,32 +82,32 @@
         android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/advantage1ExpensiveChecker"
+        android:id="@+id/advantage1VideoChecker"
         android:fontFamily="@font/harmonia_sans_regular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/advantagesExpensiveChecker"
+        app:layout_constraintTop_toBottomOf="@id/advantagesVideoChecker"
         android:layout_width="match_parent"
         android:textSize="16sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:text="@string/advantageExpensive"
+        android:text="@string/advantageVideo"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
     <TextView
-        android:id="@+id/tvTimerExpensive"
+        android:id="@+id/tvTimerVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/advantage1ExpensiveChecker"
+        app:layout_constraintTop_toBottomOf="@+id/advantage1VideoChecker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/peopleDesExpensiveChecker"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesVideoChecker"
         android:text="00:00"
         android:textColor="@color/colorRed"
         android:textSize="60sp" />
     <TextView
-        android:id="@+id/peopleNumExpensiveChecker"
+        android:id="@+id/peopleNumVideoChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
@@ -115,21 +115,21 @@
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"/>
+        app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"/>
     <TextView
-        android:id="@+id/peopleDesExpensiveChecker"
+        android:id="@+id/peopleDesVideoChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
+        android:layout_marginStart="58dp"
         android:text="@string/checker_people_description"
         android:fontFamily="@font/open_sans_condensed_light"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="58dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"/>
+        app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnExpensiveChecker"
+        android:id="@+id/btnVideoChecker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

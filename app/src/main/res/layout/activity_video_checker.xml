@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="activities.VideoCheckerActivity">
+    tools:context=".video.VideoCheckerActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/froozeblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/topLayoutChecker"
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -34,7 +37,7 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="Cars from Rolls Royce"
+                    android:text="Watches from Rolex"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/colorWhite"
                     android:textSize="25sp"
@@ -50,7 +53,7 @@
             android:orientation="horizontal" >
             <ImageView
                 android:layout_width="200dp"
-                android:src="@drawable/video_checker"
+                android:src="@drawable/img_video_checker"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content"/>
 
@@ -64,33 +67,74 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/advantages"
+        android:id="@+id/advantagesVideoChecker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLayoutChecker"
+        app:layout_constraintBottom_toTopOf="@id/advantage1VideoChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/froozeblue"
         android:text="Benefits:"
+        android:fontFamily="@font/harmonia_sans_bold"
         android:layout_marginStart="20dp"
         android:textSize="28sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/discover_video"
+        android:id="@+id/advantage1VideoChecker"
+        android:fontFamily="@font/harmonia_sans_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advantagesVideoChecker"
         android:layout_width="match_parent"
         android:textSize="16sp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/advantages"
         android:layout_marginStart="30dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/discover_video"
+        android:text="@string/advantageVideo"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
 
+    <TextView
+        android:id="@+id/tvTimerVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/advantage1VideoChecker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesVideoChecker"
+        android:text="00:00"
+        android:textColor="@color/colorRed"
+        android:textSize="60sp" />
+    <TextView
+        android:id="@+id/peopleNumVideoChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"/>
+    <TextView
+        android:id="@+id/peopleDesVideoChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:text="@string/checker_people_description"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnVideoChecker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -101,20 +145,11 @@
         android:layout_marginBottom="7dp"
         android:background="@drawable/button_bg"
         android:elevation="10dp"
-        android:text="Purchase  $400"
+        android:text="Purchase  $352"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="25sp"
         app:cornerRadius="30dp"
         app:rippleColor="#00FFFFFF" />
-    <TextView
-        android:id="@+id/alreadysubscribed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:visibility="gone"
-        android:text="You're already subscribed\n Thank You"
-        android:textSize="30sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

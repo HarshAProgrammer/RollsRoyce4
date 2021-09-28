@@ -8,7 +8,7 @@
     android:background="@color/colorBlack"
     android:padding="10dp"
     android:orientation="vertical"
-    tools:context="activities.ImagesDetailActivity">
+    tools:context=".images.ImagesDetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/ablImageDetail"

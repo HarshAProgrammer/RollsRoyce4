@@ -1,4 +1,4 @@
-package com.rackluxury.rollsroyce.activities;
+package com.rackluxury.rollsroyce.video;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -36,6 +36,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.rackluxury.rollsroyce.R;
+import com.rackluxury.rollsroyce.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -222,7 +223,7 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
     @Override
     public void onBackPressed() {
         finish();
-        Intent openHomeFromVideoChecker = new Intent(VideoCheckerActivity.this,HomeActivity.class);
+        Intent openHomeFromVideoChecker = new Intent(VideoCheckerActivity.this, HomeActivity.class);
         startActivity(openHomeFromVideoChecker);
         Animatoo.animateSwipeLeft(VideoCheckerActivity.this);
 
