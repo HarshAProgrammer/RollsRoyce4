@@ -15,8 +15,17 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:textSize="20sp"
-            android:layout_marginBottom="150dp"
+            android:layout_marginBottom="300dp"
             android:text="@string/loginOrRegister_welcome_txt" />
+
+
+        <TextView
+            style="@style/LabelStyle"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="150dp"
+            android:text="@string/loginorregisterInformation" />
 
         <RelativeLayout
             android:layout_width="match_parent"

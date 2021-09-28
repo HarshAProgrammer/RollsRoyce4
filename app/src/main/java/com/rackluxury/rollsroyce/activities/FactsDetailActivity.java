@@ -246,6 +246,7 @@ public class FactsDetailActivity extends AppCompatActivity implements
         FactTitle2.setText(getIntent().getStringExtra("title"));
         FactImage.setImageResource(getIntent().getIntExtra("image", 1));
         shareFactsDescription = FactDescription.getText().toString();
+        factDescription.setMovementMethod(new ScrollingMovementMethod());
 
         new MaterialShowcaseView.Builder(this)
                 .setTarget(fcFacts)
