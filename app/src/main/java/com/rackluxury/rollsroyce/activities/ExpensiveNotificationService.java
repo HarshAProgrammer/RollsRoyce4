@@ -26,7 +26,7 @@ public class ExpensiveNotificationService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
 
 
-            drawable = (BitmapDrawable) ContextCompat.getDrawable(getApplicationContext(),R.drawable.expensive_checker);
+            drawable = (BitmapDrawable) ContextCompat.getDrawable(getApplicationContext(),R.drawable.img_expensive_checker);
             bitmap = drawable.getBitmap();
 
 
