@@ -1,13 +1,18 @@
 package com.rackluxury.rollsroyce.activities;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -39,6 +44,7 @@ import com.rackluxury.rollsroyce.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import es.dmoral.toasty.Toasty;
 
@@ -47,34 +53,117 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
 
     private FirebaseAuth firebaseAuth;
     private StorageReference storageReference;
+    private SharedPreferences prefs;
+    private TextView people;
+
+
 
     private BillingClient billingClient;
     private final List<String> skulist = new ArrayList<>();
     private final String categories = "expensive_checker";
+    private TextView timer;
+    private String TAG = "Main";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expensive_checker);
 
+        people = findViewById(R.id.peopleNumExpensiveChecker);
+
+        Random random = new Random();
+        int val = random.nextInt(500); // save random number in an integer variable
+        people.setText(Integer.toString(val));
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
 
+        timer = findViewById(R.id.tvTimerExpensive);
+        Intent intent = new Intent(this, BroadcastServiceExpensive.class);
+        startService(intent);
+
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("expensiveCheckerFirst", true);
+        if (firstStart) {
+            firstDialogue();
+        }
+
         expensiveCheckerFunctionality();
 
 
+
+    }
+    private BroadcastReceiver broadcastReciever = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateGUI(intent);
+        }
+    };
+    @Override
+    protected void onStop(){
+        try {
+            unregisterReceiver(broadcastReciever);
+        }catch(Exception e){
+
+        }
+        super.onStop();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        unregisterReceiver(broadcastReciever);
+
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        registerReceiver(broadcastReciever,new IntentFilter(BroadcastServiceExpensive.COUNTDOWN_BR));
+
+    }
+    @Override
+    protected void onDestroy(){
+        stopService(new Intent(this, BroadcastServiceExpensive.class));
+        super.onDestroy();
+    }
+    private void updateGUI(Intent intent){
+        if(intent.getExtras() != null){
+            long millisUntilFinished = intent.getLongExtra("countdownExpensive",300000);
+
+            timer.setText(Long.toString(millisUntilFinished/1000));
+            SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(),MODE_PRIVATE);
+            sharedPreferences.edit().putLong("timeExpensive",millisUntilFinished).apply();
+        }
+    }
+    private void firstDialogue(){
+        LayoutInflater inflater = LayoutInflater.from(ExpensiveCheckerActivity.this);
+        View viewInformation = inflater.inflate(R.layout.alert_dialog_purchase_information, null);
+        Button acceptButton = viewInformation.findViewById(R.id.btnOkAlertPurchaseInformation);
+        final AlertDialog alertDialogInformation = new AlertDialog.Builder(ExpensiveCheckerActivity.this)
+                .setView(viewInformation)
+                .show();
+
+        acceptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialogInformation.dismiss();
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("expensiveCheckerFirst", false);
+                editor.apply();
+
+            }
+        });
     }
 
 
     private void expensiveCheckerFunctionality() {
         Toolbar toolbar = findViewById(R.id.toolbarExpensiveCheckerActivity);
-        Button buttonExpChecker = findViewById(R.id.btnExpensiveChecker);
+        Button buttonExpensiveChecker = findViewById(R.id.btnExpensiveChecker);
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Most Expensive Motor Cars");
+            getSupportActionBar().setTitle("");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         billingClient = BillingClient.newBuilder(ExpensiveCheckerActivity.this).enablePendingPurchases().setListener(new PurchasesUpdatedListener() {
@@ -122,7 +211,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
         skulist.add(categories);
         final SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
         params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);  //Skutype.subs for Subscription
-        buttonExpChecker.setOnClickListener(new View.OnClickListener() {
+        buttonExpensiveChecker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 billingClient.querySkuDetailsAsync(params.build(), new SkuDetailsResponseListener() {
@@ -166,6 +255,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     //Here we give coins to user.
 
                     FirebaseMessaging.getInstance().unsubscribeFromTopic("purchase_expensive");
+
                     LayoutInflater inflater = LayoutInflater.from(ExpensiveCheckerActivity.this);
                     View view = inflater.inflate(R.layout.alert_dialog_purchased, null);
                     Button acceptButton = view.findViewById(R.id.btnOkAlertPurchased);
@@ -184,9 +274,8 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                         }
                     });
 
-
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Expensive Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/expensive_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_expensive_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override

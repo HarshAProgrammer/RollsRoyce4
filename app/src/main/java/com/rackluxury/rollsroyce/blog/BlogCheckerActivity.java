@@ -1,13 +1,18 @@
 package com.rackluxury.rollsroyce.blog;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -40,6 +45,7 @@ import com.rackluxury.rollsroyce.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import es.dmoral.toasty.Toasty;
 
@@ -48,30 +54,117 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
 
     private FirebaseAuth firebaseAuth;
     private StorageReference storageReference;
+    private SharedPreferences prefs;
+    private TextView people;
+
 
     private BillingClient billingClient;
     private final List<String> skulist = new ArrayList<>();
     private final String categories = "blog_checker";
+    private TextView timer;
+    private String TAG = "Main";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_checker);
 
+        people = findViewById(R.id.peopleNumBlogChecker);
+
+        Random random = new Random();
+        int val = random.nextInt(500); // save random number in an integer variable
+        people.setText(Integer.toString(val));
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
 
+
+        timer = findViewById(R.id.tvTimerBlog);
+        Intent intent = new Intent(this, BroadcastServiceBlog.class);
+        startService(intent);
+
+
+
+
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("blogCheckerFirst", true);
+        if (firstStart) {
+            firstDialogue();
+        }
+
         blogCheckerFunctionality();
 
 
+
+    }
+    private BroadcastReceiver broadcastReciever = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateGUI(intent);
+        }
+    };
+    @Override
+    protected void onStop(){
+        try {
+            unregisterReceiver(broadcastReciever);
+        }catch(Exception e){
+
+        }
+        super.onStop();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        unregisterReceiver(broadcastReciever);
+
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        registerReceiver(broadcastReciever,new IntentFilter(BroadcastServiceBlog.COUNTDOWN_BR));
+
+    }
+    @Override
+    protected void onDestroy(){
+        stopService(new Intent(this, BroadcastServiceBlog.class));
+        super.onDestroy();
+    }
+    private void updateGUI(Intent intent){
+        if(intent.getExtras() != null){
+            long millisUntilFinished = intent.getLongExtra("countdownBlog",300000);
+
+            timer.setText(Long.toString(millisUntilFinished/1000));
+            SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(),MODE_PRIVATE);
+            sharedPreferences.edit().putLong("timeBlog",millisUntilFinished).apply();
+        }
+    }
+    private void firstDialogue(){
+        LayoutInflater inflater = LayoutInflater.from(BlogCheckerActivity.this);
+        View viewInformation = inflater.inflate(R.layout.alert_dialog_purchase_information, null);
+        Button acceptButton = viewInformation.findViewById(R.id.btnOkAlertPurchaseInformation);
+        final AlertDialog alertDialogInformation = new AlertDialog.Builder(BlogCheckerActivity.this)
+                .setView(viewInformation)
+                .show();
+
+        acceptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialogInformation.dismiss();
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("blogCheckerFirst", false);
+                editor.apply();
+
+            }
+        });
     }
 
 
     private void blogCheckerFunctionality() {
         Toolbar toolbar = findViewById(R.id.toolbarBlogCheckerActivity);
         Button buttonBlogChecker = findViewById(R.id.btnBlogChecker);
+
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -187,7 +280,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                     });
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Blog Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/blog_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_blog_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override

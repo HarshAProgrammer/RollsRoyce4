@@ -39,9 +39,6 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
-        <activity
-            android:name=".video.VideoCheckerActivity"
-            />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -89,12 +86,6 @@
         <activity
             android:name=".activities.CategoriesDetailActivity"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity
-            android:name=".activities.ExpensiveCheckerActivity"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".blog.BlogCheckerActivity"
-            android:launchMode="singleTop" />
         <activity
             android:name=".activities.ExpensiveActivity"
             android:parentActivityName=".activities.HomeActivity" />
