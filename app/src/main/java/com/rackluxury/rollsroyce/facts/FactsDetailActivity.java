@@ -12,6 +12,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
+import android.text.method.ScrollingMovementMethod;
+
 import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Build;
@@ -73,7 +75,6 @@ public class FactsDetailActivity extends AppCompatActivity implements
     private BitmapDrawable drawable;
     private SoundPool soundPool;
     private TextView FactTitle1;
-    private TextView FactDescription;
     private int soundSaveImage;
     private int soundWallpaper;
     private int soundLike;
@@ -82,7 +83,6 @@ public class FactsDetailActivity extends AppCompatActivity implements
     private AnimatedVectorDrawable avd2;
     private AnimatedVectorDrawableCompat avd;
     private ImageView mainGreyHeart;
-    private ImageView liker;
     private CardView cardViewLike;
     private ImageView mainRedHeart;
     private ImageView heart;
@@ -101,13 +101,13 @@ public class FactsDetailActivity extends AppCompatActivity implements
         toolbar = findViewById(R.id.toolbarFactDetailActivity);
         explosionField = ExplosionField.attach2Window(FactsDetailActivity.this);
         gestureDetector = new GestureDetector(FactsDetailActivity.this, this);
-        FactDescription = findViewById(R.id.tvFactsDescription);
+        TextView factDescription = findViewById(R.id.tvFactsDescription);
         FactTitle1 = findViewById(R.id.tvFactsTitle1);
         TextView FactTitle2 = findViewById(R.id.tvFactsTitle2);
         FactImage = findViewById(R.id.ivDetailFacts);
         shimmerFrameLayout = findViewById(R.id.ivShimDetailFacts);
 
-        liker = findViewById(R.id.ivFactsDetailLiker);
+        ImageView liker = findViewById(R.id.ivFactsDetailLiker);
         mainGreyHeart = findViewById(R.id.ivFactsDetailGreyHeart);
         cardViewLike = findViewById(R.id.cvFactsDetailLikerOptions);
         mainRedHeart = findViewById(R.id.ivFactsDetailRedHeart);
@@ -116,7 +116,6 @@ public class FactsDetailActivity extends AppCompatActivity implements
         love = findViewById(R.id.ivFacDetailReactLove);
         sad = findViewById(R.id.ivFacDetailReactSad);
         shocked = findViewById(R.id.ivFacDetailReactShocked);
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -241,11 +240,11 @@ public class FactsDetailActivity extends AppCompatActivity implements
         }
 
 
-        FactDescription.setText(getIntent().getStringExtra("description"));
+        factDescription.setText(getIntent().getStringExtra("description"));
         FactTitle1.setText(getIntent().getStringExtra("title"));
         FactTitle2.setText(getIntent().getStringExtra("title"));
         FactImage.setImageResource(getIntent().getIntExtra("image", 1));
-        shareFactsDescription = FactDescription.getText().toString();
+        shareFactsDescription = factDescription.getText().toString();
         factDescription.setMovementMethod(new ScrollingMovementMethod());
 
         new MaterialShowcaseView.Builder(this)
@@ -339,7 +338,7 @@ public class FactsDetailActivity extends AppCompatActivity implements
             bitmap = drawable.getBitmap();
 
             try {
-                File file = new File(getApplicationContext().getExternalCacheDir(), File.separator + "Cars from RollsRoyce.png");
+                File file = new File(getApplicationContext().getExternalCacheDir(), File.separator + "Cars from Rolls Royce.png");
                 FileOutputStream fOut = new FileOutputStream(file);
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
                 fOut.flush();
@@ -396,7 +395,7 @@ public class FactsDetailActivity extends AppCompatActivity implements
         drawable = (BitmapDrawable) FactImage.getDrawable();
         bitmap = drawable.getBitmap();
         File filePath = Environment.getExternalStorageDirectory();
-        File dir = new File(filePath.getAbsolutePath() + "/Cars from RollsRoyce/");
+        File dir = new File(filePath.getAbsolutePath() + "/Cars from Rolls Royce/");
         dir.mkdir();
         File file = new File(dir, System.currentTimeMillis() + ".jpg");
         try {
