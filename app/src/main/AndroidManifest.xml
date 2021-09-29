@@ -110,6 +110,15 @@
         <activity android:name=".activities.AboutUsActivity" />
         <activity android:name=".blog.BlogActivity" />
         <activity android:name=".blog.BlogDetailActivity" />
+        <activity
+            android:name=".video.VideoCheckerActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activities.ExpensiveCheckerActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".blog.BlogCheckerActivity"
+            android:launchMode="singleTop" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
