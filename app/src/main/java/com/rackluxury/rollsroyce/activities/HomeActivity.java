@@ -7,6 +7,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.media.AudioAttributes;
+import android.widget.RelativeLayout;
+import android.graphics.Color;
+
+
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
@@ -72,6 +76,7 @@ import com.rackluxury.rollsroyce.youtube.YouTubeActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -100,6 +105,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private long backPressedTime;
     private Toolbar toolbar;
     private MyCategoriesAdapter myCategoriesAdapter;
+    ImageView greetImg;
+    RelativeLayout greetLay;
+    TextView greetText;
+
     final ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
         @Override
         public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -224,7 +233,45 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        greeting();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                greetImg.animate().alpha(0).translationY(-greetImg.getHeight()).setDuration(1000);
+                greetText.animate().alpha(0).translationY(-greetText.getHeight()).setDuration(1000);
+                greetLay.animate().alpha(0).translationY(-greetLay.getHeight()).setDuration(1000);
+                Handler handler = new Handler();
+                int TRANSITION_SCREEN_LOADING_TIME = 1000;
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        greetLay.setVisibility(View.GONE);
 
+                    }
+                }, TRANSITION_SCREEN_LOADING_TIME);
+            }
+        }, 3000);
+
+    }
+
+    private void greeting() {
+        Calendar calendar = Calendar.getInstance();
+        int timeOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+
+        if (timeOfDay >= 0 && timeOfDay < 12) {
+            greetText.setText("Good Morning");
+            greetImg.setImageResource(R.drawable.img_greet_half_morning);
+        } else if (timeOfDay >= 12 && timeOfDay < 15) {
+            greetText.setText("Good Afternoon");
+            greetImg.setImageResource(R.drawable.img_greet_half_afternoon);
+        } else if (timeOfDay >= 15 && timeOfDay < 18) {
+            greetText.setText("Good Evening");
+            greetImg.setImageResource(R.drawable.img_greet_half_without_sun);
+        } else if (timeOfDay >= 18 && timeOfDay < 24) {
+            greetText.setText("Good Night");
+            greetText.setTextColor(Color.WHITE);
+            greetImg.setImageResource(R.drawable.img_greet_half_night);
+        }
     }
 
     @Override
@@ -248,6 +295,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fabMore = findViewById(R.id.fabMoreCategories);
         fabFav = findViewById(R.id.fabFavCategories);
         fabVideos = findViewById(R.id.fabVideosCategories);
+        greetImg = findViewById(R.id.ivGreetHome);
+        greetText = findViewById(R.id.tvGreetHome);
+        greetLay = findViewById(R.id.rlGreetHome);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()

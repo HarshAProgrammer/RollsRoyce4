@@ -37,7 +37,7 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="Cars from Rolls Royce"
+                    android:text="Watches from Rolex"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/colorWhite"
                     android:textSize="25sp"
@@ -92,6 +92,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:text="@string/advantageExpensive"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/tvTimerInfoExpensive"
+        android:fontFamily="@font/harmonia_sans_regular"
+        app:layout_constraintBottom_toTopOf="@+id/tvTimerExpensive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_information_timer"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />

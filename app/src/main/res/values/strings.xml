@@ -1376,5 +1376,6 @@ Meter to show power being utilized
     <string name="purchase_information_description">This item can only be purchased by first 100 Users.</string>
     <string name="checker_people_description">Users currently looking at this Product</string>
     <string name="loginorregisterInformation">Swipe Right to Login \n Swipe Left to Register</string>
+    <string name="purchase_information_timer">Get this product at a discount price of $352 instead of $999 before this timer runs out.</string>
 
 </resources>

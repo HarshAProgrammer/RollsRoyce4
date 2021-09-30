@@ -133,7 +133,14 @@ public class ImagesDetailActivity extends AppCompatActivity {
                 heart.startAnimation(reactBounceAnim);
             }
         });
+        optionsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Toasty.info(ImagesDetailActivity.this, "Hold Long for Options", Toast.LENGTH_LONG).show();
+
+            }
+        });
 
         happy.setOnClickListener(new View.OnClickListener() {
             @Override
