@@ -7,8 +7,8 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.rackluxury.rollsroyce.R;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.rackluxury.rolex.R;
 
 public class SecondSplashScreenActivity extends AppCompatActivity {
 
@@ -31,7 +31,7 @@ public class SecondSplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent openLoginOrRegisterActivityFromSecondSplash = new Intent(SecondSplashScreenActivity.this, HomeActivity.class);
+                Intent openLoginOrRegisterActivityFromSecondSplash = new Intent(SecondSplashScreenActivity.this, DashboardActivity.class);
                 startActivity(openLoginOrRegisterActivityFromSecondSplash);
                 finish();
                 Animatoo.animateSlideUp(SecondSplashScreenActivity.this);

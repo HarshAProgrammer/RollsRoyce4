@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 
 public class BroadcastServiceExpensive extends Service {
     private String TAG = "BroadcastService";
-    public static final String COUNTDOWN_BR = "com.rackluxury.rollsroyce.activities";
+    public static final String COUNTDOWN_BR = "com.rackluxury.rolex.activities";
     Intent intent = new Intent(COUNTDOWN_BR);
 
     CountDownTimer countDownTimer = null;

@@ -1,4 +1,7 @@
 package com.rackluxury.rollsroyce.activities;
+
+import static com.rackluxury.rolex.activities.ExpensiveNotificationApp.FCM_CHANNEL_ID;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -6,28 +9,24 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.rackluxury.rollsroyce.R;
-
-import static com.rackluxury.rollsroyce.activities.App.FCM_CHANNEL_ID;
-
+import com.rackluxury.rolex.R;
 
 
 public class ExpensiveNotificationService extends FirebaseMessagingService {
 
-    private Bitmap bitmap;
-    private BitmapDrawable drawable;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
 
-            drawable = (BitmapDrawable) ContextCompat.getDrawable(getApplicationContext(),R.drawable.img_expensive_checker);
-            bitmap = drawable.getBitmap();
+        BitmapDrawable drawable = (BitmapDrawable) ContextCompat.getDrawable(getApplicationContext(), R.drawable.img_expensive_checker);
+        Bitmap bitmap = drawable.getBitmap();
 
 
         if (remoteMessage.getNotification() != null) {

@@ -39,6 +39,22 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
+        <activity android:name=".activities.DashboardActivity" />
+        <activity android:name=".activities.BuyCoinsActivity" />
+        <activity android:name=".activities.RedeemActivity" />
+        <activity android:name=".activities.DailyLoginActivity" />
+        <service android:name=".blog.BroadcastServiceBlog"/>
+        <service android:name=".activities.BroadcastServiceExpensive"/>
+        <service android:name=".video.BroadcastServiceVideo"/>
+        <activity
+            android:name=".video.VideoCheckerActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activities.ExpensiveCheckerActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".blog.BlogCheckerActivity"
+            android:launchMode="singleTop" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -46,15 +62,6 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/fcmNotificationColor" />
-
-        <service
-            android:name=".activities.ExpensiveNotificationService"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECIEVE" />
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
 
         <activity android:name=".activities.FavouriteCategoriesActivity" />
         <activity android:name=".activities.IntroActivity">
@@ -67,16 +74,12 @@
         <activity android:name=".activities.FavouriteExpensiveActivity" />
         <activity android:name=".activities.FirstSplashScreenActivity"
             android:screenOrientation="fullSensor"/>
-        <activity android:name=".activities.SecondSplashScreenActivity"
-            android:screenOrientation="fullSensor"/>
-        <service android:name=".blog.BroadcastServiceBlog"/>
-        <service android:name=".activities.BroadcastServiceExpensive"/>
-        <service android:name=".activities.BroadcastServiceVideo"/>
+
+
         <activity
             android:name=".activities.LoginOrRegisterActivity"
             android:launchMode="singleTop" />
         <activity android:name=".activities.RegistrationActivity" />
-        <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.ForgotPassword" />
         <activity
             android:name=".activities.HomeActivity"

@@ -43,7 +43,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.rackluxury.rollsroyce.R;
+import com.rackluxury.rolex.R;
 
 import es.dmoral.toasty.Toasty;
 
@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity implements
     private FirebaseAuth.AuthStateListener authStateListener;
 
     private TextInputLayout textInputEmail;
-    private TextInputLayout textInputPassword;
     private EditText loginEmail;
     private EditText loginPassword;
     private TextView Info;
@@ -85,7 +84,7 @@ public class LoginActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_login);
 
         textInputEmail = findViewById(R.id.login_email_layout);
-        textInputPassword = findViewById(R.id.login_password_layout);
+        TextInputLayout textInputPassword = findViewById(R.id.login_password_layout);
         loginEmail = findViewById(R.id.etEmailLogin);
         loginPassword = findViewById(R.id.etPasswordLogin);
         Login = findViewById(R.id.btnLogin);
@@ -131,16 +130,11 @@ public class LoginActivity extends AppCompatActivity implements
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-
-                } else {
-                }
             }
         };
         AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
-                if (currentAccessToken == null) ;
                 firebaseAuth.signOut();
             }
         };
@@ -305,7 +299,7 @@ public class LoginActivity extends AppCompatActivity implements
 
 
     public void openRegistrationActivityFromLogin() {
-        Intent openRegistrationActivityFromLogin = new Intent(LoginActivity.this, com.rackluxury.rollsroyce.activities.RegistrationActivity.class);
+        Intent openRegistrationActivityFromLogin = new Intent(LoginActivity.this, RegistrationActivity.class);
         startActivity(openRegistrationActivityFromLogin);
         finish();
         Animatoo.animateSwipeLeft(LoginActivity.this);
@@ -362,8 +356,8 @@ public class LoginActivity extends AppCompatActivity implements
                 public void run() {
                     Toasty.success(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
                     finish();
-                    Intent openHomeActivityFromLogin = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(openHomeActivityFromLogin);
+                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                    startActivity(intent);
                     Animatoo.animateSlideUp(LoginActivity.this);
 
 
