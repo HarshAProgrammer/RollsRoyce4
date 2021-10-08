@@ -29,7 +29,7 @@ import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
-import com.rackluxury.rolex.R;
+import com.rackluxury.rollsroyce.R;
 
 import java.util.ArrayList;
 import java.util.List;

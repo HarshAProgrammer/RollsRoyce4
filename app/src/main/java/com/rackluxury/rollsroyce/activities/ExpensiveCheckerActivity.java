@@ -40,7 +40,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.rackluxury.rolex.R;
+import com.rackluxury.rollsroyce.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -276,7 +276,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     });
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Expensive Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rolex/drawable/img_expensive_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_expensive_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override

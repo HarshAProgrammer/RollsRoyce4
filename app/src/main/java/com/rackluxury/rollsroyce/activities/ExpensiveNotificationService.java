@@ -1,6 +1,6 @@
 package com.rackluxury.rollsroyce.activities;
 
-import static com.rackluxury.rolex.activities.ExpensiveNotificationApp.FCM_CHANNEL_ID;
+import static com.rackluxury.rollsroyce.activities.ExpensiveNotificationApp.FCM_CHANNEL_ID;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,7 +15,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.rackluxury.rolex.R;
+import com.rackluxury.rollsroyce.R;
 
 
 public class ExpensiveNotificationService extends FirebaseMessagingService {

@@ -1,6 +1,6 @@
 package com.rackluxury.rollsroyce.video;
 
-import static com.rackluxury.rolex.video.VideoNotificationApp.FCM_CHANNEL_ID;
+import static com.rackluxury.rollsroyce.video.VideoNotificationApp.FCM_CHANNEL_ID;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,7 +15,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.rackluxury.rolex.R;
+import com.rackluxury.rollsroyce.R;
 
 
 public class VideoNotificationService extends FirebaseMessagingService {

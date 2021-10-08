@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
-import com.rackluxury.rolex.R;
+import com.rackluxury.rollsroyce.R;
 
 import java.util.Calendar;
 

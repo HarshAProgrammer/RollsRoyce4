@@ -6,11 +6,8 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Canvas;
-import android.media.AudioAttributes;
-import android.widget.RelativeLayout;
 import android.graphics.Color;
-
-
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
@@ -27,7 +24,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import es.dmoral.toasty.Toasty;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -65,10 +64,12 @@ import com.rackluxury.rollsroyce.adapters.CategoriesData;
 import com.rackluxury.rollsroyce.adapters.MyCategoriesAdapter;
 import com.rackluxury.rollsroyce.adapters.UserProfile;
 import com.rackluxury.rollsroyce.blog.BlogActivity;
+import com.rackluxury.rollsroyce.blog.BlogCheckerActivity;
 import com.rackluxury.rollsroyce.facts.FactsActivity;
 import com.rackluxury.rollsroyce.images.ImagesActivity;
 import com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity;
 import com.rackluxury.rollsroyce.video.VideoActivity;
+import com.rackluxury.rollsroyce.video.VideoCheckerActivity;
 import com.rackluxury.rollsroyce.youtube.YouTubeActivity;
 import com.squareup.picasso.Picasso;
 
@@ -77,7 +78,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
-import es.dmoral.toasty.Toasty;
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -93,19 +93,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private int soundLike;
 
+    private TextView coins2;
+    public SharedPreferences coins;
+    private String currentCoins;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseAuth firebaseAuth;
+    private DatabaseReference mRef;
 
     private SoundPool soundPool;
     private int soundFBShare;
     private int soundFBLike;
     private int soundTwitterShare;
 
-    private long backPressedTime;
     private Toolbar toolbar;
     private MyCategoriesAdapter myCategoriesAdapter;
-    ImageView greetImg;
-    RelativeLayout greetLay;
-    TextView greetText;
-
     final ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
         @Override
         public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -148,7 +149,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onChildDraw(c, categoriesRecyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         }
     };
-    private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private String ShareOnFacebookString;
     private String ShareOnTwitterString;
@@ -159,6 +159,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private int lastPosition;
     private FloatingActionButton fabMore, fabFav, fabVideos;
     private Animation fromBottom, toBottom, rotateOpen, rotateClose;
+    ImageView greetImg;
+    RelativeLayout greetLay;
+    TextView greetText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -170,6 +173,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setupNavigationDrawer();
         loadMainData();
         itemTouchCategories();
+
+
+        coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+        currentCoins = coins.getString("Coins", "0");
+        coins2 = findViewById(R.id.tvCoinsHome);
+        coins2.setText(currentCoins);
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reference.child("Coins").setValue(currentCoins);
 
         fromBottom = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.from_bottom_anim);
         toBottom = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.to_bottom_anim);
@@ -247,7 +259,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     }
                 }, TRANSITION_SCREEN_LOADING_TIME);
             }
-        }, 3000);
+        }, 1000);
 
     }
 
@@ -292,9 +304,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fabMore = findViewById(R.id.fabMoreCategories);
         fabFav = findViewById(R.id.fabFavCategories);
         fabVideos = findViewById(R.id.fabVideosCategories);
+
         greetImg = findViewById(R.id.ivGreetHome);
         greetText = findViewById(R.id.tvGreetHome);
         greetLay = findViewById(R.id.rlGreetHome);
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -461,13 +475,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (backPressedTime + 2000 > System.currentTimeMillis()) {
-            super.onBackPressed();
-            return;
         } else {
-            Toasty.normal(HomeActivity.this, "Click Back again to Exit", Toast.LENGTH_SHORT, ContextCompat.getDrawable(HomeActivity.this, R.drawable.ic_main_exit_toast)).show();
+            finish();
         }
-        backPressedTime = System.currentTimeMillis();
 
     }
 
@@ -483,6 +493,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.videoNavigation) {
             homeVideos();
+
+        } else if (id == R.id.checkinNavigation) {
+            homeCheckin();
+
+        } else if (id == R.id.redeemNavigation) {
+            homeRedeem();
 
         } else if (id == R.id.youtubeVideoNavigation) {
             youtubeVideos();
@@ -550,7 +566,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             public void onFailure(@NonNull Exception e) {
                 FirebaseMessaging.getInstance().subscribeToTopic("purchase_blog");
                 finish();
-
                 Intent openBlogCheckerFromMain = new Intent(HomeActivity.this, BlogCheckerActivity.class);
                 startActivity(openBlogCheckerFromMain);
                 Animatoo.animateSwipeRight(HomeActivity.this);
@@ -562,6 +577,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private void Reddit() {
         Intent openBlogFromMain = new Intent(HomeActivity.this, RedditMainActivity.class);
         startActivity(openBlogFromMain);
+        Animatoo.animateSwipeRight(HomeActivity.this);
+    }
+
+    private void homeCheckin() {
+        Intent intent = new Intent(HomeActivity.this, DailyLoginActivity.class);
+        startActivity(intent);
+        Animatoo.animateSwipeRight(HomeActivity.this);
+    }
+
+    private void homeRedeem() {
+        Intent intent = new Intent(HomeActivity.this, RedeemActivity.class);
+        startActivity(intent);
         Animatoo.animateSwipeRight(HomeActivity.this);
     }
 
@@ -675,10 +702,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
                 GeneralShareMainIntent.setType("Text/plain");
-                String generalMainShareBody = "Rolls Royce:Trusted to Deliver Excellence.      " +
+                String generalMainShareBody = "Rolex:A Crown For Every Achievement      " +
                         "" +
                         appLink;
-                String generalMainShareSub = "Rolls Royce App";
+                String generalMainShareSub = "Rolex App";
                 GeneralShareMainIntent.putExtra(Intent.EXTRA_SUBJECT, generalMainShareSub);
                 GeneralShareMainIntent.putExtra(Intent.EXTRA_TEXT, generalMainShareBody);
                 startActivity(Intent.createChooser(GeneralShareMainIntent, "Share Via"));
@@ -776,7 +803,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     shareOnTwitterIntent.setType("text/plain");
                     final String appPackageName = getApplicationContext().getPackageName();
                     ShareOnTwitterString = "https://play.google.com/store/apps/details?id=" + appPackageName;
-                    shareOnTwitterIntent.putExtra(Intent.EXTRA_TEXT, "Rolls Royce:Trusted to Deliver Excellence.      " +
+                    shareOnTwitterIntent.putExtra(Intent.EXTRA_TEXT, "Rolex:A Crown For Every Achievement      " +
                             "" + ShareOnTwitterString);
                     shareOnTwitterIntent.setPackage("com.twitter.android");
                     startActivity(shareOnTwitterIntent);
@@ -866,6 +893,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(categoriesRecyclerView);
     }
+
     private void loadMainData() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(HomeActivity.this, 1);
         categoriesRecyclerView.setLayoutManager(gridLayoutManager);

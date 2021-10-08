@@ -37,8 +37,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.rackluxury.rolex.R;
-import com.rackluxury.rolex.blog.BlogActivity;
+import com.rackluxury.rollsroyce.R;
+import com.rackluxury.rollsroyce.blog.BlogActivity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -63,7 +63,7 @@ public class RedeemActivity extends AppCompatActivity {
     private SharedPreferences coins;
 
     ViewPager viewPagerRedeem;
-    com.rackluxury.rolex.activities.AdapterRedeem adapterRedeem;
+    com.rackluxury.rollsroyce.activities.AdapterRedeem adapterRedeem;
     List<Model> models;
     private RelativeLayout layout;
 
@@ -105,7 +105,7 @@ public class RedeemActivity extends AppCompatActivity {
         buyMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RedeemActivity.this, com.rackluxury.rolex.activities.BuyCoinsActivity.class);
+                Intent intent = new Intent(RedeemActivity.this, com.rackluxury.rollsroyce.activities.BuyCoinsActivity.class);
                         startActivity(intent);
             }
         });
@@ -156,7 +156,7 @@ public class RedeemActivity extends AppCompatActivity {
 
                     mRef.child("RedeemCoins").setValue(String.valueOf(integer));
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Blog Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rolex/drawable/img_blog_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_blog_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -298,7 +298,7 @@ public class RedeemActivity extends AppCompatActivity {
         models.add(new Model(R.drawable.redeem_22, "Sky-Dweller,326938-0003", "$54,940"));
 
 
-        adapterRedeem = new com.rackluxury.rolex.activities.AdapterRedeem(models, this);
+        adapterRedeem = new com.rackluxury.rollsroyce.activities.AdapterRedeem(models, this);
 
         viewPagerRedeem = findViewById(R.id.viewPagerRedeem);
         viewPagerRedeem.setAdapter(adapterRedeem);

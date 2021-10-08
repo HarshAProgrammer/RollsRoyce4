@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.rackluxury.rolex.R;
+import com.rackluxury.rollsroyce.R;
 
 import java.util.List;
 

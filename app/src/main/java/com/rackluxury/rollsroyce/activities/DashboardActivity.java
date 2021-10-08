@@ -27,14 +27,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.rackluxury.rolex.R;
-import com.rackluxury.rolex.blog.BlogActivity;
-import com.rackluxury.rolex.blog.BlogCheckerActivity;
-import com.rackluxury.rolex.facts.FactsActivity;
-import com.rackluxury.rolex.images.ImagesActivity;
-import com.rackluxury.rolex.reddit.activities.RedditMainActivity;
-import com.rackluxury.rolex.video.VideoActivity;
-import com.rackluxury.rolex.video.VideoCheckerActivity;
+import com.rackluxury.rollsroyce.R;
+import com.rackluxury.rollsroyce.blog.BlogActivity;
+import com.rackluxury.rollsroyce.blog.BlogCheckerActivity;
+import com.rackluxury.rollsroyce.facts.FactsActivity;
+import com.rackluxury.rollsroyce.images.ImagesActivity;
+import com.rackluxury.rollsroyce.reddit.activities.RedditMainActivity;
+import com.rackluxury.rollsroyce.video.VideoActivity;
+import com.rackluxury.rollsroyce.video.VideoCheckerActivity;
 
 import java.util.Calendar;
 
@@ -143,7 +143,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 Animatoo.animateSwipeRight(DashboardActivity.this);
                 break;
             case R.id.dailyLoginDashboard:
-                Intent intent2 = new Intent(DashboardActivity.this, com.rackluxury.rolex.activities.DailyLoginActivity.class);
+                Intent intent2 = new Intent(DashboardActivity.this, com.rackluxury.rollsroyce.activities.DailyLoginActivity.class);
                 startActivity(intent2);
                 Animatoo.animateSwipeRight(DashboardActivity.this);
                 break;
