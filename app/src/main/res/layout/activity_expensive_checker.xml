@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="activities.ExpensiveCheckerActivity">
+    tools:context=".activities.ExpensiveCheckerActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,6 +108,7 @@
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
+
     <TextView
         android:id="@+id/tvTimerExpensive"
         android:layout_width="wrap_content"
@@ -115,16 +116,35 @@
         app:layout_constraintTop_toBottomOf="@+id/advantage1ExpensiveChecker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/peopleDesExpensiveChecker"
+        app:layout_constraintBottom_toTopOf="@+id/purchaseDesExpensiveChecker"
         android:text="00:00"
         android:textColor="@color/colorRed"
         android:textSize="60sp" />
+    <TextView
+        android:id="@+id/purchaseNumExpensiveChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleNumExpensiveChecker"/>
+    <TextView
+        android:id="@+id/purchaseDesExpensiveChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:text="@string/checker_purchase_description"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesExpensiveChecker"/>
     <TextView
         android:id="@+id/peopleNumExpensiveChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +160,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"/>
+
 
 
     <androidx.appcompat.widget.AppCompatButton

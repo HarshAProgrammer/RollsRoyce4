@@ -40,8 +40,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.rackluxury.rollsroyce.R;
-import com.rackluxury.rollsroyce.activities.HomeActivity;
+import com.rackluxury.rolex.R;
+import com.rackluxury.rolex.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +56,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
     private StorageReference storageReference;
     private SharedPreferences prefs;
     private TextView people;
+    private TextView purchasesRemaining;
 
 
     private BillingClient billingClient;
@@ -63,6 +64,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
     private final String categories = "blog_checker";
     private TextView timer;
     private String TAG = "Main";
+    private SharedPreferences coins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,15 +72,21 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
         setContentView(R.layout.activity_blog_checker);
 
         people = findViewById(R.id.peopleNumBlogChecker);
+        purchasesRemaining = findViewById(R.id.purchaseNumBlogChecker);
+
+        Random randomPurchase = new Random();
+        int valPurc = randomPurchase.nextInt(10);
+        purchasesRemaining.setText(Integer.toString(valPurc));
 
         Random random = new Random();
-        int val = random.nextInt(500); // save random number in an integer variable
-        people.setText(Integer.toString(val));
+        int valPeop = random.nextInt(500); // save random number in an integer variable
+        people.setText(Integer.toString(valPeop));
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
 
+        coins = getSharedPreferences("Rewards", MODE_PRIVATE);
 
         timer = findViewById(R.id.tvTimerBlog);
         Intent intent = new Intent(this, BroadcastServiceBlog.class);
@@ -188,8 +196,6 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                             Intent openBlogFromBlogChecker = new Intent(BlogCheckerActivity.this, BlogActivity.class);
                             startActivity(openBlogFromBlogChecker);
                             Animatoo.animateSwipeRight(BlogCheckerActivity.this);
-                        }else {
-                            FirebaseMessaging.getInstance().subscribeToTopic("purchase_blog");
                         }
                     }
                 }
@@ -215,7 +221,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
         });
         skulist.add(categories);
         final SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-        params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);  //Skutype.subs for Subscription
+        params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);
         buttonBlogChecker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -224,10 +230,10 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                     public void onSkuDetailsResponse(@NonNull BillingResult billingResult, List<SkuDetails> list) {
                         if (list != null && billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                             for (final SkuDetails skuDetails : list) {
-                                String sku = skuDetails.getSku(); // your Categories id
-                                String price = skuDetails.getPrice(); // your categories price
-                                String description = skuDetails.getDescription(); // categories description
-                                //method opens Popup for billing purchase
+                                String sku = skuDetails.getSku();
+                                String price = skuDetails.getPrice();
+                                String description = skuDetails.getDescription();
+
                                 BillingFlowParams flowParams = BillingFlowParams.newBuilder()
                                         .setSkuDetails(skuDetails)
                                         .build();
@@ -280,7 +286,7 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                     });
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Blog Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_blog_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rolex/drawable/img_blog_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -293,6 +299,11 @@ public class BlogCheckerActivity extends AppCompatActivity implements PurchasesU
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             Toasty.success(BlogCheckerActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
+                            int coinCount = Integer.parseInt(coins.getString("Coins", "0"));
+                            coinCount = coinCount + 100000;
+                            SharedPreferences.Editor coinsEdit = coins.edit();
+                            coinsEdit.putString("Coins", String.valueOf(coinCount));
+                            coinsEdit.apply();
 
                         }
                     });

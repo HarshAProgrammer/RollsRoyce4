@@ -108,6 +108,7 @@
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
+
     <TextView
         android:id="@+id/tvTimerVideo"
         android:layout_width="wrap_content"
@@ -115,16 +116,35 @@
         app:layout_constraintTop_toBottomOf="@+id/advantage1VideoChecker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/peopleDesVideoChecker"
+        app:layout_constraintBottom_toTopOf="@+id/purchaseDesVideoChecker"
         android:text="00:00"
         android:textColor="@color/colorRed"
         android:textSize="60sp" />
+    <TextView
+        android:id="@+id/purchaseNumVideoChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleNumVideoChecker"/>
+    <TextView
+        android:id="@+id/purchaseDesVideoChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:text="@string/checker_purchase_description"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesVideoChecker"/>
     <TextView
         android:id="@+id/peopleNumVideoChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +160,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"/>
+
 
 
     <androidx.appcompat.widget.AppCompatButton

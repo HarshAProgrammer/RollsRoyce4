@@ -2,25 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="activities.ExpensiveCheckerActivity">
+    android:orientation="vertical"
+    tools:context=".activities.ExpensiveCheckerActivity">
+
     <LinearLayout
+        android:id="@+id/topLayoutChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/topLayoutChecker"
-        android:orientation="vertical">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/transparent"
             android:outlineAmbientShadowColor="@color/transparent"
-            android:outlineSpotShadowColor="@color/transparent"
-            android:background="@color/transparent">
+            android:outlineSpotShadowColor="@color/transparent">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarExpensiveCheckerActivity"
@@ -50,101 +51,124 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="200dp"
-                android:src="@drawable/img_expensive_checker"
+                android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:layout_height="wrap_content"/>
+                android:src="@drawable/img_expensive_checker" />
 
 
         </LinearLayout>
+
         <View
             android:id="@+id/cover"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/advantagesExpensiveChecker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topLayoutChecker"
-        app:layout_constraintBottom_toTopOf="@id/advantage1ExpensiveChecker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Benefits:"
-        android:fontFamily="@font/harmonia_sans_bold"
         android:layout_marginStart="20dp"
-        android:textSize="28sp"
+        android:fontFamily="@font/harmonia_sans_bold"
+        android:text="Benefits:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/advantage1ExpensiveChecker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLayoutChecker" />
 
     <TextView
         android:id="@+id/advantage1ExpensiveChecker"
-        android:fontFamily="@font/harmonia_sans_regular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/advantagesExpensiveChecker"
         android:layout_width="match_parent"
-        android:textSize="16sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:fontFamily="@font/harmonia_sans_regular"
         android:text="@string/advantageExpensive"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advantagesExpensiveChecker" />
+
     <TextView
         android:id="@+id/tvTimerInfoExpensive"
-        android:fontFamily="@font/harmonia_sans_regular"
-        app:layout_constraintBottom_toTopOf="@+id/tvTimerExpensive"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
-        android:textSize="16sp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/harmonia_sans_regular"
         android:text="@string/purchase_information_timer"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advantage1ExpensiveChecker" />
+
     <TextView
         android:id="@+id/tvTimerExpensive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/peopleDesExpensiveChecker"
         android:text="00:00"
         android:textColor="@color/colorRed"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimerInfoExpensive" />
+
+    <TextView
+        android:id="@+id/purchaseNumExpensiveChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/peopleNumExpensiveChecker"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/purchaseDesExpensiveChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:text="@string/checker_purchase_description"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesExpensiveChecker"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/peopleNumExpensiveChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"/>
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/peopleDesExpensiveChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="@string/checker_people_description"
-        android:fontFamily="@font/open_sans_condensed_light"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="58dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"/>
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:text="@string/checker_people_description"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnExpensiveChecker"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnExpensiveChecker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -160,6 +184,9 @@
         android:textColor="@color/colorWhite"
         android:textSize="25sp"
         app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#00FFFFFF" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

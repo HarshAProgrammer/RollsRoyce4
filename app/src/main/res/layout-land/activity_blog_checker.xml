@@ -98,29 +98,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/advantagesBlogChecker" />
+
     <TextView
         android:id="@+id/tvTimerInfoBlog"
-        android:fontFamily="@font/harmonia_sans_regular"
-        app:layout_constraintBottom_toTopOf="@+id/tvTimerBlog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
-        android:textSize="16sp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/harmonia_sans_regular"
         android:text="@string/purchase_information_timer"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advantage1BlogChecker" />
+
     <TextView
         android:id="@+id/tvTimerBlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/peopleDesBlogChecker"
         android:text="00:00"
         android:textColor="@color/colorRed"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimerInfoBlog" />
+
+    <TextView
+        android:id="@+id/purchaseNumBlogChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/peopleNumBlogChecker"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/purchaseDesBlogChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        android:text="@string/checker_purchase_description"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesBlogChecker"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/peopleNumBlogChecker"

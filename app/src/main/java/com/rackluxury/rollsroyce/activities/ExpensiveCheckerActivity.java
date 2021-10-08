@@ -40,7 +40,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.rackluxury.rollsroyce.R;
+import com.rackluxury.rolex.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,8 +55,8 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
     private StorageReference storageReference;
     private SharedPreferences prefs;
     private TextView people;
-
-
+    private TextView purchasesRemaining;
+    private SharedPreferences coins;
 
     private BillingClient billingClient;
     private final List<String> skulist = new ArrayList<>();
@@ -70,11 +70,16 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
         setContentView(R.layout.activity_expensive_checker);
 
         people = findViewById(R.id.peopleNumExpensiveChecker);
+        purchasesRemaining = findViewById(R.id.purchaseNumExpensiveChecker);
+
+        Random randomPurchase = new Random();
+        int valPurc = randomPurchase.nextInt(10);
+        purchasesRemaining.setText(Integer.toString(valPurc));
 
         Random random = new Random();
-        int val = random.nextInt(500); // save random number in an integer variable
-        people.setText(Integer.toString(val));
-
+        int valPeop = random.nextInt(500); // save random number in an integer variable
+        people.setText(Integer.toString(valPeop));
+        coins = getSharedPreferences("Rewards", MODE_PRIVATE);
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
@@ -183,8 +188,6 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                             Intent openExpensiveFromExpensiveChecker = new Intent(ExpensiveCheckerActivity.this, ExpensiveActivity.class);
                             startActivity(openExpensiveFromExpensiveChecker);
                             Animatoo.animateSwipeRight(ExpensiveCheckerActivity.this);
-                        }else {
-                            FirebaseMessaging.getInstance().subscribeToTopic("purchase_expensive");
                         }
                     }
                 }
@@ -210,7 +213,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
         });
         skulist.add(categories);
         final SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-        params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);  //Skutype.subs for Subscription
+        params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);
         buttonExpensiveChecker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -219,10 +222,10 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     public void onSkuDetailsResponse(@NonNull BillingResult billingResult, List<SkuDetails> list) {
                         if (list != null && billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                             for (final SkuDetails skuDetails : list) {
-                                String sku = skuDetails.getSku(); // your Categories id
-                                String price = skuDetails.getPrice(); // your categories price
-                                String description = skuDetails.getDescription(); // categories description
-                                //method opens Popup for billing purchase
+                                String sku = skuDetails.getSku();
+                                String price = skuDetails.getPrice();
+                                String description = skuDetails.getDescription();
+
                                 BillingFlowParams flowParams = BillingFlowParams.newBuilder()
                                         .setSkuDetails(skuDetails)
                                         .build();
@@ -251,8 +254,6 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                         }
                     };
                     billingClient.consumeAsync(consumeParams, consumeResponseListener);
-                    //now you can purchase same categories again and again
-                    //Here we give coins to user.
 
                     FirebaseMessaging.getInstance().unsubscribeFromTopic("purchase_expensive");
 
@@ -275,7 +276,7 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     });
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Expensive Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_expensive_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rolex/drawable/img_expensive_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -287,6 +288,11 @@ public class ExpensiveCheckerActivity extends AppCompatActivity implements Purch
                     uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                            int coinCount = Integer.parseInt(coins.getString("Coins", "0"));
+                            coinCount = coinCount + 100000;
+                            SharedPreferences.Editor coinsEdit = coins.edit();
+                            coinsEdit.putString("Coins", String.valueOf(coinCount));
+                            coinsEdit.apply();
                             Toasty.success(ExpensiveCheckerActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
 
                         }

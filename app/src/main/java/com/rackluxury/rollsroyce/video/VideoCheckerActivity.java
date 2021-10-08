@@ -40,8 +40,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.rackluxury.rollsroyce.R;
-import com.rackluxury.rollsroyce.activities.HomeActivity;
+import com.rackluxury.rolex.R;
+import com.rackluxury.rolex.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +56,7 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
     private StorageReference storageReference;
     private SharedPreferences prefs;
     private TextView people;
+    private TextView purchasesRemaining;
 
 
 
@@ -64,23 +65,30 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
     private final String categories = "video_checker";
     private TextView timer;
     private String TAG = "Main";
+    private SharedPreferences coins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_checker);
         people = findViewById(R.id.peopleNumVideoChecker);
+        purchasesRemaining = findViewById(R.id.purchaseNumVideoChecker);
 
+        Random randomPurchase = new Random();
+        int valPurc = randomPurchase.nextInt(10);
+        purchasesRemaining.setText(Integer.toString(valPurc));
+
+        coins = getSharedPreferences("Rewards", MODE_PRIVATE);
         Random random = new Random();
-        int val = random.nextInt(500); // save random number in an integer variable
-        people.setText(Integer.toString(val));
+        int valPeop = random.nextInt(500); // save random number in an integer variable
+        people.setText(Integer.toString(valPeop));
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
 
         timer = findViewById(R.id.tvTimerVideo);
-        Intent intent = new Intent(this, com.rackluxury.rollsroyce.video.BroadcastServiceVideo.class);
+        Intent intent = new Intent(this, BroadcastServiceVideo.class);
         startService(intent);
 
         prefs = getSharedPreferences("prefs", MODE_PRIVATE);
@@ -119,12 +127,12 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
     @Override
     protected void onResume(){
         super.onResume();
-        registerReceiver(broadcastReciever,new IntentFilter(com.rackluxury.rollsroyce.video.BroadcastServiceVideo.COUNTDOWN_BR));
+        registerReceiver(broadcastReciever,new IntentFilter(BroadcastServiceVideo.COUNTDOWN_BR));
 
     }
     @Override
     protected void onDestroy(){
-        stopService(new Intent(this, com.rackluxury.rollsroyce.video.BroadcastServiceVideo.class));
+        stopService(new Intent(this, BroadcastServiceVideo.class));
         super.onDestroy();
     }
     private void updateGUI(Intent intent){
@@ -183,8 +191,6 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
                             Intent openVideoFromVideoChecker = new Intent(VideoCheckerActivity.this, VideoActivity.class);
                             startActivity(openVideoFromVideoChecker);
                             Animatoo.animateSwipeRight(VideoCheckerActivity.this);
-                        }else {
-                            FirebaseMessaging.getInstance().subscribeToTopic("purchase_video");
                         }
                     }
                 }
@@ -210,7 +216,7 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
         });
         skulist.add(categories);
         final SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-        params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);  //Skutype.subs for Subscription
+        params.setSkusList(skulist).setType(BillingClient.SkuType.INAPP);
         buttonVideoChecker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -219,10 +225,10 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
                     public void onSkuDetailsResponse(@NonNull BillingResult billingResult, List<SkuDetails> list) {
                         if (list != null && billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                             for (final SkuDetails skuDetails : list) {
-                                String sku = skuDetails.getSku(); // your Categories id
-                                String price = skuDetails.getPrice(); // your categories price
-                                String description = skuDetails.getDescription(); // categories description
-                                //method opens Popup for billing purchase
+                                String sku = skuDetails.getSku();
+                                String price = skuDetails.getPrice();
+                                String description = skuDetails.getDescription();
+
                                 BillingFlowParams flowParams = BillingFlowParams.newBuilder()
                                         .setSkuDetails(skuDetails)
                                         .build();
@@ -275,7 +281,7 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
                     });
 
                     StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Video Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_video_checker");
+                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rolex/drawable/img_video_checker");
                     UploadTask uploadTask = imageReference1.putFile(uri1);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -287,6 +293,11 @@ public class VideoCheckerActivity extends AppCompatActivity implements Purchases
                     uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                            int coinCount = Integer.parseInt(coins.getString("Coins", "0"));
+                            coinCount = coinCount + 100000;
+                            SharedPreferences.Editor coinsEdit = coins.edit();
+                            coinsEdit.putString("Coins", String.valueOf(coinCount));
+                            coinsEdit.apply();
                             Toasty.success(VideoCheckerActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
 
                         }

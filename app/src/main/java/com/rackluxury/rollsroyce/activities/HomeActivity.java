@@ -29,9 +29,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.rackluxury.rollsroyce.video.VideoCheckerActivity;
-import com.rackluxury.rollsroyce.activities.ExpensiveCheckerActivity;
-import com.rackluxury.rollsroyce.blog.BlogCheckerActivity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;

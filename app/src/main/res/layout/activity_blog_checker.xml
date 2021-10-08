@@ -108,12 +108,43 @@
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tvTimerBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/advantage1BlogChecker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/purchaseDesBlogChecker"
+        android:text="00:00"
+        android:textColor="@color/colorRed"
+        android:textSize="60sp" />
+    <TextView
+        android:id="@+id/purchaseNumBlogChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleNumBlogChecker"/>
+    <TextView
+        android:id="@+id/purchaseDesBlogChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        android:text="@string/checker_purchase_description"
+        android:fontFamily="@font/open_sans_condensed_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/peopleDesBlogChecker"/>
     <TextView
         android:id="@+id/peopleNumBlogChecker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,17 +161,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnBlogChecker"/>
 
-    <TextView
-        android:id="@+id/tvTimerBlog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/advantage1BlogChecker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/peopleDesBlogChecker"
-        android:text="00:00"
-        android:textColor="@color/colorRed"
-        android:textSize="60sp" />
 
 
     <androidx.appcompat.widget.AppCompatButton
