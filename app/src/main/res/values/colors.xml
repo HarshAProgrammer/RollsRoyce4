@@ -71,5 +71,33 @@
     <color name="dividerColor">#E0E0E0</color>
 
 
+    <color name="colorRedeem1">#B6D5E5</color>
+    <color name="colorRedeem2">#485B87</color>
+    <color name="colorRedeem3">#3F5B88</color>
+    <color name="colorRedeem4">#D4E5ED</color>
+    <color name="colorRedeem5">#4D4F4F</color>
+    <color name="colorRedeem6">#000000</color>
+    <color name="colorRedeem7">#013C1C</color>
+    <color name="colorRedeem8">#015638</color>
+    <color name="colorRedeem9">#355450</color>
+    <color name="colorRedeem10">#CDCED0</color>
+    <color name="colorRedeem11">#6E4557</color>
+    <color name="colorRedeem12">#ECE6E6</color>
+    <color name="colorRedeem13">#B5B5B1</color>
+    <color name="colorRedeem14">#1E1C1F</color>
+    <color name="colorRedeem15">#D7D1CC</color>
+    <color name="colorRedeem16">#A8A59A</color>
+    <color name="colorRedeem17">#28435F</color>
+    <color name="colorRedeem18">#F0DBB3</color>
+    <color name="colorRedeem19">#27425D</color>
+    <color name="colorRedeem20">#1B1B1B</color>
+    <color name="colorRedeem21">#3B5451</color>
+    <color name="colorRedeem22">#F0DBB3</color>
+
+    <color name="color_image_pdf">#5AC5CA</color>
+    <color name="color_text_pdf">#F27D59</color>
+    <color name="color_qr_pdf">#A58FFD</color>
+    <color name="color_excel_pdf">#6298EC</color>
+
 
 </resources>

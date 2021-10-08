@@ -702,10 +702,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
                 GeneralShareMainIntent.setType("Text/plain");
-                String generalMainShareBody = "Rolex:A Crown For Every Achievement      " +
+                String generalMainShareBody = "Rolls Royce:A Crown For Every Achievement      " +
                         "" +
                         appLink;
-                String generalMainShareSub = "Rolex App";
+                String generalMainShareSub = "Rolls Royce App";
                 GeneralShareMainIntent.putExtra(Intent.EXTRA_SUBJECT, generalMainShareSub);
                 GeneralShareMainIntent.putExtra(Intent.EXTRA_TEXT, generalMainShareBody);
                 startActivity(Intent.createChooser(GeneralShareMainIntent, "Share Via"));
@@ -803,7 +803,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     shareOnTwitterIntent.setType("text/plain");
                     final String appPackageName = getApplicationContext().getPackageName();
                     ShareOnTwitterString = "https://play.google.com/store/apps/details?id=" + appPackageName;
-                    shareOnTwitterIntent.putExtra(Intent.EXTRA_TEXT, "Rolex:A Crown For Every Achievement      " +
+                    shareOnTwitterIntent.putExtra(Intent.EXTRA_TEXT, "Rolls Royce:A Crown For Every Achievement      " +
                             "" + ShareOnTwitterString);
                     shareOnTwitterIntent.setPackage("com.twitter.android");
                     startActivity(shareOnTwitterIntent);

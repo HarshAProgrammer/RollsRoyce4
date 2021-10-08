@@ -44,6 +44,7 @@
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/Rolex1/app/src/main/res/menu/crash_reports_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/Rolex1/app/src/main/res/menu/main_activity.xml" value="0.1" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/Rolex1/app/src/main/res/xml-sw600dp/number_of_columns_in_post_feed_preferences.xml" value="0.1" />
+        <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/drawable/back.xml" value="0.17777777777777778" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/drawable/splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout-land/activity_about_us.xml" value="0.1390625" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout-land/activity_blog_checker.xml" value="0.31040564373897706" />
@@ -57,12 +58,13 @@
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_about_us.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_blog_checker.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_categories_detail.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_daily_login.xml" value="0.1" />
+        <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_daily_login.xml" value="0.16" />
+        <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_dashboard.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_expensive_checker.xml" value="0.25" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_facts.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_facts_detail.xml" value="0.1" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_login_or_register.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_redeem.xml" value="0.1" />
+        <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_redeem.xml" value="0.25" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/activity_video_checker.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/alert_dialog_blog_purchased.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Kartik/AndroidStudioProjects/RollsRoyce/app/src/main/res/layout/alert_dialog_expensive_purchased.xml" value="0.36666666666666664" />

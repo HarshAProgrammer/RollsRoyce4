@@ -130,7 +130,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sf_pro_display_medium"
         android:gravity="center"
-        android:text="Get 80% off on your Rolex Watch"
+        android:text="Get 80% off on your Rolls Royce Car"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="#3E425D"
         android:textSize="20sp"

@@ -257,7 +257,7 @@
                                     android:layout_width="35dp"
                                     android:layout_height="35dp"
                                     android:layout_centerHorizontal="true"
-                                    android:src="@drawable/ic_video_main_white" />
+                                    android:src="@drawable/ic_videos_main_white" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
