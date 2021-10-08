@@ -55,6 +55,38 @@
         <activity
             android:name=".blog.BlogCheckerActivity"
             android:launchMode="singleTop" />
+        <service
+            android:name=".activities.ExpensiveNotificationService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECIEVE" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".blog.BlogNotificationService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECIEVE" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".video.VideoNotificationService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECIEVE" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.FirstSplashScreenActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activities.SecondSplashScreenActivity"
+            android:screenOrientation="fullSensor" />
+
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -72,8 +104,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.FavouriteExpensiveActivity" />
-        <activity android:name=".activities.FirstSplashScreenActivity"
-            android:screenOrientation="fullSensor"/>
+
 
 
         <activity
