@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ablHome"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:theme="@style/AppTheme">
@@ -19,29 +20,61 @@
             android:background="@color/colorWhite"
             app:titleTextColor="@color/colorBlack">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/logoHome"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:src="@drawable/toolbar_home_icon"
-                    android:contentDescription="@string/image_toolbar_home" />
+                    android:contentDescription="@string/image_toolbar_home"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <TextView
+                    android:id="@+id/companyNameHome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans_condensed_light"
                     android:gravity="center"
                     android:text="@string/toolbar_home"
                     android:textColor="@color/colorBlack"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toEndOf="@id/logoHome"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                    android:id="@+id/ivCoinHome"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/coinmain"
+                    android:padding="5dp"
+                    android:contentDescription="@string/image_toolbar_home"
+                    app:layout_constraintEnd_toStartOf="@+id/tvCoinsHome"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/tvCoinsHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/open_sans_condensed_light"
+                    android:text="0"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.appcompat.widget.Toolbar>
@@ -53,6 +86,7 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/ablHome"
         android:fitsSystemWindows="true"
         tools:openDrawer="start">
 
@@ -71,4 +105,4 @@
             app:headerLayout="@layout/nav_header_main"
             app:menu="@menu/activity_main_drawer" />
     </androidx.drawerlayout.widget.DrawerLayout>
-</LinearLayout>
+</RelativeLayout>
