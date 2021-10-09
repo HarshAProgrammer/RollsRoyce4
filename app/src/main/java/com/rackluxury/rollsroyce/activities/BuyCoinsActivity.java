@@ -327,7 +327,7 @@ public class BuyCoinsActivity extends AppCompatActivity implements PurchasesUpda
     @Override
     public void onBackPressed() {
         finish();
-        Animatoo.animateSwipeLeft(BuyCoinsActivity.this);
+        Animatoo.animateSwipeRight(BuyCoinsActivity.this);
 
     }
 
