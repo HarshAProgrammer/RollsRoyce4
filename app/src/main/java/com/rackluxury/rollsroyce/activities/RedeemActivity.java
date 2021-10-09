@@ -1,16 +1,14 @@
 package com.rackluxury.rollsroyce.activities;
 
 import android.animation.ArgbEvaluator;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -20,14 +18,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -36,15 +30,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.rackluxury.rollsroyce.R;
 import com.rackluxury.rollsroyce.blog.BlogActivity;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
 
@@ -149,118 +139,28 @@ public class RedeemActivity extends AppCompatActivity {
         mRef = database22.getReference().child(userId22);
 
         Button button = findViewById(R.id.button7);
+        int coinCount = Integer.parseInt(coins.getString("Coins", "0"));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (integer < usercoin && integer > 10) {
+                if (coinCount > 500000) {
 
-                    mRef.child("RedeemCoins").setValue(String.valueOf(integer));
-                    StorageReference imageReference1 = storageReference.child(firebaseAuth.getUid()).child("Blog Purchased");
-                    Uri uri1 = Uri.parse("android.resource://com.rackluxury.rollsroyce/drawable/img_blog_checker");
-                    UploadTask uploadTask = imageReference1.putFile(uri1);
-                    uploadTask.addOnFailureListener(new OnFailureListener() {
+                    int coinCount = Integer.parseInt(coins.getString("Coins", "0"));
+                    coinCount = coinCount - 500000;
+                    SharedPreferences.Editor coinsEdit = coins.edit();
+                    coinsEdit.putString("Coins", String.valueOf(coinCount));
+                    coinsEdit.apply();
+                    LayoutInflater inflater = LayoutInflater.from(RedeemActivity.this);
+                    View view = inflater.inflate(R.layout.alert_dialog_redeem, null);
+                    Button acceptButton = view.findViewById(R.id.btnAcceptAlertRedeem);
+                    final AlertDialog alertDialog = new AlertDialog.Builder(RedeemActivity.this)
+                            .setView(view)
+                            .show();
+
+                    acceptButton.setOnClickListener(new View.OnClickListener() {
                         @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toasty.error(RedeemActivity.this, "Please Check Your Internet Connectivity", Toast.LENGTH_LONG).show();
-
-                        }
-                    });
-                    uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-
-                            Toasty.success(RedeemActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
-
-                            FirebaseDatabase database = FirebaseDatabase.getInstance();
-                            mAuth = FirebaseAuth.getInstance();
-                            FirebaseUser user1 = mAuth.getCurrentUser();
-                            String userId = user1.getUid();
-                            mRef = database.getReference().child(userId);
-                            mRef.child("RedeemUSD").addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    usermoney = Float.parseFloat(dataSnapshot.getValue(String.class));
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-                                }
-                            });
-                            mRef.child("RedeemCoins").addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    usermoneyCoins = Integer.parseInt(dataSnapshot.getValue(String.class));
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-                                }
-                            });
-                            mRef.child("Coins").addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    usercoins = Integer.parseInt(dataSnapshot.getValue(String.class));
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-                                }
-                            });
-                            final ProgressDialog dialog = new ProgressDialog(RedeemActivity.this);
-                            dialog.setTitle("Sending Email");
-                            dialog.setMessage("Please wait");
-                            dialog.show();
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Thread sender = new Thread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            try {
-                                                dialog.dismiss();
-                                                int result = usercoins - usermoneyCoins;
-                                                mRef.child("RedeemCoins").removeValue();
-                                                mRef.child("RedeemUSD").removeValue();
-
-                                                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                                mAuth = FirebaseAuth.getInstance();
-                                                FirebaseUser user1 = mAuth.getCurrentUser();
-                                                String userId = user1.getUid();
-                                                mRefStatus = database.getReference().child("Redeem").push();
-                                                mRefStatus.child("Status").setValue("Review");
-
-                                                mRefStatus.child("MoneyUSD").setValue(String.valueOf(usermoney));
-
-                                                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child(userId).child("Redeem").push();
-                                                Map<String, Object> map = new HashMap<>();
-                                                map.put("id", databaseReference.getKey());
-                                                map.put("Redeem", usermoney);
-                                                Calendar c = Calendar.getInstance();
-
-                                                int day = c.get(Calendar.DAY_OF_MONTH);
-                                                int month = c.get(Calendar.MONTH);
-                                                int year = c.get(Calendar.YEAR);
-                                                String date = day + ". " + month + ". " + year;
-                                                map.put("Date", date);
-                                                databaseReference.setValue(map);
-
-                                                SharedPreferences.Editor coinsEdit = coins.edit();
-                                                coinsEdit.putString("Coins", String.valueOf(result));
-                                                coinsEdit.apply();
-
-                                                Intent intent = new Intent(RedeemActivity.this, HomeActivity.class);
-                                                startActivity(intent);
-                                                finish();
-
-                                            } catch (Exception e) {
-                                                Log.e("mylog", "Error: " + e.getMessage());
-                                            }
-                                        }
-                                    });
-                                    sender.start();
-                                }
-                            }, 2500);
-
+                        public void onClick(View view) {
+                            alertDialog.dismiss();
 
                         }
                     });
@@ -366,6 +266,8 @@ public class RedeemActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+        Intent view = new Intent(RedeemActivity.this, DashboardActivity.class);
+        startActivity(view);
         Animatoo.animateSwipeLeft(RedeemActivity.this);
     }
 }

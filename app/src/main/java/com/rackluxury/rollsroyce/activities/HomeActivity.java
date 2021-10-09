@@ -581,12 +581,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void homeCheckin() {
+        finish();
         Intent intent = new Intent(HomeActivity.this, DailyLoginActivity.class);
         startActivity(intent);
         Animatoo.animateSwipeRight(HomeActivity.this);
     }
 
     private void homeRedeem() {
+        finish();
         Intent intent = new Intent(HomeActivity.this, RedeemActivity.class);
         startActivity(intent);
         Animatoo.animateSwipeRight(HomeActivity.this);

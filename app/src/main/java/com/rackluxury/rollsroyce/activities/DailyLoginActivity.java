@@ -265,6 +265,8 @@ public class DailyLoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+        Intent view = new Intent(DailyLoginActivity.this, DashboardActivity.class);
+        startActivity(view);
         Animatoo.animateSwipeLeft(DailyLoginActivity.this);
     }
 }
