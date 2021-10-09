@@ -71,15 +71,15 @@
     <color name="dividerColor">#E0E0E0</color>
 
 
-    <color name="colorRedeem1">#35292A</color>
-    <color name="colorRedeem2">#7D7D6D</color>
-    <color name="colorRedeem3">#95A3B7</color>
-    <color name="colorRedeem4">#315379</color>
-    <color name="colorRedeem5">#BEB9A6</color>
-    <color name="colorRedeem6">#AAA390</color>
-    <color name="colorRedeem7">#23281B</color>
-    <color name="colorRedeem8">#D2CABD</color>
-    <color name="colorRedeem9">#0C0A0F</color>
+    <color name="colorRedeem01">#35292A</color>
+    <color name="colorRedeem02">#7D7D6D</color>
+    <color name="colorRedeem03">#95A3B7</color>
+    <color name="colorRedeem04">#315379</color>
+    <color name="colorRedeem05">#BEB9A6</color>
+    <color name="colorRedeem06">#AAA390</color>
+    <color name="colorRedeem07">#23281B</color>
+    <color name="colorRedeem08">#D2CABD</color>
+    <color name="colorRedeem09">#0C0A0F</color>
     <color name="colorRedeem10">#323428</color>
     <color name="colorRedeem11">#25292C</color>
     <color name="colorRedeem12">#43495A</color>
