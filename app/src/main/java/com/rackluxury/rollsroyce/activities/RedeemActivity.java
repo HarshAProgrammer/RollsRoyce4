@@ -274,28 +274,27 @@ public class RedeemActivity extends AppCompatActivity {
     }
     private void redeemChoice() {
         models = new ArrayList<>();
-        models.add(new Model(R.drawable.redeem_1, "Daytona,116576TBR-0003 ", "$279,950"));
-        models.add(new Model(R.drawable.redeem_2, "Submariner,116659SABR-0001", "$147,950"));
-        models.add(new Model(R.drawable.redeem_3, "Submariner,116659SABR", "$144,940"));
-        models.add(new Model(R.drawable.redeem_4, "Daytona,116506-0001", "$114,950"));
-        models.add(new Model(R.drawable.redeem_5, "GMT-Master II,116759SANR", "$92,950"));
-        models.add(new Model(R.drawable.redeem_6, "GMT-Master II,116758SANR", "$89,950"));
-        models.add(new Model(R.drawable.redeem_7, "Daytona,116508-0013", "$86,950"));
-        models.add(new Model(R.drawable.redeem_8, "Daytona,116508-0013", "$86,950"));
-        models.add(new Model(R.drawable.redeem_9, "Daytona,116508-0013", "$85,950"));
-        models.add(new Model(R.drawable.redeem_10, "Daytona,116599RBR", "$84,940"));
-        models.add(new Model(R.drawable.redeem_11, "Datejust,86349SAFUBL", "$83,940"));
-        models.add(new Model(R.drawable.redeem_12, "Day-Date,18956BR", "$83,940"));
-        models.add(new Model(R.drawable.redeem_13, "GMT-Master II,126719BLRO-0002", "$69,950"));
-        models.add(new Model(R.drawable.redeem_14, "Sea-Dweller,1665", "$69,950"));
-        models.add(new Model(R.drawable.redeem_15, "Day-Date,218349", "$69,940"));
-        models.add(new Model(R.drawable.redeem_16, "Day-Date,18946-0018", "$57,950"));
-        models.add(new Model(R.drawable.redeem_17, "Daytona,116509-0071", "$56,950"));
-        models.add(new Model(R.drawable.redeem_18, "Sky-Dweller,326938-0003", "$56,950"));
-        models.add(new Model(R.drawable.redeem_19, "Daytona,116509-0071", "$56,450"));
-        models.add(new Model(R.drawable.redeem_20, "Submariner,5513", "$59,940"));
-        models.add(new Model(R.drawable.redeem_21, "GMT-Master II,116718LN-0002", "$54,950"));
-        models.add(new Model(R.drawable.redeem_22, "Sky-Dweller,326938-0003", "$54,940"));
+        models.add(new Model(R.drawable.redeem_01, "1978 Rolls-Royce Corniche I - coupe", "$ 98 336"));
+        models.add(new Model(R.drawable.redeem_02, "2004 Rolls-Royce Phantom VII - 6.7 V12", "$ 98 336"));
+        models.add(new Model(R.drawable.redeem_03, "2020 Rolls-Royce Ghost - New Ghost", "$ 128 257"));
+        models.add(new Model(R.drawable.redeem_04, "1964 Rolls-Royce Silver Cloud III - SCT100 Non Division", "$ 439 506"));
+        models.add(new Model(R.drawable.redeem_05, "1982 Rolls-Royce Corniche I - Series 2", "$ 121 972"));
+        models.add(new Model(R.drawable.redeem_06, "2020 Rolls-Royce Silver Wraith - V12", "$ 71 669"));
+        models.add(new Model(R.drawable.redeem_07, "1985 Rolls-Royce Corniche I", "P.O.R."));
+        models.add(new Model(R.drawable.redeem_08, "1932 Rolls-Royce Phantom II", "$ 78 669"));
+        models.add(new Model(R.drawable.redeem_09, "1977 Rolls-Royce Silver Wraith II", "P.O.R."));
+        models.add(new Model(R.drawable.redeem_10, "1961 Rolls-Royce Silver Cloud II - Drophead Coupe", "$ 42 805"));
+        models.add(new Model(R.drawable.redeem_11, "1968 Rolls-Royce Silver Shadow I", "$ 399 900"));
+        models.add(new Model(R.drawable.redeem_12, "1963 Rolls-Royce Silver Cloud III - James Young SCT100 Baby...", "$ 34 489"));
+        models.add(new Model(R.drawable.redeem_13, "1972 Rolls-Royce Silver Shadow I", "P.O.R."));
+        models.add(new Model(R.drawable.redeem_14, "1933 Rolls-Royce 20/25 H.P.", "$ 86 189"));
+        models.add(new Model(R.drawable.redeem_15, "2016 Rolls-Royce Phantom Drophead - HARMONY EDITION 1 OF 1", "$ 182 790"));
+        models.add(new Model(R.drawable.redeem_16, "1969 Rolls-Royce Silver Shadow I - I", "$ 476 919"));
+        models.add(new Model(R.drawable.redeem_17, "1976 Rolls-Royce Camargue", "$ 30 178"));
+        models.add(new Model(R.drawable.redeem_18, "1959 Rolls-Royce Silver Cloud I", "P.O.R."));
+        models.add(new Model(R.drawable.redeem_19, "2020 Rolls-Royce Dawn - Convertible", "$ 403 327"));
+
+
 
 
         adapterRedeem = new com.rackluxury.rollsroyce.activities.AdapterRedeem(models, this);
@@ -323,10 +322,8 @@ public class RedeemActivity extends AppCompatActivity {
                 getResources().getColor(R.color.colorRedeem16),
                 getResources().getColor(R.color.colorRedeem17),
                 getResources().getColor(R.color.colorRedeem18),
-                getResources().getColor(R.color.colorRedeem19),
-                getResources().getColor(R.color.colorRedeem20),
-                getResources().getColor(R.color.colorRedeem21),
-                getResources().getColor(R.color.colorRedeem22)
+                getResources().getColor(R.color.colorRedeem19)
+
 
         };
 
