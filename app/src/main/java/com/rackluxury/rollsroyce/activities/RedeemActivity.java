@@ -41,7 +41,7 @@ import java.util.List;
 import es.dmoral.toasty.Toasty;
 
 public class RedeemActivity extends AppCompatActivity {
-    private TextView coins2;
+    private TextView coinsAvailable;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth mAuth;
     private DatabaseReference mRef, mRefStatus;
@@ -55,10 +55,9 @@ public class RedeemActivity extends AppCompatActivity {
     private SharedPreferences coins;
 
     ViewPager viewPagerRedeem;
-    com.rackluxury.rollsroyce.activities.AdapterRedeem adapterRedeem;
+    AdapterRedeem adapterRedeem;
     List<Model> models;
     private RelativeLayout layout;
-
 
 
     final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
@@ -84,22 +83,17 @@ public class RedeemActivity extends AppCompatActivity {
         coins = getSharedPreferences("Rewards", MODE_PRIVATE);
         redeemChoice();
 
-        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
-        float dpHeight = displayMetrics.heightPixels / displayMetrics.density;
-        if (dpHeight > 700) {
-            getWindow().setSoftInputMode(
-                    WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        }
 
-        ImageView imageView = findViewById(R.id.imageView4);
+        ImageView imageView = findViewById(R.id.ivBackRedeem);
         Button buyMore = findViewById(R.id.btnBuyMoreRedeem);
 
         buyMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RedeemActivity.this, com.rackluxury.rollsroyce.activities.BuyCoinsActivity.class);
-                        startActivity(intent);
+                Intent intent = new Intent(RedeemActivity.this, BuyCoinsActivity.class);
+                startActivity(intent);
                 Animatoo.animateSwipeLeft(RedeemActivity.this);
+
             }
         });
 
@@ -111,10 +105,8 @@ public class RedeemActivity extends AppCompatActivity {
         });
 
 
-        coins2 = (TextView) findViewById(R.id.textViewCoins);
-        final TextView calcmoney = (TextView) findViewById(R.id.textView6);
+        coinsAvailable = findViewById(R.id.tvCoinsRedeem);
         final Handler handler = new Handler();
-        final int delay = 1000; //milliseconds
         FirebaseDatabase database11 = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user11 = mAuth.getCurrentUser();
@@ -126,7 +118,7 @@ public class RedeemActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 usercoin = Integer.parseInt(dataSnapshot.getValue(String.class));
-                coins2.setText(String.valueOf(usercoin));
+                coinsAvailable.setText(String.valueOf(usercoin));
             }
 
             @Override
@@ -134,14 +126,14 @@ public class RedeemActivity extends AppCompatActivity {
             }
         });
 
-        integer = Integer.valueOf(coins2.getText().toString());
+        integer = Integer.valueOf(coinsAvailable.getText().toString());
         FirebaseDatabase database22 = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user22 = mAuth.getCurrentUser();
         String userId22 = user22.getUid();
         mRef = database22.getReference().child(userId22);
 
-        Button button = findViewById(R.id.button7);
+        Button button = findViewById(R.id.btnApplyRedeem);
         int coinCount = Integer.parseInt(coins.getString("Coins", "0"));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,6 +145,10 @@ public class RedeemActivity extends AppCompatActivity {
                     SharedPreferences.Editor coinsEdit = coins.edit();
                     coinsEdit.putString("Coins", String.valueOf(coinCount));
                     coinsEdit.apply();
+                    Toasty.info(RedeemActivity.this, "500,000 Coins have been Used.", Toast.LENGTH_LONG).show();
+                    coinsAvailable.setText(String.valueOf(coinCount));
+
+
                     LayoutInflater inflater = LayoutInflater.from(RedeemActivity.this);
                     View view = inflater.inflate(R.layout.alert_dialog_redeem, null);
                     Button acceptButton = view.findViewById(R.id.btnAcceptAlertRedeem);
@@ -168,7 +164,7 @@ public class RedeemActivity extends AppCompatActivity {
                         }
                     });
 
-                } else {
+                }else {
                     Toasty.info(RedeemActivity.this, "You don't have so many coins", Toast.LENGTH_LONG).show();
 
                 }

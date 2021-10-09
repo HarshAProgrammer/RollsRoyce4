@@ -1384,5 +1384,7 @@ Meter to show power being utilized
     <string name="dialogue_redeem">You have Successfully Applied to our Waiting List</string>
     <string name="redeem_information">Apply Now to Join our Exclusive Waiting list for this Watch</string>
     <string name="image_alert_dialogue_registration">Image Alert Dialogue</string>
+    <string name="redeem_apply_information">500,000 Coins will be used</string>
+
 
 </resources>
