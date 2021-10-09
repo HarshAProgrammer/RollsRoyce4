@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_item_redeem"
+                android:src="@drawable/splashscreen"
+                android:scaleType="center"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/redeem_image_redeems" />
+
+            <TextView
+                android:id="@+id/title_item_redeem"
+
+                android:textColor="@color/colorBlack"
+                android:layout_below="@id/image_item_redeem"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/title_redeems"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/price_item_redeem"
+                android:layout_below="@id/title_item_redeem"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:maxLines="3"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:text="@string/redeem_price_redeems"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

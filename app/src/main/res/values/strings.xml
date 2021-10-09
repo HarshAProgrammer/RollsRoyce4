@@ -37,7 +37,6 @@
 
     <string name="first_splash_text">Trusted to Deliver Excellence.</string>
 
-    <string name="loginOrRegister_welcome_txt">Easiest way to\nfind the best RollsRoyce Motor Cars</string>
     <string name="get_started_loginOrRegister_btn_label">Get Started</string>
 
     <string name="no_internet_connection">No Internet Connection</string>
@@ -1370,12 +1369,17 @@ Meter to show power being utilized
     <string name="youtube_videos_nav_home">Youtube Videos</string>
     <string name="discover_video">Watch Showcase Videos of Rolls Royce Cars</string>
 
-    <string name="advantageBlog">Read the best Blogs written on Rolls Royce from Top Notch Editors.</string>
-    <string name="advantageVideo">Watch the best Showcase Videos of Rolls Royce Cars</string>
-    <string name="advantageExpensive"><font fgcolor='#0084ff'>•</font> Discover the Most Expensive Cars from Rolls Royce</string>
-    <string name="purchase_information_description">This item can only be purchased by first 100 Users.</string>
+    <string name="advantageBlog"><font fgcolor='#0084ff'>•</font> Read the best Blogs written on Rolex from Top Notch Editors and get 100,000(80,000+20,000) coins.</string>
+    <string name="advantageVideo"><font fgcolor='#0084ff'>•</font> Watch the best Showcase Videos of Rolex Watches and get 100,000(80,000+20,000) coins.</string>
+    <string name="advantageExpensive"><font fgcolor='#0084ff'>•</font> Discover the Most Expensive Watches from Rolex and get 100,000(80,000+20,000) coins.</string>
+    <string name="purchase_information_description">This item is can only be purchased by first 100 Users.</string>
+    <string name="purchase_information_timer">Get this product at a discount price of $352 instead of $999 and an additional 20,000 coins before this timer runs out.</string>
     <string name="checker_people_description">Users currently looking at this Product</string>
+    <string name="checker_purchase_description">Users remaining who can purchase</string>
     <string name="loginorregisterInformation">Swipe Right to Login \n Swipe Left to Register</string>
-    <string name="purchase_information_timer">Get this product at a discount price of $352 instead of $999 before this timer runs out.</string>
+    <string name="redeem_image_redeems">Redeem Image</string>
+    <string name="title_redeems">Redeem Title</string>
+    <string name="redeem_price_redeems">Redeem Price</string>
+    <string name="loginOrRegister_welcome_txt">Welcome to Rolex,\nThe world\'s most prestigious and versatile Watch Company.\nFor those who demand only the best of what life has to offer.</string>
 
 </resources>
