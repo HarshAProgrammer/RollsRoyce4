@@ -92,9 +92,7 @@ public class BillingActivity extends AppCompatActivity implements PurchasesUpdat
                     if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
                         Toasty.error(BillingActivity.this, "Try Purchasing Again", Toast.LENGTH_LONG).show();
                     } else {
-                        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) {
-                            //We recover that method by consuming a purchase so that user can buy a categories again from same account.
-                        }
+                        //We recover that method by consuming a purchase so that user can buy a categories again from same account.
                     }
                 }
             }

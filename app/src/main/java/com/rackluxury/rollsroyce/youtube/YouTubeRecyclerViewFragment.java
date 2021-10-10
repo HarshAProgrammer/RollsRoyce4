@@ -134,7 +134,7 @@ public class YouTubeRecyclerViewFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.youtube_recycler_view_fragment, container, false);
 
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.youtube_recycler_view);
+        mRecyclerView = rootView.findViewById(R.id.youtube_recycler_view);
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
@@ -150,7 +150,7 @@ public class YouTubeRecyclerViewFragment extends Fragment {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mPlaylistSpinner = (Spinner)rootView.findViewById(R.id.youtube_playlist_spinner);
+        mPlaylistSpinner = rootView.findViewById(R.id.youtube_playlist_spinner);
 
         return rootView;
     }

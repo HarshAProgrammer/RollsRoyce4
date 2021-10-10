@@ -54,7 +54,7 @@ public class AcknowledgementRecyclerViewAdapter extends RecyclerView.Adapter<Ack
         return acknowledgements == null ? 0 : acknowledgements.size();
     }
 
-    class AcknowledgementViewHolder extends RecyclerView.ViewHolder {
+    static class AcknowledgementViewHolder extends RecyclerView.ViewHolder {
         View itemView;
         @BindView(R.id.name_text_view_item_acknowledgement)
         TextView nameTextView;

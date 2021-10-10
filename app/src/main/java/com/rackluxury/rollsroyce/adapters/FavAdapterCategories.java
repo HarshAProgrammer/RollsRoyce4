@@ -53,7 +53,7 @@ public class FavAdapterCategories extends RecyclerView.Adapter<FavAdapterCategor
         return favItemListCategories.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView favTextView;
         ImageView favImageView;

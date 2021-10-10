@@ -56,15 +56,15 @@ public class PlaylistCardAdapter extends RecyclerView.Adapter<PlaylistCardAdapte
         public ViewHolder(View v) {
             super(v);
             mContext = v.getContext();
-            mTitleText = (TextView) v.findViewById(R.id.tvYoutubeVideoTitle);
-            mDescriptionText = (TextView) v.findViewById(R.id.tvYoutubeVideoDescription);
-            mThumbnailImage = (ImageView) v.findViewById(R.id.ivYoutubeVideoThumbnail);
-            mShareIcon = (ImageView) v.findViewById(R.id.ivYoutubeVideoShare);
-            mShareText = (TextView) v.findViewById(R.id.tvYoutubeVideoShareText);
-            mDurationText = (TextView) v.findViewById(R.id.tvYoutubeVideoDuration);
-            mViewCountText= (TextView) v.findViewById(R.id.tvYoutubeVideoViewCount);
-            mLikeCountText = (TextView) v.findViewById(R.id.tvYoutubeVideoLikeCount);
-            mDislikeCountText = (TextView) v.findViewById(R.id.tvYoutubeVideoDislikeCount);
+            mTitleText = v.findViewById(R.id.tvYoutubeVideoTitle);
+            mDescriptionText = v.findViewById(R.id.tvYoutubeVideoDescription);
+            mThumbnailImage = v.findViewById(R.id.ivYoutubeVideoThumbnail);
+            mShareIcon = v.findViewById(R.id.ivYoutubeVideoShare);
+            mShareText = v.findViewById(R.id.tvYoutubeVideoShareText);
+            mDurationText = v.findViewById(R.id.tvYoutubeVideoDuration);
+            mViewCountText= v.findViewById(R.id.tvYoutubeVideoViewCount);
+            mLikeCountText = v.findViewById(R.id.tvYoutubeVideoLikeCount);
+            mDislikeCountText = v.findViewById(R.id.tvYoutubeVideoDislikeCount);
         }
     }
 

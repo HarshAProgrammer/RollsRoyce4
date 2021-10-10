@@ -840,7 +840,7 @@ public class NavigationDrawerRecyclerViewAdapter extends RecyclerView.Adapter<Re
         notifyDataSetChanged();
     }
 
-    class NavHeaderViewHolder extends RecyclerView.ViewHolder {
+    static class NavHeaderViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.name_text_view_nav_header_main)
         TextView accountNameTextView;
         @BindView(R.id.karma_text_view_nav_header_main)

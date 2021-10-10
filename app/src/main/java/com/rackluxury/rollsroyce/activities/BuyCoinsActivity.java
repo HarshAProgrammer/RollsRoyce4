@@ -95,8 +95,6 @@ public class BuyCoinsActivity extends AppCompatActivity implements PurchasesUpda
                 } else {
                     if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
                         Toasty.error(BuyCoinsActivity.this, "Try Purchasing Again", Toast.LENGTH_LONG).show();
-                    } else {
-
                     }
                 }
             }

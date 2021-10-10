@@ -93,7 +93,7 @@ public class ImagesDetailActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarImageDetailActivity);
         imageDetailLay = findViewById(R.id.conLayImageDetail);
-        photoView = (PhotoView) findViewById(R.id.image_view_detail);
+        photoView = findViewById(R.id.image_view_detail);
         TextView textViewViews = findViewById(R.id.tvViewImageDetail);
         TextView textViewLikes = findViewById(R.id.tvLikeImageDetail);
         TextView textViewComments = findViewById(R.id.tvCommentImageDetail);

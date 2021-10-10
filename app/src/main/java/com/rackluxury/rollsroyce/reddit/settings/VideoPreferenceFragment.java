@@ -89,12 +89,12 @@ public class VideoPreferenceFragment extends PreferenceFragmentCompat {
             startAutoplayVisibleAreaOffsetPortrait.setSummary(
                     getString(R.string.settings_start_autoplay_visible_area_offset_portrait_summary,
                             sharedPreferences.getInt(SharedPreferencesUtils.START_AUTOPLAY_VISIBLE_AREA_OFFSET_PORTRAIT, 75)));
-            startAutoplayVisibleAreaOffsetPortrait.setOnPreferenceChangeListener((Preference.OnPreferenceChangeListener) (preference, newValue) -> {
+            startAutoplayVisibleAreaOffsetPortrait.setOnPreferenceChangeListener((preference, newValue) -> {
                 if (orientation == Configuration.ORIENTATION_PORTRAIT) {
                     EventBus.getDefault().post(new ChangeStartAutoplayVisibleAreaOffsetEvent((Integer) newValue));
                 }
                 startAutoplayVisibleAreaOffsetPortrait.setSummary(
-                        getString(R.string.settings_start_autoplay_visible_area_offset_portrait_summary, (Integer) newValue));
+                        getString(R.string.settings_start_autoplay_visible_area_offset_portrait_summary, newValue));
                 return true;
             });
         }
@@ -103,12 +103,12 @@ public class VideoPreferenceFragment extends PreferenceFragmentCompat {
             startAutoplayVisibleAreaOffsetLandscape.setSummary(
                     getString(R.string.settings_start_autoplay_visible_area_offset_portrait_summary,
                             sharedPreferences.getInt(SharedPreferencesUtils.START_AUTOPLAY_VISIBLE_AREA_OFFSET_LANDSCAPE, 50)));
-            startAutoplayVisibleAreaOffsetLandscape.setOnPreferenceChangeListener((Preference.OnPreferenceChangeListener) (preference, newValue) -> {
+            startAutoplayVisibleAreaOffsetLandscape.setOnPreferenceChangeListener((preference, newValue) -> {
                 if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
                     EventBus.getDefault().post(new ChangeStartAutoplayVisibleAreaOffsetEvent((Integer) newValue));
                 }
                 startAutoplayVisibleAreaOffsetLandscape.setSummary(
-                        getString(R.string.settings_start_autoplay_visible_area_offset_landscape_summary, (Integer) newValue));
+                        getString(R.string.settings_start_autoplay_visible_area_offset_landscape_summary, newValue));
                 return true;
             });
         }

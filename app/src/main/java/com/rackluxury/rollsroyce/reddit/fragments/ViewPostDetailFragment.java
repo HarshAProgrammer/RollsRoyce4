@@ -785,7 +785,6 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
                         }
                     }
 
-                    return;
                 } else {
                     for (int i = currentSearchIndex - 1; i >= 0; i--) {
                         if (visibleComments.get(i).getCommentRawText() !=null &&
@@ -803,7 +802,6 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
                         }
                     }
 
-                    return;
                 }
             }
         }
@@ -1718,7 +1716,7 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
             }
             mSmoothScroller.setTargetPosition(mCommentsRecyclerView == null ? nextParentPosition + 1 : nextParentPosition);
             mIsSmoothScrolling = true;
-            ((LinearLayoutManager) (mCommentsRecyclerView == null ? mRecyclerView : mCommentsRecyclerView).getLayoutManager()).startSmoothScroll(mSmoothScroller);
+            (mCommentsRecyclerView == null ? mRecyclerView : mCommentsRecyclerView).getLayoutManager().startSmoothScroll(mSmoothScroller);
         }
     }
 
@@ -1731,7 +1729,7 @@ public class ViewPostDetailFragment extends Fragment implements FragmentCommunic
             }
             mSmoothScroller.setTargetPosition(mCommentsRecyclerView == null ? previousParentPosition + 1 : previousParentPosition);
             mIsSmoothScrolling = true;
-            ((LinearLayoutManager) (mCommentsRecyclerView == null ? mRecyclerView : mCommentsRecyclerView).getLayoutManager()).startSmoothScroll(mSmoothScroller);
+            (mCommentsRecyclerView == null ? mRecyclerView : mCommentsRecyclerView).getLayoutManager().startSmoothScroll(mSmoothScroller);
         }
     }
 

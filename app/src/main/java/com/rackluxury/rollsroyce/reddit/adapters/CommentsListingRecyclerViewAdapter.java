@@ -512,7 +512,7 @@ public class CommentsListingRecyclerViewAdapter extends PagedListAdapter<Comment
                     bundle.putString(CommentMoreBottomSheetFragment.EXTRA_COMMENT_MARKDOWN, comment.getCommentMarkdown());
                     CommentMoreBottomSheetFragment commentMoreBottomSheetFragment = new CommentMoreBottomSheetFragment();
                     commentMoreBottomSheetFragment.setArguments(bundle);
-                    commentMoreBottomSheetFragment.show(((AppCompatActivity) mActivity).getSupportFragmentManager(), commentMoreBottomSheetFragment.getTag());
+                    commentMoreBottomSheetFragment.show(mActivity.getSupportFragmentManager(), commentMoreBottomSheetFragment.getTag());
                 }
             });
 

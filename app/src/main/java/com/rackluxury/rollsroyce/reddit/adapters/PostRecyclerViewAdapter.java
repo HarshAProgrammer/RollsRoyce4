@@ -1887,15 +1887,15 @@ public class PostRecyclerViewAdapter extends PagedListAdapter<Post, RecyclerView
                     ((PostBaseViewHolder) holder).markPostRead(post, false);
                 }
             }
-            ((PostBaseViewHolder) holder).itemView.setVisibility(View.VISIBLE);
+            holder.itemView.setVisibility(View.VISIBLE);
             RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) holder.itemView.getLayoutParams();
             params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
             if (holder instanceof PostCard2VideoAutoplayViewHolder || holder instanceof PostCard2WithPreviewViewHolder) {
                 int paddingPixel = (int) Utils.convertDpToPixel(16, mActivity);
-                ((PostBaseViewHolder) holder).itemView.setPadding(0, paddingPixel, 0, 0);
+                holder.itemView.setPadding(0, paddingPixel, 0, 0);
             } else if (holder instanceof PostCard2TextTypeViewHolder) {
                 int paddingPixel = (int) Utils.convertDpToPixel(12, mActivity);
-                ((PostBaseViewHolder) holder).itemView.setPadding(0, paddingPixel, 0, 0);
+                holder.itemView.setPadding(0, paddingPixel, 0, 0);
             } else {
                 int marginPixel = (int) Utils.convertDpToPixel(8, mActivity);
                 params.topMargin = marginPixel;
@@ -1903,9 +1903,9 @@ public class PostRecyclerViewAdapter extends PagedListAdapter<Post, RecyclerView
             }
             holder.itemView.setLayoutParams(params);
             if (((PostBaseViewHolder) holder).itemViewIsNotCardView) {
-                ((PostBaseViewHolder) holder).itemView.setBackgroundColor(mCardViewBackgroundColor);
+                holder.itemView.setBackgroundColor(mCardViewBackgroundColor);
             } else {
-                ((PostBaseViewHolder) holder).itemView.setBackgroundTintList(ColorStateList.valueOf(mCardViewBackgroundColor));
+                holder.itemView.setBackgroundTintList(ColorStateList.valueOf(mCardViewBackgroundColor));
             }
             ((PostBaseViewHolder) holder).titleTextView.setTextColor(mPostTitleColor);
             if (holder instanceof PostVideoAutoplayViewHolder) {
@@ -1966,11 +1966,11 @@ public class PostRecyclerViewAdapter extends PagedListAdapter<Post, RecyclerView
                     ((PostCompactBaseViewHolder) holder).markPostRead(post, false);
                 }
             }
-            ((PostCompactBaseViewHolder) holder).itemView.setVisibility(View.VISIBLE);
+            holder.itemView.setVisibility(View.VISIBLE);
             ViewGroup.LayoutParams params = holder.itemView.getLayoutParams();
             params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
             holder.itemView.setLayoutParams(params);
-            ((PostCompactBaseViewHolder) holder).itemView.setBackgroundColor(mCardViewBackgroundColor);
+            holder.itemView.setBackgroundColor(mCardViewBackgroundColor);
             ((PostCompactBaseViewHolder) holder).titleTextView.setTextColor(mPostTitleColor);
             mGlide.clear(((PostCompactBaseViewHolder) holder).imageView);
             mGlide.clear(((PostCompactBaseViewHolder) holder).iconGifImageView);
@@ -2001,14 +2001,14 @@ public class PostRecyclerViewAdapter extends PagedListAdapter<Post, RecyclerView
                     ((PostGalleryViewHolder) holder).markPostRead(post, false);
                 }
             }
-            ((PostGalleryViewHolder) holder).itemView.setVisibility(View.VISIBLE);
+            holder.itemView.setVisibility(View.VISIBLE);
             RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) holder.itemView.getLayoutParams();
             params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
             int marginPixel = (int) Utils.convertDpToPixel(8, mActivity);
             params.topMargin = marginPixel;
             params.bottomMargin = marginPixel;
             holder.itemView.setLayoutParams(params);
-            ((PostGalleryViewHolder) holder).itemView.setBackgroundTintList(ColorStateList.valueOf(mCardViewBackgroundColor));
+            holder.itemView.setBackgroundTintList(ColorStateList.valueOf(mCardViewBackgroundColor));
 
             ((PostGalleryViewHolder) holder).titleTextView.setText("");
             ((PostGalleryViewHolder) holder).titleTextView.setVisibility(View.GONE);
@@ -3310,7 +3310,7 @@ public class PostRecyclerViewAdapter extends PagedListAdapter<Post, RecyclerView
             itemView.setOnLongClickListener(view -> {
                 if (mLongPressToHideToolbarInCompactLayout) {
                     if (bottomConstraintLayout.getLayoutParams().height == 0) {
-                        ViewGroup.LayoutParams params = (LinearLayout.LayoutParams) bottomConstraintLayout.getLayoutParams();
+                        ViewGroup.LayoutParams params = bottomConstraintLayout.getLayoutParams();
                         params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
                         bottomConstraintLayout.setLayoutParams(params);
                         mCallback.delayTransition();

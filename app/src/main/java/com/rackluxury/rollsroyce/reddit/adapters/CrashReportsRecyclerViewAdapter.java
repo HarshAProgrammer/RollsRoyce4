@@ -35,7 +35,7 @@ public class CrashReportsRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
         return crashReports == null ? 0 : crashReports.size();
     }
 
-    private class CrashReportViewHolder extends RecyclerView.ViewHolder {
+    private static class CrashReportViewHolder extends RecyclerView.ViewHolder {
         TextView crashReportTextView;
         public CrashReportViewHolder(@NonNull View itemView) {
             super(itemView);

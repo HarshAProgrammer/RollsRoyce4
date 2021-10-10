@@ -80,7 +80,6 @@ Privacy Policy\n\nLuxuryRack Inc. built the [Cars from RollsRoyce] app as a Comm
     <string name="videos_toolbar_home">Videos</string>
     <string name="image_toolbar_home">Image Toolbar</string>
     <string name="sort">Sort</string>
-    <string name="videos_home">Videos</string>
     <string name="categories_detail_image">RollsRoyce Detail Image</string>
     <string name="main_image">RollsRoyce Image</string>
     <string name="car_name">RollsRoyce Name</string>
@@ -121,9 +120,6 @@ Privacy Policy\n\nLuxuryRack Inc. built the [Cars from RollsRoyce] app as a Comm
     <string name="main_image_expensive">RollsRoyce Image</string>
     <string name="name_detail_expensive_detail">RollsRoyce Car Name</string>
     <string name="detail_expensive_description">RollsRoyce Detail Description</string>
-
-
-    <string name="discover_expensive"><font fgcolor='#0084ff'>•</font> Discover the Most Expensive Cars from RollsRoyce</string>
 
 
     <string name="images_toolbar_images">Images</string>
@@ -1365,9 +1361,7 @@ Meter to show power being utilized
     <string name="error_fetch_trending_search">Fetch trending searches failed.\nTap to retry.</string>
     <string name="error_parse_trending_search">Parse trending searches failed.\nTap to retry.</string>
     <string name="reddit_signup">SignUp</string>
-    <string name="discover_blogs">Read the best Blogs written on RollsRoyce from Top Notch Editors.</string>
     <string name="youtube_videos_nav_home">Youtube Videos</string>
-    <string name="discover_video">Watch Showcase Videos of Rolls Royce Cars</string>
 
     <string name="advantageBlog"><font fgcolor='#0084ff'>•</font> Read the best Blogs written on Rolls-Royce from Top Notch Editors and get 100,000 coins.</string>
     <string name="advantageVideo"><font fgcolor='#0084ff'>•</font> Watch the best Showcase Videos of Rolls-Royce Cars and get 100,000 coins.</string>

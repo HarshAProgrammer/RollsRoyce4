@@ -52,7 +52,7 @@ public class RestoreSettings {
                     FileUtils.deleteDirectory(new File(cachePath));
                 }
                 new File(cachePath).mkdir();
-                FileOutputStream zipCacheOutputStream = new FileOutputStream(new File(cachePath + "restore.zip"));
+                FileOutputStream zipCacheOutputStream = new FileOutputStream(cachePath + "restore.zip");
 
                 byte[] fileReader = new byte[1024];
 
@@ -126,7 +126,7 @@ public class RestoreSettings {
         ObjectInputStream input = null;
 
         try {
-            input = new ObjectInputStream(new FileInputStream(new File(uriString)));
+            input = new ObjectInputStream(new FileInputStream(uriString));
             Object object = input.readObject();
             if (object instanceof Map) {
                 Map<String, Object> map = (Map<String, Object>) object;

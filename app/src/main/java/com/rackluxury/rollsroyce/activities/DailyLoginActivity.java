@@ -39,8 +39,6 @@ public class DailyLoginActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isAcceptingText()) {
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-        } else {
-
         }
         ImageView imageView = findViewById(R.id.imageView8);
         imageView.setOnClickListener(new View.OnClickListener() {

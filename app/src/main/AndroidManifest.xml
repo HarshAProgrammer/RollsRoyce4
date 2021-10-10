@@ -546,7 +546,7 @@
             android:name=".reddit.activities.RedditMainActivity"
             android:label="@string/application_name"
             android:theme="@style/AppThemeReddit.Launcher"
-            android:windowSoftInputMode="adjustPan"></activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".reddit.activities.RedditLoginActivity"
             android:label="@string/login_activity_label"

@@ -109,7 +109,7 @@ public class BackupSettings {
 
         ObjectOutputStream output = null;
         try {
-            output = new ObjectOutputStream(new FileOutputStream(new File(backupDir + "/" + fileName + ".txt")));
+            output = new ObjectOutputStream(new FileOutputStream(backupDir + "/" + fileName + ".txt"));
             output.writeObject(sharedPreferences.getAll());
 
             result = true;

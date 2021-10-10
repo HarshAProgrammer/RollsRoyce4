@@ -423,7 +423,7 @@ public class RedditCustomThemePreviewActivity extends AppCompatActivity {
         }
     }
 
-    private class SectionsPagerAdapter extends FragmentPagerAdapter {
+    private static class SectionsPagerAdapter extends FragmentPagerAdapter {
         private ThemePreviewPostsFragment themePreviewPostsFragment;
         private ThemePreviewCommentsFragment themePreviewCommentsFragment;
 

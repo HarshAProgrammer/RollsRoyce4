@@ -74,7 +74,7 @@ public class CustomThemeListingRecyclerViewAdapter extends RecyclerView.Adapter<
             CustomTheme customTheme = predefinedCustomThemes.get(position - 1);
             ((PredefinedCustomThemeViewHolder) holder).colorPrimaryView.setBackgroundTintList(ColorStateList.valueOf(customTheme.colorPrimary));
             ((PredefinedCustomThemeViewHolder) holder).nameTextView.setText(customTheme.name);
-            ((PredefinedCustomThemeViewHolder) holder).itemView.setOnClickListener(view -> {
+            holder.itemView.setOnClickListener(view -> {
                 Intent intent = new Intent(activity, RedditCustomizeThemeActivity.class);
                 intent.putExtra(RedditCustomizeThemeActivity.EXTRA_THEME_NAME, customTheme.name);
                 intent.putExtra(RedditCustomizeThemeActivity.EXTRA_IS_PREDEFIINED_THEME, true);
@@ -94,21 +94,21 @@ public class CustomThemeListingRecyclerViewAdapter extends RecyclerView.Adapter<
             ((UserCustomThemeViewHolder) holder).shareImageView.setOnClickListener(view -> {
                 ((CustomThemeListingActivity) activity).shareTheme(customTheme);
             });
-            ((UserCustomThemeViewHolder) holder).itemView.setOnClickListener(view -> {
+            holder.itemView.setOnClickListener(view -> {
                 CustomThemeOptionsBottomSheetFragment customThemeOptionsBottomSheetFragment = new CustomThemeOptionsBottomSheetFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString(CustomThemeOptionsBottomSheetFragment.EXTRA_THEME_NAME, customTheme.name);
                 customThemeOptionsBottomSheetFragment.setArguments(bundle);
                 customThemeOptionsBottomSheetFragment.show(activity.getSupportFragmentManager(), customThemeOptionsBottomSheetFragment.getTag());
             });
-            ((UserCustomThemeViewHolder) holder).itemView.setOnLongClickListener(view -> {
-                ((UserCustomThemeViewHolder) holder).itemView.performClick();
+            holder.itemView.setOnLongClickListener(view -> {
+                holder.itemView.performClick();
                 return true;
             });
         } else if (holder instanceof PreDefinedThemeDividerViewHolder) {
-            ((TextView) ((PreDefinedThemeDividerViewHolder) holder).itemView).setText(R.string.predefined_themes);
+            ((TextView) holder.itemView).setText(R.string.predefined_themes);
         } else if (holder instanceof UserThemeDividerViewHolder) {
-            ((TextView) ((UserThemeDividerViewHolder) holder).itemView).setText(R.string.user_themes);
+            ((TextView) holder.itemView).setText(R.string.user_themes);
         }
     }
 
@@ -122,7 +122,7 @@ public class CustomThemeListingRecyclerViewAdapter extends RecyclerView.Adapter<
         notifyDataSetChanged();
     }
 
-    class PredefinedCustomThemeViewHolder extends RecyclerView.ViewHolder {
+    static class PredefinedCustomThemeViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.color_primary_item_predefined_custom_theme)
         View colorPrimaryView;
@@ -137,7 +137,7 @@ public class CustomThemeListingRecyclerViewAdapter extends RecyclerView.Adapter<
         }
     }
 
-    class UserCustomThemeViewHolder extends RecyclerView.ViewHolder {
+    static class UserCustomThemeViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.color_primary_item_user_custom_theme)
         View colorPrimaryView;
@@ -154,14 +154,14 @@ public class CustomThemeListingRecyclerViewAdapter extends RecyclerView.Adapter<
         }
     }
 
-    class PreDefinedThemeDividerViewHolder extends RecyclerView.ViewHolder {
+    static class PreDefinedThemeDividerViewHolder extends RecyclerView.ViewHolder {
 
         PreDefinedThemeDividerViewHolder(@NonNull View itemView) {
             super(itemView);
         }
     }
 
-    class UserThemeDividerViewHolder extends RecyclerView.ViewHolder {
+    static class UserThemeDividerViewHolder extends RecyclerView.ViewHolder {
 
         UserThemeDividerViewHolder(@NonNull View itemView) {
             super(itemView);

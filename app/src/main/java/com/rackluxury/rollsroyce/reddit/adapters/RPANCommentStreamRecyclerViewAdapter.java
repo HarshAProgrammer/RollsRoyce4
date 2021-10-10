@@ -67,7 +67,7 @@ public class RPANCommentStreamRecyclerViewAdapter extends RecyclerView.Adapter<R
         notifyItemInserted(rpanComments.size() - 1);
     }
 
-    class RPANCommentViewHolder extends RecyclerView.ViewHolder {
+    static class RPANCommentViewHolder extends RecyclerView.ViewHolder {
         ImageView iconImageView;
         TextView authorTextView;
         TextView timeTextView;

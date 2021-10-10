@@ -126,7 +126,7 @@ public class PrivateMessagesDetailRecyclerViewAdapter extends RecyclerView.Adapt
             if (holder instanceof MessageViewHolder) {
                 mMarkwon.setMarkdown(((MessageViewHolder) holder).messageTextView, message.getBody());
 
-                ((MessageViewHolder) holder).messageTextView.setOnClickListener(view -> ((MessageViewHolder) holder).itemView.performClick());
+                ((MessageViewHolder) holder).messageTextView.setOnClickListener(view -> holder.itemView.performClick());
                 if (mShowElapsedTime) {
                     ((MessageViewHolder) holder).timeTextView.setText(Utils.getElapsedTime(mRedditViewPrivateMessagesActivity, message.getTimeUTC()));
                 } else {

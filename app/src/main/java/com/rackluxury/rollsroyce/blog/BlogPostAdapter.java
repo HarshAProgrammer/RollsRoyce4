@@ -78,7 +78,7 @@ public class BlogPostAdapter extends RecyclerView.Adapter<BlogPostAdapter.PostVi
         return blogItems.size();
     }
 
-    public class PostViewHolder extends RecyclerView.ViewHolder {
+    public static class PostViewHolder extends RecyclerView.ViewHolder {
         public RelativeLayout blogPostLayout;
         public TextView blogPostTitle;
         public ImageView blogPostImage;
@@ -90,8 +90,8 @@ public class BlogPostAdapter extends RecyclerView.Adapter<BlogPostAdapter.PostVi
             super(itemView);
             shimmerFrameLayout = itemView.findViewById(R.id.sflBlogPost);
             blogPostLayout = itemView.findViewById(R.id.rlBlogPost);
-            blogPostTitle = (TextView) itemView.findViewById(R.id.tvTitleBlogPost);
-            blogPostImage = (ImageView) itemView.findViewById(R.id.ivBlogPost);
+            blogPostTitle = itemView.findViewById(R.id.tvTitleBlogPost);
+            blogPostImage = itemView.findViewById(R.id.ivBlogPost);
             blogPostAuthorImage = itemView.findViewById(R.id.imgAuthorPostDetail);
 
         }

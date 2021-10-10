@@ -53,7 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        profilePic = (PhotoView) findViewById(R.id.ivProfilePic);
+        profilePic = findViewById(R.id.ivProfilePic);
         profileName = findViewById(R.id.tvProfileName);
         profilePhoneNo = findViewById(R.id.tvProfilePhoneNo);
         profileEmail = findViewById(R.id.tvProfileEmail);
