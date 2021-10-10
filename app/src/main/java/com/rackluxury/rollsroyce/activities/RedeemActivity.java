@@ -1,15 +1,13 @@
 package com.rackluxury.rollsroyce.activities;
 
 import android.animation.ArgbEvaluator;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
-import android.app.AlertDialog;
-
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
@@ -53,6 +51,7 @@ public class RedeemActivity extends AppCompatActivity {
     private float usermoney;
     private int usermoneyCoins, usercoins;
     private SharedPreferences coins;
+    private String currentCoins;
 
     ViewPager viewPagerRedeem;
     AdapterRedeem adapterRedeem;
@@ -147,6 +146,10 @@ public class RedeemActivity extends AppCompatActivity {
                     coinsEdit.apply();
                     Toasty.info(RedeemActivity.this, "500,000 Coins have been Used.", Toast.LENGTH_LONG).show();
                     coinsAvailable.setText(String.valueOf(coinCount));
+                    coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+                    currentCoins = coins.getString("Coins", "0");
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    reference.child("Coins").setValue(currentCoins);
 
 
                     LayoutInflater inflater = LayoutInflater.from(RedeemActivity.this);

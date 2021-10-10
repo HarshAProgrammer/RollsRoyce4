@@ -29,6 +29,9 @@ import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rackluxury.rollsroyce.R;
 
 import java.util.ArrayList;
@@ -56,6 +59,7 @@ public class BuyCoinsActivity extends AppCompatActivity implements PurchasesUpda
     public static final int SWIPE_VELOCITY_THRESHOLD = 100;
     private GestureDetector gestureDetector;
     private SharedPreferences coins;
+    private String currentCoins;
 
 
 
@@ -226,6 +230,10 @@ public class BuyCoinsActivity extends AppCompatActivity implements PurchasesUpda
                     SharedPreferences.Editor coinsEdit = coins.edit();
                     coinsEdit.putString("Coins", String.valueOf(coinCount));
                     coinsEdit.apply();
+                    coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+                    currentCoins = coins.getString("Coins", "0");
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    reference.child("Coins").setValue(currentCoins);
 
                     Toasty.success(BuyCoinsActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
                 }
@@ -262,6 +270,10 @@ public class BuyCoinsActivity extends AppCompatActivity implements PurchasesUpda
                     SharedPreferences.Editor coinsEdit = coins.edit();
                     coinsEdit.putString("Coins", String.valueOf(coinCount));
                     coinsEdit.apply();
+                    coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+                    currentCoins = coins.getString("Coins", "0");
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    reference.child("Coins").setValue(currentCoins);
 
                     Toasty.success(BuyCoinsActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
                 }
@@ -299,6 +311,10 @@ public class BuyCoinsActivity extends AppCompatActivity implements PurchasesUpda
                     SharedPreferences.Editor coinsEdit = coins.edit();
                     coinsEdit.putString("Coins", String.valueOf(coinCount));
                     coinsEdit.apply();
+                    coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+                    currentCoins = coins.getString("Coins", "0");
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    reference.child("Coins").setValue(currentCoins);
                     Toasty.success(BuyCoinsActivity.this, "Purchase Successful", Toast.LENGTH_LONG).show();
                 }
             }

@@ -14,6 +14,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rackluxury.rollsroyce.R;
 
 import java.util.Calendar;
@@ -27,6 +30,7 @@ public class DailyLoginActivity extends AppCompatActivity {
     private SharedPreferences coins;
     private Button sun, mon, tue, wed, thu, fri, sat;
     private String todayString;
+    private String currentCoins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +152,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+            coins = getSharedPreferences("Rewards", MODE_PRIVATE);coins = getSharedPreferences("Rewards", MODE_PRIVATE);coins = getSharedPreferences("Rewards", MODE_PRIVATE);coins = getSharedPreferences("Rewards", MODE_PRIVATE);            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -166,6 +174,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+                        currentCoins = coins.getString("Coins", "0");            currentCoins = coins.getString("Coins", "0");            currentCoins = coins.getString("Coins", "0");            currentCoins = coins.getString("Coins", "0");            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -184,6 +196,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -202,6 +218,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+                        reference.child("Coins").setValue(currentCoins);            reference.child("Coins").setValue(currentCoins);            reference.child("Coins").setValue(currentCoins);            reference.child("Coins").setValue(currentCoins);            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -221,6 +241,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -239,6 +263,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -258,6 +286,10 @@ public class DailyLoginActivity extends AppCompatActivity {
             SharedPreferences.Editor coinsEdit = coins.edit();
             coinsEdit.putString("Coins", String.valueOf(coinCount));
             coinsEdit.apply();
+            coins = getSharedPreferences("Rewards", MODE_PRIVATE);
+            currentCoins = coins.getString("Coins", "0");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            reference.child("Coins").setValue(currentCoins);
         } else {
             Toasty.info(DailyLoginActivity.this, "Reward already recieved", Toast.LENGTH_LONG).show();
         }
@@ -269,5 +301,6 @@ public class DailyLoginActivity extends AppCompatActivity {
         Intent view = new Intent(DailyLoginActivity.this, DashboardActivity.class);
         startActivity(view);
         Animatoo.animateSwipeLeft(DailyLoginActivity.this);
+
     }
 }
