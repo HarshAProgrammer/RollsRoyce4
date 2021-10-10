@@ -39,6 +39,7 @@ public class ExpensiveNotificationService extends FirebaseMessagingService {
 
             Notification notification = new NotificationCompat.Builder(this, FCM_CHANNEL_ID)
                     .setLargeIcon(bitmap)
+                    .setSmallIcon(R.drawable.img_expensive_checker)
                     .setContentTitle(title)
                     .setContentText(body)
                     .setContentIntent(resultPendingIntent)

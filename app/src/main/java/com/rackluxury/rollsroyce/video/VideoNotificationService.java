@@ -39,6 +39,7 @@ public class VideoNotificationService extends FirebaseMessagingService {
 
             Notification notification = new NotificationCompat.Builder(this, FCM_CHANNEL_ID)
                     .setLargeIcon(bitmap)
+                    .setSmallIcon(R.drawable.img_video_checker)
                     .setContentTitle(title)
                     .setContentText(body)
                     .setContentIntent(resultPendingIntent)

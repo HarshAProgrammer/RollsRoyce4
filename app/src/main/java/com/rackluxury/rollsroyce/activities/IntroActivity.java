@@ -39,7 +39,25 @@ public class IntroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (restorePrefData()) {
+        if (getIntent().getExtras() != null) {
+            if (getIntent().hasExtra("Video")) {
+                Intent intent = new Intent(this, VideoCheckerActivity.class);
+                startActivity(intent);
+                finish();
+            }if (getIntent().hasExtra("Expensive")) {
+                Intent intent = new Intent(this, ExpensiveCheckerActivity.class);
+                startActivity(intent);
+                finish();
+            }if (getIntent().hasExtra("Blog")) {
+                Intent intent = new Intent(this, BlogCheckerActivity.class);
+                startActivity(intent);
+                finish();
+            }if (getIntent().hasExtra("Daily")) {
+                Intent intent = new Intent(this, DailyLoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }else if (restorePrefData()) {
             Intent mainActivity = new Intent(getApplicationContext(), LoginOrRegisterActivity.class);
             startActivity(mainActivity);
             finish();
