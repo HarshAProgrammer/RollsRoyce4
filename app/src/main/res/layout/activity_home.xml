@@ -50,11 +50,10 @@
                     app:layout_constraintBottom_toBottomOf="parent"/>
                 <ImageView
                     android:id="@+id/ivCoinHome"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
                     android:layout_gravity="center"
                     android:src="@drawable/coinmain"
-                    android:padding="5dp"
                     android:contentDescription="@string/image_toolbar_home"
                     app:layout_constraintEnd_toStartOf="@+id/tvCoinsHome"
                     app:layout_constraintTop_toTopOf="parent"
@@ -67,8 +66,7 @@
                     android:fontFamily="@font/open_sans_condensed_light"
                     android:text="0"
                     android:textColor="@color/colorBlack"
-                    android:textSize="25sp"
-                    android:layout_marginEnd="20dp"
+                    android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>

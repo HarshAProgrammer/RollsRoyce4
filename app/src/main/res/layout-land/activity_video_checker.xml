@@ -26,7 +26,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarVideoCheckerActivity"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
                 android:background="@drawable/searchappbar"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme">
@@ -38,10 +38,10 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="Rolls Royce"
+                    android:text="Watches from Rolex"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/colorWhite"
-                    android:textSize="25sp"
+                    android:textSize="13sp"
                     android:textStyle="normal" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
@@ -49,7 +49,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
@@ -62,11 +62,6 @@
 
         </LinearLayout>
 
-        <View
-            android:id="@+id/cover"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone" />
     </LinearLayout>
 
     <TextView
@@ -78,7 +73,7 @@
         android:text="Benefits:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
-        android:textSize="28sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@id/advantage1VideoChecker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +89,7 @@
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/advantagesVideoChecker" />
@@ -104,11 +99,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/harmonia_sans_regular"
+        android:layout_marginStart="20dp"
         android:text="@string/purchase_information_timer"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/advantage1VideoChecker" />
@@ -130,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
-        android:textSize="25sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/peopleNumVideoChecker"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -141,7 +137,7 @@
         android:layout_marginStart="58dp"
         android:fontFamily="@font/open_sans_condensed_light"
         android:text="@string/checker_purchase_description"
-        android:textSize="25sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/peopleDesVideoChecker"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -151,7 +147,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:fontFamily="@font/open_sans_condensed_light"
-        android:textSize="25sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -162,7 +158,7 @@
         android:layout_marginStart="58dp"
         android:fontFamily="@font/open_sans_condensed_light"
         android:text="@string/checker_people_description"
-        android:textSize="25sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/btnVideoChecker"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -170,7 +166,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnVideoChecker"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:layout_marginStart="5dp"
@@ -182,7 +178,7 @@
         android:text="Purchase  $352"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="25sp"
+        android:textSize="18sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
